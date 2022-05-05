@@ -1,4 +1,14 @@
 /*!
+ * \file tetrisConfig.h
+ * 
+ * \authors Philipp Karg (philipp.karg@tum.de)
+ * 
+ * \brief File containing some game configurations.
+ * \date 04.02.2021
+ * \copyright Philipp Karg 2022
+ */
+
+/*!
  * \mainpage FreeRTOS Tetris
  * Welcome to my little Tetris game using the open-source RTOS FreeRTOS. This project was developed in the scope of a laboratory at the Technical University of Munich.
  * In this laboratory I was tasked to create a Tetris game using <a href="https://freertos.org/" target="_blank">FreeRTOS</a>, building on the existing framework provided Alex Hoffman, who was the instructor for this course.

@@ -1,3 +1,13 @@
+/*!
+ * \file EmulatorConfig.h
+ * 
+ * \authors Philipp Karg (philipp.karg@tum.de)
+ * 
+ * \brief File containing some configuration for the FreeRTOS Emulator.
+ * \date 04.02.2021
+ * \copyright Philipp Karg 2022
+ */
+
 #ifndef __EMULATOR_CONFIG_H__
 #define __EMULATOR_CONFIG_H__
 
