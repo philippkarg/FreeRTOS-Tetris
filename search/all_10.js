@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['safeprintexit_145',['safePrintExit',['../group__tum__print.html#gae117e7b2d8c509fd383c365d17c20bb5',1,'TUM_Print.h']]],
+  ['safeprintinit_146',['safePrintInit',['../group__tum__print.html#gab275f35ca73fe055aca83b004feaa50c',1,'TUM_Print.h']]],
+  ['scheduler_20control_147',['Scheduler Control',['../group__SchedulerControl.html',1,'']]],
+  ['score_148',['score',['../structscore.html',1,'score'],['../structscore.html#aa1a2eb60300b3476ff7ee41922f43e4b',1,'score::score()']]],
+  ['score_5ft_149',['score_t',['../group__logic.html#ga8723207078350417f120e35862f7930a',1,'logic.h']]],
+  ['screen_5fheight_150',['SCREEN_HEIGHT',['../group__config.html#ga6974d08a74da681b3957b2fead2608b8',1,'SCREEN_HEIGHT():&#160;EmulatorConfig.h'],['../group__tum__draw.html#ga6974d08a74da681b3957b2fead2608b8',1,'SCREEN_HEIGHT():&#160;TUM_Draw.h']]],
+  ['screen_5fwidth_151',['SCREEN_WIDTH',['../group__config.html#ga2cd109632a6dcccaa80b43561b1ab700',1,'SCREEN_WIDTH():&#160;EmulatorConfig.h'],['../group__tum__draw.html#ga2cd109632a6dcccaa80b43561b1ab700',1,'SCREEN_WIDTH():&#160;TUM_Draw.h']]],
+  ['semaphorehandle_5ft_152',['SemaphoreHandle_t',['../group__SemaphoreHandle__t.html',1,'']]],
+  ['semaphores_153',['Semaphores',['../group__Semaphores.html',1,'']]],
+  ['sequence_5fhandle_5ft_154',['sequence_handle_t',['../group__tum__draw.html#ga1dafa9c3d2798f0f1ba06c637793b459',1,'TUM_Draw.h']]],
+  ['set_5fball_5fspeed_5fall_155',['SET_BALL_SPEED_ALL',['../group__tum__ball.html#gae8fce08edeb61123ef741d8279dd6612',1,'TUM_Ball.h']]],
+  ['set_5fball_5fspeed_5faxes_156',['SET_BALL_SPEED_AXES',['../group__tum__ball.html#gaefaa2cc3c051ce9bdda9e6346605f645',1,'TUM_Ball.h']]],
+  ['set_5fball_5fspeed_5fmax_157',['SET_BALL_SPEED_MAX',['../group__tum__ball.html#ga718219a6195c3cfb294808227c42f887',1,'TUM_Ball.h']]],
+  ['set_5fball_5fspeed_5fx_158',['SET_BALL_SPEED_X',['../group__tum__ball.html#gab83512dcf4b54129306a8f2f597b8950',1,'TUM_Ball.h']]],
+  ['set_5fball_5fspeed_5fy_159',['SET_BALL_SPEED_Y',['../group__tum__ball.html#gac39d23dbeaca84bc322ebc2c3eb8f278',1,'TUM_Ball.h']]],
+  ['setballlocation_160',['setBallLocation',['../group__tum__ball.html#ga310d5cc25909afb952d02502f35d9104',1,'TUM_Ball.h']]],
+  ['setballspeed_161',['setBallSpeed',['../group__tum__ball.html#gab9764923f2a8501b17814d72f0970a42',1,'TUM_Ball.h']]],
+  ['setwallproperty_162',['setWallProperty',['../group__tum__ball.html#ga7b5b042be3729b4ad8de031fb376f3f5',1,'TUM_Ball.h']]],
+  ['shape_163',['shape',['../structtetromino.html#a7fb3b793160b6e7e3863ea7616961df6',1,'tetromino']]],
+  ['sizearr_164',['SIZEARR',['../group__logic.html#ga080f7a693e9ca4fe54590aaaf7184496',1,'logic.h']]],
+  ['sprite_5fsequence_5fdirection_165',['sprite_sequence_direction',['../group__tum__draw.html#gaa566421805e9bd4491919b25e56fc8ce',1,'TUM_Draw.h']]],
+  ['square_5fwidth_166',['SQUARE_WIDTH',['../group__config.html#ga4cdc90ed78add07e15daa673da3c96f9',1,'tetrisConfig.h']]],
+  ['state_20machine_20module_167',['State Machine Module',['../group__state.html',1,'']]],
+  ['statemachine_2eh_168',['stateMachine.h',['../stateMachine_8h.html',1,'']]]
+];

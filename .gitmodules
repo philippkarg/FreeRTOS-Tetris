@@ -1,3 +1,0 @@
-[submodule "docker/docker-freertos-sdl2"]
-	path = docker/docker-freertos-sdl2
-	url = https://github.com/PhilippvK/docker-freertos-sdl2.git
