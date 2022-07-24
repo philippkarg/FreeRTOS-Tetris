@@ -1,0 +1,4 @@
+<map id="Opponent Module" name="Opponent Module">
+<area shape="rect" id="node1" href="$group__tetris.html" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" id="node2" title="Module handling incoming/outgoing messages to an &quot;oppnent&quot;." alt="" coords="169,5,307,31"/>
+</map>

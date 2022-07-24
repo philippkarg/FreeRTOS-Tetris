@@ -1,0 +1,18 @@
+<map id="Queue Management" name="Queue Management">
+<area shape="rect" id="node1" href="$group__QueueSetHandle__t.html" title=" " alt="" coords="413,5,555,31"/>
+<area shape="rect" id="node2" href="$group__xQueueSend.html" title=" " alt="" coords="432,55,536,80"/>
+<area shape="rect" id="node3" href="$group__QueueSetMemberHandle__t.html" title=" " alt="" coords="385,104,583,129"/>
+<area shape="rect" id="node4" href="$group__xQueueReceiveFromISR.html" title=" " alt="" coords="395,153,573,179"/>
+<area shape="rect" id="node5" href="$group__xQueueOverwrite.html" title=" " alt="" coords="416,203,552,228"/>
+<area shape="rect" id="node6" href="$group__xQueueSendFromISR.html" title=" " alt="" coords="405,252,563,277"/>
+<area shape="rect" id="node7" href="$group__vQueueDelete.html" title=" " alt="" coords="427,301,541,327"/>
+<area shape="rect" id="node8" href="$group__xQueueCreate.html" title=" " alt="" coords="427,351,541,376"/>
+<area shape="rect" id="node9" href="$group__xQueueOverwriteFromISR.html" title=" " alt="" coords="389,400,579,425"/>
+<area shape="rect" id="node10" href="$group__uxQueueMessagesWaiting.html" title=" " alt="" coords="387,449,581,475"/>
+<area shape="rect" id="node11" href="$group__xQueueReceive.html" title=" " alt="" coords="422,499,546,524"/>
+<area shape="rect" id="node12" href="$group__QueueHandle__t.html" title=" " alt="" coords="423,548,545,573"/>
+<area shape="rect" id="node13" href="$group__xQueuePeekFromISR.html" title=" " alt="" coords="405,597,563,623"/>
+<area shape="rect" id="node14" href="$group__freeRTOS.html" title=" " alt="" coords="5,327,135,352"/>
+<area shape="rect" id="node15" title=" " alt="" coords="183,327,337,352"/>
+<area shape="rect" id="node16" href="$group__xQueueCreateStatic.html" title=" " alt="" coords="408,647,560,672"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="EmulatorConfig.h" name="EmulatorConfig.h">
+<area shape="rect" id="node1" title="File containing some configuration for the FreeRTOS Emulator." alt="" coords="163,5,297,32"/>
+<area shape="rect" id="node2" href="$tetrisConfig_8h.html" title="File containing some game configurations." alt="" coords="175,155,285,181"/>
+<area shape="rect" id="node9" href="$TUM__Draw_8h_source.html" title=" " alt="" coords="178,80,282,107"/>
+<area shape="rect" id="node10" href="$TUM__Font_8h.html" title="Manages fonts used in TUM Draw." alt="" coords="306,80,405,107"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="Header file for game.c." alt="" coords="5,229,76,256"/>
+<area shape="rect" id="node4" href="$gui_8h.html" title="Header file for gui.c." alt="" coords="121,304,176,331"/>
+<area shape="rect" id="node5" href="$logic_8h.html" title="Header file for logic.c." alt="" coords="152,229,217,256"/>
+<area shape="rect" id="node6" href="$input_8h.html" title="Header file for input.c." alt="" coords="242,229,309,256"/>
+<area shape="rect" id="node7" href="$opponent_8h.html" title="Header file for opponent.c." alt="" coords="333,229,428,256"/>
+<area shape="rect" id="node8" href="$stateMachine_8h.html" title="Header file for stateMachine.c." alt="" coords="453,229,575,256"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="TUM_Sound.h" name="TUM_Sound.h">
+<area shape="rect" id="node1" title="A simple interface to play wav files using the SDL2 Mixer library." alt="" coords="175,5,285,32"/>
+<area shape="rect" id="node2" href="$tetrisConfig_8h.html" title="File containing some game configurations." alt="" coords="175,80,285,107"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="Header file for game.c." alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node4" href="$gui_8h.html" title="Header file for gui.c." alt="" coords="121,229,176,256"/>
+<area shape="rect" id="node5" href="$logic_8h.html" title="Header file for logic.c." alt="" coords="152,155,217,181"/>
+<area shape="rect" id="node6" href="$input_8h.html" title="Header file for input.c." alt="" coords="242,155,309,181"/>
+<area shape="rect" id="node7" href="$opponent_8h.html" title="Header file for opponent.c." alt="" coords="333,155,428,181"/>
+<area shape="rect" id="node8" href="$stateMachine_8h.html" title="Header file for stateMachine.c." alt="" coords="453,155,575,181"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="tetromino" name="tetromino">
+<area shape="rect" id="node1" title="Structure representing a Tetromino." alt="" coords="5,109,92,136"/>
+<area shape="rect" id="node2" href="$structcoord.html" title="Holds a pixel co&#45;ordinate." alt="" coords="19,5,78,32"/>
+</map>
