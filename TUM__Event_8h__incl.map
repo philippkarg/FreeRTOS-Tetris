@@ -1,13 +1,10 @@
 <map id="TUM_Event.h" name="TUM_Event.h">
-<area shape="rect" id="node1" title="Utilities required by other TUM_XXX files." alt="" coords="191,5,299,32"/>
-<area shape="rect" id="node2" href="$FreeRTOS_8h_source.html" title=" " alt="" coords="143,80,239,107"/>
-<area shape="rect" id="node11" href="$queue_8h_source.html" title=" " alt="" coords="263,80,337,107"/>
+<area shape="rect" id="node1" title="Utilities required by other TUM_XXX files." alt="" coords="225,5,333,32"/>
+<area shape="rect" id="node2" href="$FreeRTOS_8h_source.html" title=" " alt="" coords="176,80,272,107"/>
+<area shape="rect" id="node8" href="$queue_8h_source.html" title=" " alt="" coords="296,80,371,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="189,304,259,331"/>
-<area shape="rect" id="node5" href="$FreeRTOSConfig_8h_source.html" title=" " alt="" coords="155,229,293,256"/>
-<area shape="rect" id="node6" href="$projdefs_8h_source.html" title=" " alt="" coords="229,155,315,181"/>
-<area shape="rect" id="node7" href="$portable_8h_source.html" title=" " alt="" coords="447,155,535,181"/>
-<area shape="rect" id="node8" href="$deprecated__definitions_8h_source.html" title=" " alt="" coords="317,229,499,256"/>
-<area shape="rect" id="node9" href="$portmacro_8h_source.html" title=" " alt="" coords="524,229,625,256"/>
-<area shape="rect" id="node10" href="$mpu__wrappers_8h_source.html" title=" " alt="" coords="649,229,780,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="135,229,206,256"/>
+<area shape="rect" id="node5" href="$FreeRTOSConfig_8h_source.html" title=" " alt="" coords="155,155,293,181"/>
+<area shape="rect" id="node6" href="$projdefs_8h_source.html" title=" " alt="" coords="317,155,403,181"/>
+<area shape="rect" id="node7" href="$portable_8h_source.html" title=" " alt="" coords="428,155,516,181"/>
 </map>

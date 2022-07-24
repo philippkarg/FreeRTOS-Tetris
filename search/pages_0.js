@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['espl_20tetris_753',['ESPL Tetris',['../md__home_runner_work_FreeRTOS-Tetris_FreeRTOS-Tetris_README.html',1,'']]]
+  ['freertos_20tetris_752',['FreeRTOS Tetris',['../index.html',1,'']]]
 ];

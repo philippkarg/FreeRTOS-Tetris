@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image_5fhandle_5ft_616',['image_handle_t',['../group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795',1,'TUM_Draw.h']]]
+  ['image_5fhandle_5ft_615',['image_handle_t',['../group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795',1,'TUM_Draw.h']]]
 ];
