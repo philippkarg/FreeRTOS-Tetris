@@ -16,10 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install AVR Toolchain
-      run:    |
-              sudo apt-get update
-              sudo apt-get install gcc-avr binutils-avr avr-libc gdb-avr avrdude
+    - name: Install SDL2
+      run:  |
+            sudo apt-get install libsdl2-dev
       shell: bash
 
     - name: Install Doxygen
