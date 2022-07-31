@@ -1,6 +1,8 @@
 # FreeRTOS Tetris
+![Build Status](https://img.shields.io/github/workflow/status/philippkarg/FreeRTOS-Tetris/Build%20Application)
 ![License Badge](https://img.shields.io/github/license/philippkarg/FreeRTOS-Tetris)
-[![Build Status](https://img.shields.io/github/workflow/status/philippkarg/FreeRTOS-Tetris/Build%20Application)
+![Language Badge](https://img.shields.io/github/languages/top/philippkarg/FreeRTOS-Tetris?label=C)
+
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Configuration:](#configuration)
