@@ -1,4 +1,5 @@
 # FreeRTOS Tetris
+![example workflow](https://github.com/philippkarg/FreeRTOS-Tetris/actions/workflows/cmake.yaml/badge.svg)
 
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
