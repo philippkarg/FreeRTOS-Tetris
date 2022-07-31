@@ -1,6 +1,6 @@
 # FreeRTOS Tetris
-![example workflow](https://github.com/philippkarg/FreeRTOS-Tetris/actions/workflows/cmake.yaml/badge.svg)
-
+![License Badge](https://img.shields.io/github/license/philippkarg/FreeRTOS-Tetris)
+[![Build Status](https://github.com/philippkarg/FreeRTOS-Tetris/workflows/cmake/badge.svg)](https://github.com/philippkarg/FreeRTOS-Tetris/actions)
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
 - [Configuration:](#configuration)
