@@ -63,7 +63,8 @@ $(function() {
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">State Machine Module<div class="ingroups"><a class="el" href="group__tetris.html">Tetris Modules</a></div></div>  </div>
 </div><!--header-->
@@ -89,11 +90,122 @@ Functions</h2></td></tr>
 <tr class="memitem:ga01cd4856c3ad2d743bba8da1d9c137c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga01cd4856c3ad2d743bba8da1d9c137c5">iStateMachineInit</a> ()</td></tr>
 <tr class="memdesc:ga01cd4856c3ad2d743bba8da1d9c137c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the state machine.  <a href="group__state.html#ga01cd4856c3ad2d743bba8da1d9c137c5">More...</a><br /></td></tr>
 <tr class="separator:ga01cd4856c3ad2d743bba8da1d9c137c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7b6e5543fbc66a91559d86221036415"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gae7b6e5543fbc66a91559d86221036415">changeState</a> (volatile uint8_t *state, uint8_t forwards)</td></tr>
+<tr class="memdesc:gae7b6e5543fbc66a91559d86221036415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the state, either forwards of backwards.  <a href="group__state.html#gae7b6e5543fbc66a91559d86221036415">More...</a><br /></td></tr>
+<tr class="separator:gae7b6e5543fbc66a91559d86221036415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d657fe8341ff347c37013f4c63bc30b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga5d657fe8341ff347c37013f4c63bc30b">stateMachine</a> ()</td></tr>
+<tr class="memdesc:ga5d657fe8341ff347c37013f4c63bc30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic state machine with sequential states.  <a href="group__state.html#ga5d657fe8341ff347c37013f4c63bc30b">More...</a><br /></td></tr>
+<tr class="separator:ga5d657fe8341ff347c37013f4c63bc30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga1499877dfe621102bc484059d2bb4360"><td class="memItemLeft" align="right" valign="top"><a id="ga1499877dfe621102bc484059d2bb4360"></a>
+const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga1499877dfe621102bc484059d2bb4360">nextStateSignal</a> = <a class="el" href="group__state.html#gaf9726bd62399343efe0a3f65c781ec9d">NEXT_TASK</a></td></tr>
+<tr class="memdesc:ga1499877dfe621102bc484059d2bb4360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to change to the next state. <br /></td></tr>
+<tr class="separator:ga1499877dfe621102bc484059d2bb4360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0814a201d6d504fa8d7797a53e5e45e9"><td class="memItemLeft" align="right" valign="top"><a id="ga0814a201d6d504fa8d7797a53e5e45e9"></a>
+const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga0814a201d6d504fa8d7797a53e5e45e9">prevStateSignal</a> = <a class="el" href="group__state.html#ga9bf337b0b65e10f85ad9cc6a9b13353a">PREV_TASK</a></td></tr>
+<tr class="memdesc:ga0814a201d6d504fa8d7797a53e5e45e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to change to the previous state. <br /></td></tr>
+<tr class="separator:ga0814a201d6d504fa8d7797a53e5e45e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf84ffaacaa1adb2db7d67c80cf322f14"><td class="memItemLeft" align="right" valign="top"><a id="gaf84ffaacaa1adb2db7d67c80cf322f14"></a>
+static TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gaf84ffaacaa1adb2db7d67c80cf322f14">StateMachine</a> = NULL</td></tr>
+<tr class="memdesc:gaf84ffaacaa1adb2db7d67c80cf322f14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the State Machine <br /></td></tr>
+<tr class="separator:gaf84ffaacaa1adb2db7d67c80cf322f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5635a164d834a6b47e94808379e453a1"><td class="memItemLeft" align="right" valign="top"><a id="ga5635a164d834a6b47e94808379e453a1"></a>
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga5635a164d834a6b47e94808379e453a1">StateQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga5635a164d834a6b47e94808379e453a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> Queue for the different states <br /></td></tr>
+<tr class="separator:ga5635a164d834a6b47e94808379e453a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+State Machine Definitions</h2></td></tr>
+<tr class="memitem:gac2308553c832bba5fe514cf6120ca8da"><td class="memItemLeft" align="right" valign="top"><a id="gac2308553c832bba5fe514cf6120ca8da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gac2308553c832bba5fe514cf6120ca8da">STATE_QUEUE_LENGTH</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:gac2308553c832bba5fe514cf6120ca8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the state queue. <br /></td></tr>
+<tr class="separator:gac2308553c832bba5fe514cf6120ca8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3021e10ca0c58fd6832389d0b59e30"><td class="memItemLeft" align="right" valign="top"><a id="ga4a3021e10ca0c58fd6832389d0b59e30"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga4a3021e10ca0c58fd6832389d0b59e30">STATE_COUNT</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ga4a3021e10ca0c58fd6832389d0b59e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of states. <br /></td></tr>
+<tr class="separator:ga4a3021e10ca0c58fd6832389d0b59e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf31e063e332221a77f32d8cb7e8b5541"><td class="memItemLeft" align="right" valign="top"><a id="gaf31e063e332221a77f32d8cb7e8b5541"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gaf31e063e332221a77f32d8cb7e8b5541">STATE_ONE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:gaf31e063e332221a77f32d8cb7e8b5541"><td class="mdescLeft">&#160;</td><td class="mdescRight">State 1. <br /></td></tr>
+<tr class="separator:gaf31e063e332221a77f32d8cb7e8b5541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga906482fbd3d767d27149fe4c2f7ccdbe"><td class="memItemLeft" align="right" valign="top"><a id="ga906482fbd3d767d27149fe4c2f7ccdbe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga906482fbd3d767d27149fe4c2f7ccdbe">STATE_TWO</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ga906482fbd3d767d27149fe4c2f7ccdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">State 2. <br /></td></tr>
+<tr class="separator:ga906482fbd3d767d27149fe4c2f7ccdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6967690fe8c03c576a222069af40e913"><td class="memItemLeft" align="right" valign="top"><a id="ga6967690fe8c03c576a222069af40e913"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga6967690fe8c03c576a222069af40e913">STATE_THREE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:ga6967690fe8c03c576a222069af40e913"><td class="mdescLeft">&#160;</td><td class="mdescRight">State 3. <br /></td></tr>
+<tr class="separator:ga6967690fe8c03c576a222069af40e913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9726bd62399343efe0a3f65c781ec9d"><td class="memItemLeft" align="right" valign="top"><a id="gaf9726bd62399343efe0a3f65c781ec9d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gaf9726bd62399343efe0a3f65c781ec9d">NEXT_TASK</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:gaf9726bd62399343efe0a3f65c781ec9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next task. <br /></td></tr>
+<tr class="separator:gaf9726bd62399343efe0a3f65c781ec9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bf337b0b65e10f85ad9cc6a9b13353a"><td class="memItemLeft" align="right" valign="top"><a id="ga9bf337b0b65e10f85ad9cc6a9b13353a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga9bf337b0b65e10f85ad9cc6a9b13353a">PREV_TASK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ga9bf337b0b65e10f85ad9cc6a9b13353a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous task. <br /></td></tr>
+<tr class="separator:ga9bf337b0b65e10f85ad9cc6a9b13353a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafcd61110e5f4559f123c89a8e386a6be"><td class="memItemLeft" align="right" valign="top"><a id="gafcd61110e5f4559f123c89a8e386a6be"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#gafcd61110e5f4559f123c89a8e386a6be">STARTING_STATE</a>&#160;&#160;&#160;<a class="el" href="group__state.html#gaf31e063e332221a77f32d8cb7e8b5541">STATE_ONE</a></td></tr>
+<tr class="memdesc:gafcd61110e5f4559f123c89a8e386a6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial state. <br /></td></tr>
+<tr class="separator:gafcd61110e5f4559f123c89a8e386a6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga458ff10654a16a5fdcef8a96c227f59b"><td class="memItemLeft" align="right" valign="top"><a id="ga458ff10654a16a5fdcef8a96c227f59b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__state.html#ga458ff10654a16a5fdcef8a96c227f59b">STATE_DEBOUNCE_DELAY</a>&#160;&#160;&#160;300</td></tr>
+<tr class="memdesc:ga458ff10654a16a5fdcef8a96c227f59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay between state changes. <br /></td></tr>
+<tr class="separator:ga458ff10654a16a5fdcef8a96c227f59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>State Machine handling changes between tasks. </p>
 <p>This module contains a state machine task. This task is responsible for switching from one state (task) to another. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gae7b6e5543fbc66a91559d86221036415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7b6e5543fbc66a91559d86221036415">&#9670;&nbsp;</a></span>changeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void changeState </td>
+          <td>(</td>
+          <td class="paramtype">volatile uint8_t *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>forwards</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;stateMachine.c&gt;</code></p>
+
+<p>Change the state, either forwards of backwards. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">state</td><td>(uint8_t*): Current state, to be changed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">forwards</td><td>(uint8_t): Whether to change to the next or previous state. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga8f7f823233cd0eb607c45224a28f34b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8f7f823233cd0eb607c45224a28f34b7">&#9670;&nbsp;</a></span>iCheckStateInput()</h2>
 
@@ -174,6 +286,40 @@ Functions</h2></td></tr>
 
 <p>Initialize the state machine. </p>
 <dl class="section return"><dt>Returns</dt><dd>(int): 0 if initialization was successful, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga5d657fe8341ff347c37013f4c63bc30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d657fe8341ff347c37013f4c63bc30b">&#9670;&nbsp;</a></span>stateMachine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void stateMachine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;stateMachine.c&gt;</code></p>
+
+<p>Basic state machine with sequential states. </p>
+<ol type="1">
+<li>Read from <a class="el" href="group__state.html#ga5635a164d834a6b47e94808379e453a1" title="Queue Queue for the different states">StateQueue</a>, whether to switch to the next or previous task.</li>
+<li>Calculate the current state by calling <a class="el" href="group__state.html#gae7b6e5543fbc66a91559d86221036415" title="Change the state, either forwards of backwards.">changeState()</a>.</li>
+<li>Depending on the current state, resume or suspend specific tasks. </li>
+</ol>
 
 </div>
 </div>

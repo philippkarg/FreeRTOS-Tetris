@@ -1,0 +1,18 @@
+<map id="draw_job" name="draw_job">
+<area shape="rect" id="node1" title=" " alt="" coords="885,557,967,635"/>
+<area shape="rect" id="node2" href="$uniondata__u.html" title=" " alt="" coords="893,417,959,495"/>
+<area shape="rect" id="node3" href="$structpoly__data.html" title=" " alt="" coords="5,226,92,318"/>
+<area shape="rect" id="node4" href="$structellipse__data.html" title=" " alt="" coords="117,204,218,340"/>
+<area shape="rect" id="node5" href="$structscaled__image__data.html" title=" " alt="" coords="348,233,496,311"/>
+<area shape="rect" id="node6" href="$structimage__data.html" title=" " alt="" coords="238,5,337,127"/>
+<area shape="rect" id="node7" href="$structloaded__image__crop.html" title=" " alt="" coords="521,197,670,347"/>
+<area shape="rect" id="node8" href="$structline__data.html" title=" " alt="" coords="694,197,793,347"/>
+<area shape="rect" id="node9" href="$structarc__data.html" title=" " alt="" coords="817,197,896,347"/>
+<area shape="rect" id="node10" href="$structloaded__image__data.html" title=" " alt="" coords="920,226,1071,318"/>
+<area shape="rect" id="node11" href="$structtriangle__data.html" title=" " alt="" coords="1095,233,1203,311"/>
+<area shape="rect" id="node12" href="$structrect__data.html" title=" " alt="" coords="1227,204,1310,340"/>
+<area shape="rect" id="node13" href="$structarrow__data.html" title=" " alt="" coords="1334,189,1451,355"/>
+<area shape="rect" id="node14" href="$structtext__data.html" title=" " alt="" coords="1476,204,1560,340"/>
+<area shape="rect" id="node15" href="$structcircle__data.html" title=" " alt="" coords="1585,211,1678,333"/>
+<area shape="rect" id="node16" href="$structclear__data.html" title=" " alt="" coords="1702,233,1793,311"/>
+</map>

@@ -1,4 +1,5 @@
 <map id="logic.h" name="logic.h">
-<area shape="rect" id="node1" title="Header file for logic.c." alt="" coords="5,5,71,32"/>
-<area shape="rect" id="node2" href="$gui_8h.html" title="Header file for gui.c." alt="" coords="11,80,65,107"/>
+<area shape="rect" id="node1" title="Header file for logic.c." alt="" coords="32,5,97,32"/>
+<area shape="rect" id="node2" href="$gui_8h.html" title="Header file for gui.c." alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$game_8c.html" title="File containing the Game&#39;s Tasks." alt="" coords="29,155,100,181"/>
 </map>

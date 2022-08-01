@@ -140,6 +140,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ga395be01d83fdbbdca08b0d368fa55ae5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__logic.html#ga395be01d83fdbbdca08b0d368fa55ae5">vLogicRowFull</a> (<a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a> landed[<a class="el" href="group__config.html#ga3cfd3aa62338d12609f6d65bce97e9cd">ROWS</a>][<a class="el" href="group__config.html#gab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</a>], <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *<a class="el" href="structscore.html">score</a>)</td></tr>
 <tr class="memdesc:ga395be01d83fdbbdca08b0d368fa55ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check how many rows are full and remove them.  <a href="group__logic.html#ga395be01d83fdbbdca08b0d368fa55ae5">More...</a><br /></td></tr>
 <tr class="separator:ga395be01d83fdbbdca08b0d368fa55ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace75e23bae9b7f2703f3bda9e00187a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__logic.html#gace75e23bae9b7f2703f3bda9e00187a2">setTetrominoType</a> (<a class="el" href="group__logic.html#ga136fe79e97366e28afcf4811728f4ddb">tetromino_t</a> *<a class="el" href="structtetromino.html">tetromino</a>, <a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a> types[], int *index)</td></tr>
+<tr class="memdesc:gace75e23bae9b7f2703f3bda9e00187a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a Tetromino's type.  <a href="group__logic.html#gace75e23bae9b7f2703f3bda9e00187a2">More...</a><br /></td></tr>
+<tr class="separator:gace75e23bae9b7f2703f3bda9e00187a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e3ae38d2cf0daadb95c89464af56cfc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__logic.html#ga3e3ae38d2cf0daadb95c89464af56cfc">increaseScore</a> (<a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *<a class="el" href="structscore.html">score</a>, uint8_t rowsAmount)</td></tr>
+<tr class="memdesc:ga3e3ae38d2cf0daadb95c89464af56cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase score if a row is full.  <a href="group__logic.html#ga3e3ae38d2cf0daadb95c89464af56cfc">More...</a><br /></td></tr>
+<tr class="separator:ga3e3ae38d2cf0daadb95c89464af56cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a516ac9220b6d15274f41abbfced8a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__logic.html#ga6a516ac9220b6d15274f41abbfced8a7">setTetrominoShape</a> (<a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a> <a class="el" href="group__config.html#ga37dbdc30935031c05304482e1be89d8f">color</a>, <a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a> type, <a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a> shape[<a class="el" href="group__config.html#ga89bfe934f54d1bcfd98797799a7021bb">FIGURE_SIZE</a>][<a class="el" href="group__config.html#ga89bfe934f54d1bcfd98797799a7021bb">FIGURE_SIZE</a>], int rotateAmount, bool init)</td></tr>
+<tr class="memdesc:ga6a516ac9220b6d15274f41abbfced8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the shape array of the tetromino, depending on the rotation &amp; type.  <a href="group__logic.html#ga6a516ac9220b6d15274f41abbfced8a7">More...</a><br /></td></tr>
+<tr class="separator:ga6a516ac9220b6d15274f41abbfced8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Initial coordinates</h2></td></tr>
@@ -327,6 +336,175 @@ Pressed keys</h2></td></tr>
 
 </div>
 </div>
+<a id="ga3e3ae38d2cf0daadb95c89464af56cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e3ae38d2cf0daadb95c89464af56cfc">&#9670;&nbsp;</a></span>increaseScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void increaseScore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rowsAmount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;logic.c&gt;</code></p>
+
+<p>Increase score if a row is full. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">score</td><td>( <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *): Score object to change. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowsAmount</td><td>(uint8_t): NUmber of rows cleared. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6a516ac9220b6d15274f41abbfced8a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a516ac9220b6d15274f41abbfced8a7">&#9670;&nbsp;</a></span>setTetrominoShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void setTetrominoShape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a>&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a>&#160;</td>
+          <td class="paramname"><em>shape</em>[FIGURE_SIZE][FIGURE_SIZE], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rotateAmount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;logic.c&gt;</code></p>
+
+<p>Set the shape array of the tetromino, depending on the rotation &amp; type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>( <a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a>): Color of the tetromino. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>( <a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a>): Type of the tetromino. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>( <a class="el" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a> [][]): Shape array to set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rotateAmount</td><td>(int): Amount of rotation for the shape. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">init</td><td>(bool): For some Tetrominos, the shape is set differently at the start. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gace75e23bae9b7f2703f3bda9e00187a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace75e23bae9b7f2703f3bda9e00187a2">&#9670;&nbsp;</a></span>setTetrominoType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void setTetrominoType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__logic.html#ga136fe79e97366e28afcf4811728f4ddb">tetromino_t</a> *&#160;</td>
+          <td class="paramname"><em>tetromino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a>&#160;</td>
+          <td class="paramname"><em>types</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;logic.c&gt;</code></p>
+
+<p>Set a Tetromino's type. </p>
+<p>Randomly take one of the 7 possible tetromino types and reduce the number of possible types, so that every type is selected once for every seven new tetrominos. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">tetromino</td><td>( <a class="el" href="group__logic.html#ga136fe79e97366e28afcf4811728f4ddb">tetromino_t</a> *): Tetromino to set type for. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">types</td><td>( <a class="el" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a> []): Array of tetromino types. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">index</td><td>(int*): Current index of the types array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga842c4f8bf8cab9f31c90d322b1ac9244"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga842c4f8bf8cab9f31c90d322b1ac9244">&#9670;&nbsp;</a></span>vLogicAddToLanded()</h2>
 
@@ -408,7 +586,7 @@ Pressed keys</h2></td></tr>
 
 <p>Initialize a Tetromino. </p>
 <ol type="1">
-<li>Set the Tetromino's type by calling setTetrominoType().</li>
+<li>Set the Tetromino's type by calling <a class="el" href="group__logic.html#gace75e23bae9b7f2703f3bda9e00187a2" title="Set a Tetromino&#39;s type.">setTetrominoType()</a>.</li>
 <li>Set rotation</li>
 <li>Set color</li>
 <li>Init the position</li>
@@ -463,7 +641,7 @@ Pressed keys</h2></td></tr>
 <p>Rotate <code>tetromino</code>, if possible. </p>
 <ol type="1">
 <li>Increase/decrease <code>tetromino's</code> rotation counter, depending on <code>rotationMode</code>.</li>
-<li>Set <code>tetromino's</code> <a class="el" href="structtetromino.html#a6e3e92a535a14457a08955bcd0a2e956">new shape</a>, by calling setTetrominoShape().</li>
+<li>Set <code>tetromino's</code> <a class="el" href="structtetromino.html#a6e3e92a535a14457a08955bcd0a2e956">new shape</a>, by calling <a class="el" href="group__logic.html#ga6a516ac9220b6d15274f41abbfced8a7" title="Set the shape array of the tetromino, depending on the rotation &amp; type.">setTetrominoShape()</a>.</li>
 <li>Check if that new shape is possible with <a class="el" href="group__logic.html#gab402c74b2dfa7ed78e1151175a932eaa" title="Check if a move to a newPosition is possible.">bLogicCheckMove()</a>.</li>
 <li>If it is, copy the new shape to <a class="el" href="structtetromino.html#a7fb3b793160b6e7e3863ea7616961df6">the old shape</a>.</li>
 </ol>

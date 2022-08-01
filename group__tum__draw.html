@@ -219,7 +219,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tumDrawDuplicateBuffe
 <tr class="memitem:ga216ad074bf3dbb18e3ce5610ea615cef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tum__draw.html#ga216ad074bf3dbb18e3ce5610ea615cef">tumDrawArrow</a> (signed short x1, signed short y1, signed short x2, signed short y2, signed short head_length, unsigned char thickness, unsigned int colour)</td></tr>
 <tr class="memdesc:ga216ad074bf3dbb18e3ce5610ea615cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an arrow on the screen.  <a href="group__tum__draw.html#ga216ad074bf3dbb18e3ce5610ea615cef">More...</a><br /></td></tr>
 <tr class="separator:ga216ad074bf3dbb18e3ce5610ea615cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ac21e5c600b747bcbc508765d0d3ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__tum__draw.html#gaef066681601a056ed3315ce3d9b8d2ba">animation_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tum__draw.html#ga5ac21e5c600b747bcbc508765d0d3ee8">tumDrawAnimationCreate</a> (<a class="el" href="group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795">image_handle_t</a> spritesheet, unsigned sprite_cols, unsigned sprite_rows)</td></tr>
+<tr class="memitem:ga5ac21e5c600b747bcbc508765d0d3ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__tum__draw.html#gaef066681601a056ed3315ce3d9b8d2ba">animation_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tum__draw.html#ga5ac21e5c600b747bcbc508765d0d3ee8">tumDrawAnimationCreate</a> (<a class="el" href="group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795">image_handle_t</a> <a class="el" href="structspritesheet.html">spritesheet</a>, unsigned sprite_cols, unsigned sprite_rows)</td></tr>
 <tr class="memdesc:ga5ac21e5c600b747bcbc508765d0d3ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an animation object with an attached spritesheet that must be loaded prior as an image.  <a href="group__tum__draw.html#ga5ac21e5c600b747bcbc508765d0d3ee8">More...</a><br /></td></tr>
 <tr class="separator:ga5ac21e5c600b747bcbc508765d0d3ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gade3c5a085a13de1b0de1514238411a09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tum__draw.html#gade3c5a085a13de1b0de1514238411a09">tumDrawAnimationAddSequence</a> (<a class="el" href="group__tum__draw.html#gaef066681601a056ed3315ce3d9b8d2ba">animation_handle_t</a> animation, char *name, unsigned start_row, unsigned start_col, enum <a class="el" href="group__tum__draw.html#gaa566421805e9bd4491919b25e56fc8ce">sprite_sequence_direction</a> sprite_step_direction, unsigned frames)</td></tr>
@@ -939,6 +939,7 @@ Hex RGB colours</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+<p>INIT_JOB(job, DRAW_CLEAR);</p>
 
 </div>
 </div>

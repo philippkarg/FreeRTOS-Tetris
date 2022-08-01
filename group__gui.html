@@ -123,6 +123,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memitem:ga3a1305adf53cbd3febf6bb78b99929fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#ga3a1305adf53cbd3febf6bb78b99929fb">vGUISetImageHandle</a> (<a class="el" href="group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795">image_handle_t</a> squares[])</td></tr>
 <tr class="memdesc:ga3a1305adf53cbd3febf6bb78b99929fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes an <a class="el" href="group__tum__draw.html#gac6a2817cea43f79996e1373bbe8e1795">image_handle_t</a> array &amp; initializes it with the correct images.  <a href="group__gui.html#ga3a1305adf53cbd3febf6bb78b99929fb">More...</a><br /></td></tr>
 <tr class="separator:ga3a1305adf53cbd3febf6bb78b99929fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2cdd004ca66305a4b46f82ab96207b6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#gad2cdd004ca66305a4b46f82ab96207b6">checkDraw</a> (uint8_t status, const char *msg)</td></tr>
+<tr class="memdesc:gad2cdd004ca66305a4b46f82ab96207b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check ifdrawing possible.  <a href="group__gui.html#gad2cdd004ca66305a4b46f82ab96207b6">More...</a><br /></td></tr>
+<tr class="separator:gad2cdd004ca66305a4b46f82ab96207b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga144a5acc7a19e4025f059bb14cd66495"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#ga144a5acc7a19e4025f059bb14cd66495">drawUserNameSelection</a> (<a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *<a class="el" href="structscore.html">score</a>, char *lastUserName)</td></tr>
+<tr class="memdesc:ga144a5acc7a19e4025f059bb14cd66495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the User-Name selection.  <a href="group__gui.html#ga144a5acc7a19e4025f059bb14cd66495">More...</a><br /></td></tr>
+<tr class="separator:ga144a5acc7a19e4025f059bb14cd66495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga558dbd77f2d324ab926e4b0fd1f3bd1a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#ga558dbd77f2d324ab926e4b0fd1f3bd1a">drawHighScores</a> (const <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> highScores[])</td></tr>
+<tr class="memdesc:ga558dbd77f2d324ab926e4b0fd1f3bd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the three hightest scores.  <a href="group__gui.html#ga558dbd77f2d324ab926e4b0fd1f3bd1a">More...</a><br /></td></tr>
+<tr class="separator:ga558dbd77f2d324ab926e4b0fd1f3bd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadefb9e0f35ae981bdfb1c70e686566a5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#gadefb9e0f35ae981bdfb1c70e686566a5">drawGameModes</a> (<a class="el" href="group__config.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a> currentMode)</td></tr>
+<tr class="memdesc:gadefb9e0f35ae981bdfb1c70e686566a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the available game modes.  <a href="group__gui.html#gadefb9e0f35ae981bdfb1c70e686566a5">More...</a><br /></td></tr>
+<tr class="separator:gadefb9e0f35ae981bdfb1c70e686566a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6336c0add0dac720cf9b1bf54182af16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gui.html#ga6336c0add0dac720cf9b1bf54182af16">drawText</a> (char *str, int16_t x, int16_t y, uint32_t <a class="el" href="group__config.html#ga37dbdc30935031c05304482e1be89d8f">color</a>)</td></tr>
+<tr class="memdesc:ga6336c0add0dac720cf9b1bf54182af16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text on the screen.  <a href="group__gui.html#ga6336c0add0dac720cf9b1bf54182af16">More...</a><br /></td></tr>
+<tr class="separator:ga6336c0add0dac720cf9b1bf54182af16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Widths &amp; heights for the individual mode texts on the display.</h2></td></tr>
@@ -267,6 +282,233 @@ Widths &amp; heights for the individual mode texts on the display.</h2></td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>(bool): Whether the rotation-mode changed. </dd></dl>
+
+</div>
+</div>
+<a id="gad2cdd004ca66305a4b46f82ab96207b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2cdd004ca66305a4b46f82ab96207b6">&#9670;&nbsp;</a></span>checkDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkDraw </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;gui.c&gt;</code></p>
+
+<p>Check ifdrawing possible. </p>
+<p>Checks if tumDrawing functions return 0 (success) or 1 (failure) and sends and error message in case of failure. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>(uint8_t): Function to check. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>(const char *): Error message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadefb9e0f35ae981bdfb1c70e686566a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadefb9e0f35ae981bdfb1c70e686566a5">&#9670;&nbsp;</a></span>drawGameModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawGameModes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__config.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a>&#160;</td>
+          <td class="paramname"><em>currentMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;gui.c&gt;</code></p>
+
+<p>Draw the available game modes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">currentMode</td><td>( <a class="el" href="group__config.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a>): Currently selected game mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga558dbd77f2d324ab926e4b0fd1f3bd1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga558dbd77f2d324ab926e4b0fd1f3bd1a">&#9670;&nbsp;</a></span>drawHighScores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawHighScores </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a>&#160;</td>
+          <td class="paramname"><em>highScores</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;gui.c&gt;</code></p>
+
+<p>Draw the three hightest scores. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">highScores</td><td>(const <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> []): Sorted highscores array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6336c0add0dac720cf9b1bf54182af16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6336c0add0dac720cf9b1bf54182af16">&#9670;&nbsp;</a></span>drawText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawText </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;gui.c&gt;</code></p>
+
+<p>Draw text on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>(char *): Text to draw. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>(int16_t): X-coordianate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>(int16_t): Y-coordinate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>(uint32_t): Color (HEX). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga144a5acc7a19e4025f059bb14cd66495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga144a5acc7a19e4025f059bb14cd66495">&#9670;&nbsp;</a></span>drawUserNameSelection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawUserNameSelection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>lastUserName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;gui.c&gt;</code></p>
+
+<p>Draw the User-Name selection. </p>
+<p>Function that draws &amp; lets the player select one of 6 usernames. Usernames are defined in the <a class="el" href="group__config.html">Config module</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">score</td><td>(const <a class="el" href="group__logic.html#ga8723207078350417f120e35862f7930a">score_t</a> *): Scores to draw. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lastUserName</td><td>(char*): Selected User-Name. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

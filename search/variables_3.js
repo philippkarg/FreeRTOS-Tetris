@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['dampening_569',['dampening',['../structwall.html#a0df1f1235ac720d52262b2826440ff72',1,'wall']]],
-  ['dx_570',['dx',['../structball.html#a002d4264923596f8336536208a98950d',1,'ball']]],
-  ['dy_571',['dy',['../structball.html#ae53b7696a6db67e8198272e682dd1243',1,'ball']]]
+  ['dampening_758',['dampening',['../structwall.html#a0df1f1235ac720d52262b2826440ff72',1,'wall']]],
+  ['delayatgroundtimer_759',['DelayAtGroundTimer',['../group__game.html#gaf0f39057a5449286d20e005c848ddd97',1,'game.c']]],
+  ['drawsignal_760',['DrawSignal',['../group__game.html#ga0a7fc4a73a5c65e216cd12f0b5809c0f',1,'DrawSignal():&#160;game.c'],['../group__game.html#ga0a7fc4a73a5c65e216cd12f0b5809c0f',1,'DrawSignal():&#160;game.c']]],
+  ['dx_761',['dx',['../structball.html#a002d4264923596f8336536208a98950d',1,'ball']]],
+  ['dy_762',['dy',['../structball.html#ae53b7696a6db67e8198272e682dd1243',1,'ball']]]
 ];

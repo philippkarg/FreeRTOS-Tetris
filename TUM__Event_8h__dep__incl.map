@@ -1,6 +1,7 @@
 <map id="TUM_Event.h" name="TUM_Event.h">
-<area shape="rect" id="node1" title="Utilities required by other TUM_XXX files." alt="" coords="176,5,284,32"/>
+<area shape="rect" id="node1" title="Utilities required by other TUM_XXX files." alt="" coords="241,5,349,32"/>
 <area shape="rect" id="node2" href="$tetrisConfig_8h.html" title="File containing some game configurations." alt="" coords="175,80,285,107"/>
+<area shape="rect" id="node9" href="$TUM__Event_8c.html" title="Utilities required by other TUM_XXX files." alt="" coords="309,80,415,107"/>
 <area shape="rect" id="node3" href="$game_8h.html" title="Header file for game.c." alt="" coords="5,155,76,181"/>
 <area shape="rect" id="node4" href="$gui_8h.html" title="Header file for gui.c." alt="" coords="121,229,176,256"/>
 <area shape="rect" id="node5" href="$logic_8h.html" title="Header file for logic.c." alt="" coords="152,155,217,181"/>

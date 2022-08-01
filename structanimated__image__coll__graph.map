@@ -1,0 +1,6 @@
+<map id="animated_image" name="animated_image">
+<area shape="rect" id="node1" title=" " alt="" coords="85,476,217,553"/>
+<area shape="rect" id="node2" href="$structspritesheet.html" title=" " alt="" coords="5,285,128,406"/>
+<area shape="rect" id="node3" href="$structloaded__image.html" title=" " alt="" coords="5,5,128,215"/>
+<area shape="rect" id="node4" href="$structspritesheet__sequence.html" title=" " alt="" coords="153,277,317,413"/>
+</map>

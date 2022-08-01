@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['coord_394',['coord',['../structcoord.html',1,'']]],
-  ['corcoroutinecontrolblock_395',['corCoRoutineControlBlock',['../structcorCoRoutineControlBlock.html',1,'']]]
+  ['ball_517',['ball',['../structball.html',1,'']]],
+  ['buttons_5fbuffer_518',['buttons_buffer',['../structbuttons__buffer.html',1,'']]]
 ];

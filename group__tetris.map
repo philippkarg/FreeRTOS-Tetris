@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" href="$group__gui.html" title="Module handling the Graphical User Interface." alt="" coords="203,5,302,31"/>
 <area shape="rect" id="node2" href="$group__logic.html" title="Module handling the logic components of the game." alt="" coords="199,55,307,80"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,153,121,179"/>
-<area shape="rect" id="node4" href="$group__game.html" title="Module that contains the primary game functionality." alt="" coords="177,104,328,129"/>
+<area shape="rect" id="node4" href="$group__game.html" title="Module that contains the primary game functionality." alt="" coords="178,104,327,129"/>
 <area shape="rect" id="node5" href="$group__input.html" title="Module handling any interactions with keyboard or mouse inputs." alt="" coords="199,153,306,179"/>
 <area shape="rect" id="node6" href="$group__opponent.html" title="Module handling incoming/outgoing messages to an &quot;oppnent&quot;." alt="" coords="184,203,321,228"/>
 <area shape="rect" id="node7" href="$group__state.html" title="State Machine handling changes between tasks." alt="" coords="169,252,336,277"/>

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['aiocloseconn_432',['aIOCloseConn',['../group__aio__comms.html#gaf9055178cf96eb0ea533670f2bea8f45',1,'AsyncIO.h']]],
-  ['aiodeinit_433',['aIODeinit',['../group__aio__comms.html#ga8e27c7e86259d74e9483118287482aa0',1,'AsyncIO.h']]],
-  ['aiomessagequeueput_434',['aIOMessageQueuePut',['../group__aio__comms.html#ga3383aeeb2ad84918a13481fe4630f0d8',1,'AsyncIO.h']]],
-  ['aioopenmessagequeue_435',['aIOOpenMessageQueue',['../group__aio__comms.html#ga8c51de534fee978fc9e44b78f93d180d',1,'AsyncIO.h']]],
-  ['aioopentcpsocket_436',['aIOOpenTCPSocket',['../group__aio__comms.html#gac1c270d38d69f192a5ca26a176f7a61e',1,'AsyncIO.h']]],
-  ['aioopenudpsocket_437',['aIOOpenUDPSocket',['../group__aio__comms.html#ga755d912ba9b4cf6dfc92d73a6c833519',1,'AsyncIO.h']]],
-  ['aiosocketput_438',['aIOSocketPut',['../group__aio__comms.html#ga2479aee5414c3adfb0de63246ebea795',1,'AsyncIO.h']]]
+  ['aiocloseconn_594',['aIOCloseConn',['../group__aio__comms.html#gaf9055178cf96eb0ea533670f2bea8f45',1,'aIOCloseConn(aIO_handle_t conn):&#160;AsyncIO.c'],['../group__aio__comms.html#gaf9055178cf96eb0ea533670f2bea8f45',1,'aIOCloseConn(aIO_handle_t conn):&#160;AsyncIO.c']]],
+  ['aiodeinit_595',['aIODeinit',['../group__aio__comms.html#ga8e27c7e86259d74e9483118287482aa0',1,'aIODeinit(void):&#160;AsyncIO.c'],['../group__aio__comms.html#ga8e27c7e86259d74e9483118287482aa0',1,'aIODeinit(void):&#160;AsyncIO.c']]],
+  ['aiomessagequeueput_596',['aIOMessageQueuePut',['../group__aio__comms.html#ga3383aeeb2ad84918a13481fe4630f0d8',1,'aIOMessageQueuePut(char *mq_name, char *buffer):&#160;AsyncIO.c'],['../group__aio__comms.html#ga3383aeeb2ad84918a13481fe4630f0d8',1,'aIOMessageQueuePut(char *mq_name, char *buffer):&#160;AsyncIO.c']]],
+  ['aiomqsighandler_597',['aIOMQSigHandler',['../AsyncIO_8c.html#ac0e7ad372f5b99a27720143d418c400b',1,'AsyncIO.c']]],
+  ['aioopenmessagequeue_598',['aIOOpenMessageQueue',['../AsyncIO_8c.html#a51be7919084405caf07396a9cced11f2',1,'aIOOpenMessageQueue(char *name, long max_msg_num, long max_msg_size, void(*callback)(size_t, char *, void *), void *args):&#160;AsyncIO.c'],['../group__aio__comms.html#ga8c51de534fee978fc9e44b78f93d180d',1,'aIOOpenMessageQueue(char *name, long max_msg_num, long max_msg_size, aIO_callback_t callback, void *args):&#160;AsyncIO.h']]],
+  ['aioopentcpsocket_599',['aIOOpenTCPSocket',['../AsyncIO_8c.html#ad3eb64180b561117adf84403b1cc130c',1,'aIOOpenTCPSocket(char *s_addr, in_port_t port, size_t buffer_size, void(*callback)(size_t, char *, void *), void *args):&#160;AsyncIO.c'],['../group__aio__comms.html#gac1c270d38d69f192a5ca26a176f7a61e',1,'aIOOpenTCPSocket(char *s_addr, in_port_t port, size_t buffer_size, aIO_callback_t callback, void *args):&#160;AsyncIO.h']]],
+  ['aioopenudpsocket_600',['aIOOpenUDPSocket',['../group__aio__comms.html#ga755d912ba9b4cf6dfc92d73a6c833519',1,'AsyncIO.h']]],
+  ['aiosocketput_601',['aIOSocketPut',['../group__aio__comms.html#ga2479aee5414c3adfb0de63246ebea795',1,'aIOSocketPut(aIO_socket_e protocol, char *s_addr, in_port_t port, char *buffer, size_t buffer_size):&#160;AsyncIO.c'],['../group__aio__comms.html#ga2479aee5414c3adfb0de63246ebea795',1,'aIOSocketPut(aIO_socket_e protocol, char *s_addr, in_port_t port, char *buffer, size_t buffer_size):&#160;AsyncIO.c']]]
 ];

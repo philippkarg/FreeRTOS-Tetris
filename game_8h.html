@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for game.c.  
+<p>Header file for <a class="el" href="game_8c.html" title="File containing the Game&#39;s Tasks.">game.c</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="tetrisConfig_8h_source.html">tetrisConfig.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -107,6 +107,15 @@ Include dependency graph for game.h:</div>
 <area shape="rect" href="enum_8h.html" title="File containing all global enumerations." alt="" coords="1960,155,2031,181"/>
 </map>
 </div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8h__dep__incl.png" border="0" usemap="#game_8hdep" alt=""/></div>
+<map name="game_8hdep" id="game_8hdep">
+<area shape="rect" title="Header file for game.c." alt="" coords="5,5,76,32"/>
+<area shape="rect" href="game_8c.html" title="File containing the Game&#39;s Tasks." alt="" coords="5,80,76,107"/>
+</map>
+</div>
 </div>
 <p><a href="game_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,45 +133,57 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a215063f255bc753a0acb41aba47894da"><td class="memItemLeft" align="right" valign="top"><a id="a215063f255bc753a0acb41aba47894da"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>MainMenuTask</b></td></tr>
-<tr class="separator:a215063f255bc753a0acb41aba47894da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae39db714a1a294ee98ea33804b3760"><td class="memItemLeft" align="right" valign="top"><a id="afae39db714a1a294ee98ea33804b3760"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>GameTask</b></td></tr>
-<tr class="separator:afae39db714a1a294ee98ea33804b3760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memItemLeft" align="right" valign="top"><a id="a490b4b9435b72080f06bf0ca4ef3b2f0"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>PauseTask</b></td></tr>
-<tr class="separator:a490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e503a50ab629bbd723a22b6cd8148a1"><td class="memItemLeft" align="right" valign="top"><a id="a1e503a50ab629bbd723a22b6cd8148a1"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ScoreTask</b></td></tr>
-<tr class="separator:a1e503a50ab629bbd723a22b6cd8148a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99ee110cf7bf0643a0f13222c19c5b78"><td class="memItemLeft" align="right" valign="top"><a id="a99ee110cf7bf0643a0f13222c19c5b78"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionQueue</b></td></tr>
-<tr class="separator:a99ee110cf7bf0643a0f13222c19c5b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb1026a4a6d5fb815b54cc60489e366d"><td class="memItemLeft" align="right" valign="top"><a id="aeb1026a4a6d5fb815b54cc60489e366d"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>GameModeQueue</b></td></tr>
-<tr class="separator:aeb1026a4a6d5fb815b54cc60489e366d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2954b5ccae63e952fecce2ed70fb3640"><td class="memItemLeft" align="right" valign="top"><a id="a2954b5ccae63e952fecce2ed70fb3640"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>TetrominoQueue</b></td></tr>
-<tr class="separator:a2954b5ccae63e952fecce2ed70fb3640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e09f2085c337016bfa9d484d8b8a9bd"><td class="memItemLeft" align="right" valign="top"><a id="a7e09f2085c337016bfa9d484d8b8a9bd"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenLock</b></td></tr>
-<tr class="separator:a7e09f2085c337016bfa9d484d8b8a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a7fc4a73a5c65e216cd12f0b5809c0f"><td class="memItemLeft" align="right" valign="top"><a id="a0a7fc4a73a5c65e216cd12f0b5809c0f"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>DrawSignal</b></td></tr>
-<tr class="separator:a0a7fc4a73a5c65e216cd12f0b5809c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070875c0006906cad26b4f9f48fac972"><td class="memItemLeft" align="right" valign="top"><a id="a070875c0006906cad26b4f9f48fac972"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ResetGameSignal</b></td></tr>
-<tr class="separator:a070875c0006906cad26b4f9f48fac972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a695fb2241e9c15ec6b6efa12b96bae9b"><td class="memItemLeft" align="right" valign="top"><a id="a695fb2241e9c15ec6b6efa12b96bae9b"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ResetUDPSignal</b></td></tr>
-<tr class="separator:a695fb2241e9c15ec6b6efa12b96bae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa458c4ae442f2b588edaad1d0769fcad"><td class="memItemLeft" align="right" valign="top"><a id="aa458c4ae442f2b588edaad1d0769fcad"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>NoConnectionSignal</b></td></tr>
-<tr class="separator:aa458c4ae442f2b588edaad1d0769fcad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga215063f255bc753a0acb41aba47894da"><td class="memItemLeft" align="right" valign="top">
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga215063f255bc753a0acb41aba47894da">MainMenuTask</a></td></tr>
+<tr class="memdesc:ga215063f255bc753a0acb41aba47894da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Main Menu Task <br /></td></tr>
+<tr class="separator:ga215063f255bc753a0acb41aba47894da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafae39db714a1a294ee98ea33804b3760"><td class="memItemLeft" align="right" valign="top">
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gafae39db714a1a294ee98ea33804b3760">GameTask</a></td></tr>
+<tr class="memdesc:gafae39db714a1a294ee98ea33804b3760"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Game Task <br /></td></tr>
+<tr class="separator:gafae39db714a1a294ee98ea33804b3760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memItemLeft" align="right" valign="top">
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga490b4b9435b72080f06bf0ca4ef3b2f0">PauseTask</a></td></tr>
+<tr class="memdesc:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Pause Task <br /></td></tr>
+<tr class="separator:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="memItemLeft" align="right" valign="top">
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga1e503a50ab629bbd723a22b6cd8148a1">ScoreTask</a></td></tr>
+<tr class="memdesc:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Score Task <br /></td></tr>
+<tr class="separator:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="memItemLeft" align="right" valign="top">
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga99ee110cf7bf0643a0f13222c19c5b78">ConnectionQueue</a></td></tr>
+<tr class="memdesc:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the connection status <br /></td></tr>
+<tr class="separator:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="memItemLeft" align="right" valign="top">
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaeb1026a4a6d5fb815b54cc60489e366d">GameModeQueue</a></td></tr>
+<tr class="memdesc:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the game mode <br /></td></tr>
+<tr class="separator:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2954b5ccae63e952fecce2ed70fb3640"><td class="memItemLeft" align="right" valign="top">
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__opponent.html#ga2954b5ccae63e952fecce2ed70fb3640">TetrominoQueue</a></td></tr>
+<tr class="memdesc:ga2954b5ccae63e952fecce2ed70fb3640"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for receiving tetromino types from opponent <br /></td></tr>
+<tr class="separator:ga2954b5ccae63e952fecce2ed70fb3640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e09f2085c337016bfa9d484d8b8a9bd"><td class="memItemLeft" align="right" valign="top">
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga7e09f2085c337016bfa9d484d8b8a9bd">ScreenLock</a></td></tr>
+<tr class="memdesc:ga7e09f2085c337016bfa9d484d8b8a9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__SemaphoreHandle__t.html">Semaphore</a> for locking the screen <br /></td></tr>
+<tr class="separator:ga7e09f2085c337016bfa9d484d8b8a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a7fc4a73a5c65e216cd12f0b5809c0f"><td class="memItemLeft" align="right" valign="top">
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga0a7fc4a73a5c65e216cd12f0b5809c0f">DrawSignal</a></td></tr>
+<tr class="memdesc:ga0a7fc4a73a5c65e216cd12f0b5809c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__SemaphoreHandle__t.html">Signal</a> for drawing <br /></td></tr>
+<tr class="separator:ga0a7fc4a73a5c65e216cd12f0b5809c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga070875c0006906cad26b4f9f48fac972"><td class="memItemLeft" align="right" valign="top">
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga070875c0006906cad26b4f9f48fac972">ResetGameSignal</a></td></tr>
+<tr class="memdesc:ga070875c0006906cad26b4f9f48fac972"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__SemaphoreHandle__t.html">Signal</a> for resetting the game <br /></td></tr>
+<tr class="separator:ga070875c0006906cad26b4f9f48fac972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga695fb2241e9c15ec6b6efa12b96bae9b"><td class="memItemLeft" align="right" valign="top">
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga695fb2241e9c15ec6b6efa12b96bae9b">ResetUDPSignal</a></td></tr>
+<tr class="memdesc:ga695fb2241e9c15ec6b6efa12b96bae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__SemaphoreHandle__t.html">Signal</a> for resetting the UDP socket <br /></td></tr>
+<tr class="separator:ga695fb2241e9c15ec6b6efa12b96bae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa458c4ae442f2b588edaad1d0769fcad"><td class="memItemLeft" align="right" valign="top">
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaa458c4ae442f2b588edaad1d0769fcad">NoConnectionSignal</a></td></tr>
+<tr class="memdesc:gaa458c4ae442f2b588edaad1d0769fcad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__SemaphoreHandle__t.html">Signal</a> if the binary is not connected <br /></td></tr>
+<tr class="separator:gaa458c4ae442f2b588edaad1d0769fcad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for game.c. </p>
+<div class="textblock"><p>Header file for <a class="el" href="game_8c.html" title="File containing the Game&#39;s Tasks.">game.c</a>. </p>
 <dl class="section author"><dt>Authors</dt><dd>Philipp Karg (<a href="#" onclick="location.href='mai'+'lto:'+'phi'+'li'+'pp.'+'ka'+'rg@'+'tu'+'m.d'+'e'; return false;">phili<span style="display: none;">.nosp@m.</span>pp.k<span style="display: none;">.nosp@m.</span>arg@t<span style="display: none;">.nosp@m.</span>um.d<span style="display: none;">.nosp@m.</span>e</a>)</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>04.02.2021 </dd></dl>
 </div></div><!-- contents -->

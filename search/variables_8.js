@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fspeed_579',['max_speed',['../structball.html#a16bf50c1bc289aabb819dc8ddeb7057b',1,'ball']]]
+  ['initnextsignal_773',['InitNextSignal',['../group__game.html#ga80247a06f4a72590404c24bd5d8d0715',1,'game.c']]]
 ];

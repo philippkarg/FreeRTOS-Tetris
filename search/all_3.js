@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['dampening_50',['dampening',['../structwall.html#a0df1f1235ac720d52262b2826440ff72',1,'wall']]],
-  ['debounce_5fbutton_51',['debounce_button',['../structdebounce__button.html',1,'']]],
-  ['debounce_5fbutton_5ft_52',['debounce_button_t',['../group__input.html#ga9ea12c4389866b28c81eac49c3eda5b9',1,'input.h']]],
-  ['default_5ffont_53',['DEFAULT_FONT',['../group__config.html#ga0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;EmulatorConfig.h'],['../group__tum__font.html#ga0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;TUM_Font.h']]],
-  ['default_5ffont_5fsize_54',['DEFAULT_FONT_SIZE',['../group__config.html#gacde9ec8712f62632c6a8fcacfe6800c4',1,'DEFAULT_FONT_SIZE():&#160;EmulatorConfig.h'],['../group__tum__font.html#gacde9ec8712f62632c6a8fcacfe6800c4',1,'DEFAULT_FONT_SIZE():&#160;TUM_Font.h']]],
-  ['down_5fpressed_55',['DOWN_PRESSED',['../group__logic.html#ga94a2aaf4b42336cba02cf06e8354e034',1,'logic.h']]],
-  ['dx_56',['dx',['../structball.html#a002d4264923596f8336536208a98950d',1,'ball']]],
-  ['dy_57',['dy',['../structball.html#ae53b7696a6db67e8198272e682dd1243',1,'ball']]]
+  ['dampening_69',['dampening',['../structwall.html#a0df1f1235ac720d52262b2826440ff72',1,'wall']]],
+  ['data_5fu_70',['data_u',['../uniondata__u.html',1,'']]],
+  ['debounce_5fbutton_71',['debounce_button',['../structdebounce__button.html',1,'']]],
+  ['debounce_5fbutton_5ft_72',['debounce_button_t',['../group__input.html#ga9ea12c4389866b28c81eac49c3eda5b9',1,'input.h']]],
+  ['default_5ffont_73',['DEFAULT_FONT',['../group__config.html#ga0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;EmulatorConfig.h'],['../group__tum__font.html#ga0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;TUM_Font.h']]],
+  ['default_5ffont_5fsize_74',['DEFAULT_FONT_SIZE',['../group__config.html#gacde9ec8712f62632c6a8fcacfe6800c4',1,'DEFAULT_FONT_SIZE():&#160;EmulatorConfig.h'],['../group__tum__font.html#gacde9ec8712f62632c6a8fcacfe6800c4',1,'DEFAULT_FONT_SIZE():&#160;TUM_Font.h']]],
+  ['delay_5fat_5fbottom_75',['DELAY_AT_BOTTOM',['../game_8c.html#ab1cb095ecfbbfa8035a9f5176a45a9ae',1,'game.c']]],
+  ['delayatbottomtimercallback_76',['delayAtBottomTimerCallback',['../group__game.html#ga5fc2cc66a3fafdd978e1f75eae4e9cac',1,'game.c']]],
+  ['delayatgroundtimer_77',['DelayAtGroundTimer',['../group__game.html#gaf0f39057a5449286d20e005c848ddd97',1,'game.c']]],
+  ['down_5fpressed_78',['DOWN_PRESSED',['../group__logic.html#ga94a2aaf4b42336cba02cf06e8354e034',1,'logic.h']]],
+  ['draw_5fjob_79',['draw_job',['../structdraw__job.html',1,'']]],
+  ['drawgamemodes_80',['drawGameModes',['../group__gui.html#gadefb9e0f35ae981bdfb1c70e686566a5',1,'gui.c']]],
+  ['drawhighscores_81',['drawHighScores',['../group__gui.html#ga558dbd77f2d324ab926e4b0fd1f3bd1a',1,'gui.c']]],
+  ['drawsignal_82',['DrawSignal',['../group__game.html#ga0a7fc4a73a5c65e216cd12f0b5809c0f',1,'DrawSignal():&#160;game.c'],['../group__game.html#ga0a7fc4a73a5c65e216cd12f0b5809c0f',1,'DrawSignal():&#160;game.c']]],
+  ['drawtext_83',['drawText',['../group__gui.html#ga6336c0add0dac720cf9b1bf54182af16',1,'gui.c']]],
+  ['drawusernameselection_84',['drawUserNameSelection',['../group__gui.html#ga144a5acc7a19e4025f059bb14cd66495',1,'gui.c']]],
+  ['dx_85',['dx',['../structball.html#a002d4264923596f8336536208a98950d',1,'ball']]],
+  ['dy_86',['dy',['../structball.html#ae53b7696a6db67e8198272e682dd1243',1,'ball']]]
 ];

@@ -1,0 +1,4 @@
+<map id="walls" name="walls">
+<area shape="rect" id="node1" title=" " alt="" coords="7,277,114,355"/>
+<area shape="rect" id="node2" href="$structwall.html" title="Object to represent a wall that balls bounce off of." alt="" coords="5,5,116,215"/>
+</map>

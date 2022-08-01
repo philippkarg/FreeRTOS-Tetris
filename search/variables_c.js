@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['score_588',['score',['../structscore.html#aa1a2eb60300b3476ff7ee41922f43e4b',1,'score']]],
-  ['shape_589',['shape',['../structtetromino.html#a7fb3b793160b6e7e3863ea7616961df6',1,'tetromino']]]
+  ['pausetask_786',['PauseTask',['../group__game.html#ga490b4b9435b72080f06bf0ca4ef3b2f0',1,'PauseTask():&#160;game.c'],['../group__game.html#ga490b4b9435b72080f06bf0ca4ef3b2f0',1,'PauseTask():&#160;game.c']]],
+  ['pctaskname_787',['pcTaskName',['../structxTASK__STATUS.html#ad272663e2560bd9ea088384a39ba6192',1,'xTASK_STATUS']]],
+  ['playermodequeue_788',['PlayerModeQueue',['../group__game.html#ga741ddb5d9d35c6adc3b66022cf678368',1,'game.c']]],
+  ['position_789',['position',['../structtetromino.html#a813ee0fd70aca88f57a83db53c5ccdf1',1,'tetromino']]],
+  ['posupdatetimer_790',['PosUpdateTimer',['../group__game.html#ga6f00ade6863d7c9c9707f5abec4860d5',1,'game.c']]],
+  ['prevstatesignal_791',['prevStateSignal',['../group__state.html#ga0814a201d6d504fa8d7797a53e5e45e9',1,'prevStateSignal():&#160;stateMachine.c'],['../group__state.html#ga0814a201d6d504fa8d7797a53e5e45e9',1,'prevStateSignal():&#160;stateMachine.c']]],
+  ['pxstackbase_792',['pxStackBase',['../structxTASK__STATUS.html#a0ee59674d2cc57d3a5a29c777d5452ed',1,'xTASK_STATUS']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['laststate_576',['lastState',['../structdebounce__button.html#a3f52949ce16e5da234430f4847a26512',1,'debounce_button']]],
-  ['level_577',['level',['../structscore.html#adf292c74d53616328d6a14c9ebb98b60',1,'score']]],
-  ['lock_578',['lock',['../structbuttons__buffer.html#a3cc09271c98f4ba05a8045e488a3ae60',1,'buttons_buffer']]]
+  ['h_770',['h',['../structwall.html#af16fe2353d45c7abf2152fdae053fbbd',1,'wall']]],
+  ['handleudp_771',['HandleUDP',['../group__opponent.html#ga0e9e0e7d465ccd1462c0bd24750dca02',1,'opponent.c']]],
+  ['highscoresqueue_772',['HighScoresQueue',['../group__game.html#gaea49840ec771aae0bd549870ed69eed4',1,'game.c']]]
 ];
