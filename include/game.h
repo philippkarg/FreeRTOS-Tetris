@@ -7,7 +7,7 @@
  */
 
 /*!
- * \defgroup game Main Game module
+ * \defgroup game Main Game Module
  * \ingroup tetris
  * \brief Module that contains the primary game functionality
  * 
