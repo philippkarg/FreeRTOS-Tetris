@@ -3,35 +3,35 @@
 // **********************************************************************************
 // Forward Declarations *************************************************************
 // **********************************************************************************
-/*!
- * \ingroup logic
- * \brief Set a Tetromino's type.
+/**
+ * @ingroup logic
+ * @brief Set a Tetromino's type.
  *
  * Randomly take one of the 7 possible tetromino types 
  * and reduce the number of possible types, 
  * so that every type is selected once for every seven new tetrominos.
- * \param[out] tetromino ( \ref tetromino_t *): Tetromino to set type for.
- * \param[inout] types ( \ref tetromino_type_t []): Array of tetromino types.
- * \param[inout] index (int*): Current index of the types array.
+ * @param[out] tetromino ( @ref tetromino_t *): Tetromino to set type for.
+ * @param[inout] types ( @ref tetromino_type_t []): Array of tetromino types.
+ * @param[inout] index (int*): Current index of the types array.
  */
 static void setTetrominoType(tetromino_t *tetromino, tetromino_type_t types[], int *index);
 
-/*!
- * \ingroup logic
- * \brief Increase score if a row is full.
- * \param[in] score ( \ref score_t *): Score object to change. 
- * \param[in] rowsAmount (uint8_t): NUmber of rows cleared. 
+/**
+ * @ingroup logic
+ * @brief Increase score if a row is full.
+ * @param[in] score ( @ref score_t *): Score object to change. 
+ * @param[in] rowsAmount (uint8_t): NUmber of rows cleared. 
  */
 static void increaseScore(score_t *score, uint8_t rowsAmount);
 
-/*!
- * \ingroup logic
- * \brief Set the shape array of the tetromino, depending on the rotation & type.
- * \param[in] color ( \ref color_t): Color of the tetromino.
- * \param[in] type ( \ref tetromino_type_t): Type of the tetromino. 
- * \param[in] shape ( \ref color_t [][]): Shape array to set.
- * \param[in] rotateAmount (int): Amount of rotation for the shape. 
- * \param[in] init (bool): For some Tetrominos, the shape is set differently at the start. 
+/**
+ * @ingroup logic
+ * @brief Set the shape array of the tetromino, depending on the rotation & type.
+ * @param[in] color ( @ref color_t): Color of the tetromino.
+ * @param[in] type ( @ref tetromino_type_t): Type of the tetromino. 
+ * @param[in] shape ( @ref color_t [][]): Shape array to set.
+ * @param[in] rotateAmount (int): Amount of rotation for the shape. 
+ * @param[in] init (bool): For some Tetrominos, the shape is set differently at the start. 
  */
 static void setTetrominoShape(  color_t color, 
                                 tetromino_type_t type, 
@@ -180,7 +180,7 @@ bool bLogicUpdateYCoord(tetromino_t *tetromino, const color_t landed[ROWS][COLS]
 
 void vLogicRotate(tetromino_t *tetromino, const color_t landed[ROWS][COLS], rotation_t rotationMode)
 {
-    // Increase/deacrease Tetromino's rotation counter, depending on the rotation mode
+    // Increase/decrease Tetromino's rotation counter, depending on the rotation mode
     int rotation = tetromino->rotation;
     if(rotationMode == LEFT)
     {
@@ -206,10 +206,8 @@ void vLogicRotate(tetromino_t *tetromino, const color_t landed[ROWS][COLS], rota
 
 void vLogicAddToLanded(const tetromino_t *tetromino, color_t landed[ROWS][COLS])
 {
-    for(int row=0; row<SIZEARR(tetromino->shape); row++)
-    {
-        for(int col=0; col<SIZEARR(tetromino->shape[row]); col++)
-        {
+    for(int row=0; row<FIGURE_SIZE; row++)
+        for(int col=0; col<FIGURE_SIZE; col++)
             if(tetromino->shape[row][col] != EMPTY_SPACE)
             {
                 // The landed array's rows start at the bottom of the window
@@ -218,8 +216,6 @@ void vLogicAddToLanded(const tetromino_t *tetromino, color_t landed[ROWS][COLS])
                 uint16_t colIndex = col + tetromino->position.x;
                 landed[rowIndex][colIndex] = tetromino->shape[row][col]; 
             }
-        }
-    }
 }
 
 bool vLogicRowFull(color_t landed[ROWS][COLS], score_t *score)
@@ -231,13 +227,11 @@ bool vLogicRowFull(color_t landed[ROWS][COLS], score_t *score)
     {
         bool rowFull = true;
         for(int col=0; col<COLS; col++)
-        {
             if(landed[row][col] == EMPTY_SPACE)
             {
                 rowFull = false;
                 break;
             }
-        }
         // If the row is indeed full, the rows above are shifted down
         if(rowFull)
         {
@@ -276,7 +270,9 @@ static void increaseScore(score_t *score, uint8_t rowsAmount)
             break;
         case 4: 
             score->score += (score->level+1)*1200;
-            break;    
+            break;
+        default:
+            break;
     }
 
     // For each 10 rows cleared, increase the level

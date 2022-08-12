@@ -1,9 +1,11 @@
-/*!
- * \file gui.h
- * \authors Philipp Karg (philipp.karg@tum.de)
+/**
+ * @file gui.h
  * 
- * \brief Header file for gui.c.
- * \date 04.02.2021
+ * @authors Philipp Karg (philipp.karg@tum.de)
+ * 
+ * @brief Header file for gui.c.
+ * @date 04.02.2021
+ * @copyright Philipp Karg 2022
  */
 #include "gui.h"
 #include "input.h"
@@ -14,49 +16,49 @@
 // **********************************************************************************
 // Forward Declarations *************************************************************
 // **********************************************************************************
-/*!
- * \ingroup gui
- * \brief Check ifdrawing possible.
+/**
+ * @ingroup gui
+ * @brief Check if drawing is possible.
  * 
  * Checks if tumDrawing functions return 0 (success) or 1 (failure)
  * and sends and error message in case of failure.
- * \param[in] status (uint8_t): Function to check.
- * \param[in] msg (const char *): Error message.
+ * @param[in] status (uint8_t): Function to check.
+ * @param[in] msg (const char *): Error message.
  */
 static void checkDraw(uint8_t status, const char *msg);
 
-/*!
- * \ingroup gui
- * \brief Draw the User-Name selection.
+/**
+ * @ingroup gui
+ * @brief Draw the User-Name selection.
  * 
  * Function that draws & lets the player select one of 6 usernames.
- * Usernames are defined in the \ref config "Config module".
- * \param[inout] score (const \ref score_t *): Scores to draw. 
- * \param[in] lastUserName (char*): Selected User-Name.
+ * Usernames are defined in the @ref config "Config module".
+ * @param[inout] score (const @ref score_t *): Scores to draw. 
+ * @param[in] lastUserName (char*): Selected User-Name.
  */
 static void drawUserNameSelection(score_t *score, char *lastUserName);
 
-/*!
- * \ingroup gui
- * \brief Draw the three hightest scores.
- * \param[in] highScores (const \ref score_t []): Sorted highscores array. 
+/**
+ * @ingroup gui
+ * @brief Draw the three hightest scores.
+ * @param[in] highScores (const @ref score_t []): Sorted high-scores array. 
  */
 static void drawHighScores(const score_t highScores[]);
 
-/*!
- * \ingroup gui
- * \brief Draw the available game modes.
- * \param[in] currentMode ( \ref game_mode_t): Currently selected game mode. 
+/**
+ * @ingroup gui
+ * @brief Draw the available game modes.
+ * @param[in] currentMode ( @ref game_mode_t): Currently selected game mode. 
  */
 static void drawGameModes(game_mode_t currentMode);
 
-/*!
- * \ingroup gui
- * \brief Draw text on the screen.
- * \param[in] str (char *): Text to draw. 
- * \param[in] x (int16_t): X-coordianate. 
- * \param[in] y (int16_t): Y-coordinate. 
- * \param[in] color (uint32_t): Color (HEX). 
+/**
+ * @ingroup gui
+ * @brief Draw text on the screen.
+ * @param[in] str (char *): Text to draw. 
+ * @param[in] x (int16_t): X-coordinate. 
+ * @param[in] y (int16_t): Y-coordinate. 
+ * @param[in] color (uint32_t): Color (HEX). 
  */
 static void drawText(char *str, int16_t x, int16_t y, uint32_t color);
 
@@ -585,8 +587,8 @@ void vGUIDrawLanded(const color_t landed[ROWS][COLS], const image_handle_t squar
 
 void vGUIDrawNextTetromino(const tetromino_t *tetromino, const image_handle_t squares[])
 {
-    for(int row=0; row< SIZEARR(tetromino->shape); row++)
-        for(int col=0; col<SIZEARR(tetromino->shape[row]); col++)
+    for(int row=0; row<FIGURE_SIZE; row++)
+        for(int col=0; col<FIGURE_SIZE; col++)
             if(tetromino->shape[row][col] != 0)
                 tumDrawLoadedImage
                 (   

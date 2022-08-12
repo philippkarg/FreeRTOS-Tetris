@@ -1,9 +1,9 @@
-/*!
- * \file game.c
- * \authors Philipp Karg (philipp.karg@tum.de)
+/**
+ * @file game.c
+ * @authors Philipp Karg (philipp.karg@tum.de)
  * 
- * \brief File containing the Game's Tasks.
- * \date 04.02.2021
+ * @brief File containing the Game's Tasks.
+ * @date 04.02.2021
  */
 
 #include "game.h"
@@ -13,8 +13,8 @@
 #include "gui.h"
 #include "opponent.h"
 
-/*!
- * \name Delays
+/**
+ * @name Delays
  * @{
  */
 #define POS_UPDATE_DELAY 500    ///< Initial value for the delay for updating a Tetromino's position
@@ -24,78 +24,78 @@
 // **********************************************************************************
 // Global Variables *****************************************************************
 // **********************************************************************************
-/*!
- * \addtogroup game
+/**
+ * @addtogroup game
  * @{
  */
 // **********************************************************************************
 /// \name Task Handles
 ///@{
-TaskHandle_t MainMenuTask                   = NULL; ///< \ref TaskHandle_t "Task" for the Main Menu Task
-TaskHandle_t GameTask                       = NULL; ///< \ref TaskHandle_t "Task" for the Game Task
-TaskHandle_t PauseTask                      = NULL; ///< \ref TaskHandle_t "Task" for the Pause Task
-TaskHandle_t ScoreTask                      = NULL; ///< \ref TaskHandle_t "Task" for the Score Task
+TaskHandle_t MainMenuTask                   = NULL; ///< @ref TaskHandle_t "Task" for the Main Menu Task
+TaskHandle_t GameTask                       = NULL; ///< @ref TaskHandle_t "Task" for the Game Task
+TaskHandle_t PauseTask                      = NULL; ///< @ref TaskHandle_t "Task" for the Pause Task
+TaskHandle_t ScoreTask                      = NULL; ///< @ref TaskHandle_t "Task" for the Score Task
 ///@}
 
 // **********************************************************************************
 /// \name Timer Handles
 ///@{
-TimerHandle_t PosUpdateTimer                = NULL; ///< \ref TimerHandle_t "Timer" for updating a Tetromino's position
-TimerHandle_t DelayAtGroundTimer            = NULL; ///< \ref TimerHandle_t "Timer" for the delay, when a Tetromino hits the bottom
+TimerHandle_t PosUpdateTimer                = NULL; ///< @ref TimerHandle_t "Timer" for updating a Tetromino's position
+TimerHandle_t DelayAtGroundTimer            = NULL; ///< @ref TimerHandle_t "Timer" for the delay, when a Tetromino hits the bottom
 ///@}
 
 // **********************************************************************************
 /// \name Semaphore Handles
 ///@{
-SemaphoreHandle_t ScreenLock                = NULL; ///< \ref SemaphoreHandle_t "Semaphore" for locking the screen
-SemaphoreHandle_t DrawSignal                = NULL; ///< \ref SemaphoreHandle_t "Signal" for drawing
-SemaphoreHandle_t YSignal             = NULL; ///< \ref SemaphoreHandle_t "Signal" for updating a Tetromino's y-position
-SemaphoreHandle_t XSignal             = NULL; ///< \ref SemaphoreHandle_t "Signal" for updating a Tetromino's x-position
-SemaphoreHandle_t FallSignal         = NULL; ///< \ref SemaphoreHandle_t "Signal" if the down-key is held
-SemaphoreHandle_t RotationSignal            = NULL; ///< \ref SemaphoreHandle_t "Signal" for rotating a Tetromino
-SemaphoreHandle_t InitNextSignal   = NULL; ///< \ref SemaphoreHandle_t "Signal" for initializing the next Tetromino
-SemaphoreHandle_t ResetGameSignal           = NULL; ///< \ref SemaphoreHandle_t "Signal" for resetting the game
-SemaphoreHandle_t ResetUDPSignal            = NULL; ///< \ref SemaphoreHandle_t "Signal" for resetting the UDP socket
-SemaphoreHandle_t NoConnectionSignal        = NULL; ///< \ref SemaphoreHandle_t "Signal" if the binary is not connected
+SemaphoreHandle_t ScreenLock                = NULL; ///< @ref SemaphoreHandle_t "Semaphore" for locking the screen
+SemaphoreHandle_t DrawSignal                = NULL; ///< @ref SemaphoreHandle_t "Signal" for drawing
+SemaphoreHandle_t YSignal             = NULL; ///< @ref SemaphoreHandle_t "Signal" for updating a Tetromino's y-position
+SemaphoreHandle_t XSignal             = NULL; ///< @ref SemaphoreHandle_t "Signal" for updating a Tetromino's x-position
+SemaphoreHandle_t FallSignal         = NULL; ///< @ref SemaphoreHandle_t "Signal" if the down-key is held
+SemaphoreHandle_t RotationSignal            = NULL; ///< @ref SemaphoreHandle_t "Signal" for rotating a Tetromino
+SemaphoreHandle_t InitNextSignal   = NULL; ///< @ref SemaphoreHandle_t "Signal" for initializing the next Tetromino
+SemaphoreHandle_t ResetGameSignal           = NULL; ///< @ref SemaphoreHandle_t "Signal" for resetting the game
+SemaphoreHandle_t ResetUDPSignal            = NULL; ///< @ref SemaphoreHandle_t "Signal" for resetting the UDP socket
+SemaphoreHandle_t NoConnectionSignal        = NULL; ///< @ref SemaphoreHandle_t "Signal" if the binary is not connected
 ///@}
 
 // **********************************************************************************
 /// \name Queue Handles
 ///@{
-QueueHandle_t LeftRightQueue                = NULL; ///< \ref QueueHandle_t "Queue" for left & right input
-QueueHandle_t ConnectionQueue               = NULL; ///< \ref QueueHandle_t "Queue" for the connection status
-QueueHandle_t GameModeQueue                 = NULL; ///< \ref QueueHandle_t "Queue" for the game mode
-QueueHandle_t PlayerModeQueue               = NULL; ///< \ref QueueHandle_t "Queue" for the player mode
-QueueHandle_t RotationModeQueue             = NULL; ///< \ref QueueHandle_t "Queue" for the rotation mode
-QueueHandle_t ScoreQueue                    = NULL; ///< \ref QueueHandle_t "Queue" for the current score
-QueueHandle_t HighScoresQueue               = NULL; ///< \ref QueueHandle_t "Queue" for the highscores 
-QueueHandle_t LevelQueue                    = NULL; ///< \ref QueueHandle_t "Queue" for the current level
-QueueHandle_t GameOverQueue                 = NULL; ///< \ref QueueHandle_t "Queue" for the game-over status
+QueueHandle_t LeftRightQueue                = NULL; ///< @ref QueueHandle_t "Queue" for left & right input
+QueueHandle_t ConnectionQueue               = NULL; ///< @ref QueueHandle_t "Queue" for the connection status
+QueueHandle_t GameModeQueue                 = NULL; ///< @ref QueueHandle_t "Queue" for the game mode
+QueueHandle_t PlayerModeQueue               = NULL; ///< @ref QueueHandle_t "Queue" for the player mode
+QueueHandle_t RotationModeQueue             = NULL; ///< @ref QueueHandle_t "Queue" for the rotation mode
+QueueHandle_t ScoreQueue                    = NULL; ///< @ref QueueHandle_t "Queue" for the current score
+QueueHandle_t HighScoresQueue               = NULL; ///< @ref QueueHandle_t "Queue" for the highscores 
+QueueHandle_t LevelQueue                    = NULL; ///< @ref QueueHandle_t "Queue" for the current level
+QueueHandle_t GameOverQueue                 = NULL; ///< @ref QueueHandle_t "Queue" for the game-over status
 ///@}
 ///@}
 
 // **********************************************************************************
 // Forward Declarations *************************************************************
 // **********************************************************************************
-/*!
- * \ingroup game
- * \brief Check for button input, give semaphores and write the pressed buttons in a queue.
- * \param[inout] buttonPressed (bool): whether a button was pressed.
+/**
+ * @ingroup game
+ * @brief Check for button input, give semaphores and write the pressed buttons in a queue.
+ * @param[inout] buttonPressed (bool): whether a button was pressed.
  */
 static void buttonInput(bool *buttonPressed);
 
-/*!
- * \ingroup game
- * \brief Change a timer's period depending on the current level & start the timer.
- * \param[inout] timer ( \ref TimerHandle_t): Timer to change period for. 
- * \param[in] level (uint8_t): Current level. 
- * \param[in] delay (int): The delay for changing the period. 
+/**
+ * @ingroup game
+ * @brief Change a timer's period depending on the current level & start the timer.
+ * @param[inout] timer ( @ref TimerHandle_t): Timer to change period for. 
+ * @param[in] level (uint8_t): Current level. 
+ * @param[in] delay (int): The delay for changing the period. 
  */
 static void changeTimerPeriod(TimerHandle_t timer, uint8_t level, int delay);
 
-/*!
- * \ingroup game
- * \brief Task that handles the Main Menu.
+/**
+ * @ingroup game
+ * @brief Task that handles the Main Menu.
  * 
  * This Task draws the following textures:
  * - The Main Menu (vGUIDrawMainMenu())
@@ -202,29 +202,29 @@ static void mainMenuTask()
     }
 }
 
-/*!
- * \ingroup game
- * \brief Callback function for the Timer that updates the position.
- * \param[in] PosUpdateTimer ( \ref TimerHandle_t): Timer to callback. 
+/**
+ * @ingroup game
+ * @brief Callback function for the Timer that updates the position.
+ * @param[in] PosUpdateTimer ( @ref TimerHandle_t): Timer to callback. 
  */
 static void posUpdateTimerCallback(TimerHandle_t PosUpdateTimer)
 {
     xSemaphoreGive(YSignal);
 }
 
-/*!
- * \ingroup game
- * \brief Callback function for the Timer that starts a delay if a Tetromino hits the bottom.
- * \param[in] DelayAtGroundTimer ( \ref TimerHandle_t): Timer to callback. 
+/**
+ * @ingroup game
+ * @brief Callback function for the Timer that starts a delay if a Tetromino hits the bottom.
+ * @param[in] DelayAtGroundTimer ( @ref TimerHandle_t): Timer to callback. 
  */
 static void delayAtBottomTimerCallback(TimerHandle_t DelayAtGroundTimer)
 {
     xSemaphoreGive(InitNextSignal);
 }
 
-/*!
- * \ingroup game
- * \brief Task that handles the Tetris gameplay.
+/**
+ * @ingroup game
+ * @brief Task that handles the Tetris gameplay.
  * 
  * -# If the #ResetGameSignal has been received, reset the game.
  * -# At the beginning/if the game is reset, the first Tetromino is initialized.
@@ -530,9 +530,9 @@ static void gameTask()
     }
 }
 
-/*!
- * \ingroup game 
- * \brief Task that handles the pause & game-over screen.
+/**
+ * @ingroup game 
+ * @brief Task that handles the pause & game-over screen.
  * 
  * -# Read from the #GameOverQueue, #ScoreQueue & #ConnectionQueue.
  * -# If the game is not over, call vGUIDrawPauseMenu().
@@ -586,9 +586,9 @@ static void pauseTask()
 
 #define HIGHSCORES_SIZE 3
 
-/*!
- * \ingroup game 
- * \brief Low priority task, running in the background, that handles the score.
+/**
+ * @ingroup game 
+ * @brief Low priority task, running in the background, that handles the score.
  */
 static void scoreTask()
 {

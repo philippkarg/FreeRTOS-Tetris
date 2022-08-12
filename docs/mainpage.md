@@ -1,22 +1,7 @@
 # FreeRTOS Tetris
-![Build Status](https://img.shields.io/github/workflow/status/philippkarg/FreeRTOS-Tetris/Build%20Application)
-![License Badge](https://img.shields.io/github/license/philippkarg/FreeRTOS-Tetris)
-![Language Badge](https://img.shields.io/github/languages/top/philippkarg/FreeRTOS-Tetris?label=C)
-![Lines Of Code](https://img.shields.io/tokei/lines/github.com/philippkarg/FreeRTOS-Tetris?style=flat-square)
+[TOC]
 
-- [Introduction](#introduction)
-- [Project Overview](#project-overview)
-- [Configuration:](#configuration)
-- [Building the Project](#building-the-project)
-- [Controls](#controls)
-- [Menus](#menus)
-    - [Main Menu Screen](#main-menu-screen)
-    - [Game Screen](#game-screen)
-    - [Pause Screen](#pause-screen)
-
-<br/>
-
-![Gameplay Screenshot](resources/images/in_game.jpg)
+@image html in_game.jpg
 
 ## Introduction
 Welcome to my little Tetris game using the open-source RTOS FreeRTOS. This project was developed in the scope of a laboratory at the Technical University of Munich.
@@ -25,16 +10,16 @@ The FreeRTOS Emulator that he provided can be found <a href="https://github.com/
 
 ## Project Overview
 The project is divided into the following modules:
-- A `Configuration Module` that allows for some game configurations.
-- A `Game Module` that handles the main game functionality, e.g. tasks & menus.
-- A `GUI Module` that makes use of the FreeRTOS Emulators built-in Drawing API.
-- An `Input Module` that handles any mouse or keyboard input using the SDL & Emulator's Event API.
-- A `Logic Module` that handles the game's logic.
-- An `Opponent Module` that allows playing against an "opponent" executable (found in the opponents folder) by sending/receiving UDP messages.
-- A `State Machine Module` that handles switching between the different tasks. 
+- A [Configuration Module](@ref config) that allows for some game configurations.
+- A [Game Module](@ref game) that handles the main game functionality, e.g. tasks & menus.
+- A [GUI Module] (@ref gui) that makes use of the FreeRTOS Emulators built-in Drawing API.
+- An [Input Module](@ref input) that handles any mouse or keyboard input using the SDL & Emulator's Event API.
+- A [Logic Module](@ref logic) that handles the game's logic.
+- An [Opponent Module](@ref opponent) that allows playing against an "opponent" executable (found in the opponents folder) by sending/receiving UDP messages.
+- A [State Machine Module](@ref state) that handles switching between the different tasks. 
 
 ## Configuration:
-**Some configurations can be made in the [`tetrisConfig.h`](include/tetrisConfig.h) file:**
+Some configurations to be done in the [Configuration Module](@ref config):
 * There are 6 usernames that can be set
 * If you want to enable sound effects, set `ENABLE_SOUND_EFFECTS` to 1  
 **WARNING: Sound effects may be very annoying or not in sync at all time**
@@ -49,6 +34,9 @@ To build the project, you need to have the following libraries installed:
 - `libsdl2-image-dev` (e.g. `sudo apt install libsdl2-image-dev`)
 - `libsdl2-ttf-dev` (e.g. `sudo apt install libsdl2-ttf-dev`)
 - `libsdl2-mixer-dev` (e.g. `sudo apt install libsdl2-mixer-dev`)
+  
+The project can only be built for Linux in the current configuration.
+For other operating systems, adjust the CMake files.
 
 ### Compiling
 To compile the project, run the following commands:
@@ -60,13 +48,12 @@ make
 ```
 
 ## Controls
-* Up: Rotating the Tetromino
-* Down: Falling faster (this button is not debounced)
-* Left/Right: Moving the Tetromino to the left/right
+* Up: Rotating the Tetromino.
+* Down: Falling faster (this button can be held down).
+* Left/Right: Moving the Tetromino to the left/right.
 
 ## Menus
 ### Main Menu Screen
-![Main Menu Screen](resources/images/main_menu.jpg)
 * Click on the rotation/player mode to select
 * If a rotation & player mode have been selected, press S to start
 * Click on the "Select level" text to go to the level/high scores screen
@@ -74,11 +61,13 @@ make
 * If multi player mode is selected & a connection has been established,  
 click on a mode to select that mode  
 
+<img src="main_menu.jpg" align="left">
+<div style="clear: both"></div>
+
 ### Game Screen
 * Press Esc to Pause  
 
 ### Pause Screen
-![Pause Screen](resources/images/pause_menu.jpg)
 * Press Esc to continue
 * Press R to restart the game
 * Press M to go back to Main Menu
@@ -86,3 +75,7 @@ click on a mode to select that mode
   * Select your username by clicking
   * Press R to restart
   * Press M to go back to Main Menu
+
+<img src="pause_menu.jpg" align="left">
+<div style="clear: both"></div>
+

@@ -83,31 +83,37 @@ extern "C" {
 #define portSTACK_TYPE uint32_t
 #define portBASE_TYPE   long
 
-
-typedef portSTACK_TYPE StackType_t;
-typedef long BaseType_t;
-typedef unsigned long UBaseType_t;
+/**
+ * @addtogroup freeRTOSconfig
+ * @{
+ */
+typedef portSTACK_TYPE StackType_t; ///< FreeRTOS defintions for the Stack Type
+typedef long BaseType_t;            ///< FreeRTOS definition for long ints
+typedef unsigned long UBaseType_t;  ///< FreeRTOS definition for unsigned long ints
 
 #if( configUSE_16_BIT_TICKS == 1 )
-typedef uint16_t TickType_t;
+typedef uint16_t TickType_t;        ///< FreeRTOS definitions for a single tick
 #define portMAX_DELAY ( TickType_t ) 0xffff
 #else
-typedef uint32_t TickType_t;
-#define portMAX_DELAY ( TickType_t ) 0xffffffffUL
+typedef uint32_t TickType_t;        ///< FreeRTOS definition for a single tick
+#define portMAX_DELAY ( TickType_t ) 0xffffffffUL   ///< The maximum possible delay
 
-/* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
-not need to be guarded with a critical section. */
+
+
+/// 32-bit tick type on a 32-bit architecture, so reads of the tick count do not need to be guarded with a critical section. 
 #define portTICK_TYPE_IS_ATOMIC 1
 #endif
 /*-----------------------------------------------------------*/
 
 /* Architecture specifics. */
-#define portSTACK_GROWTH                ( -1 )
-#define portTICK_PERIOD_MS              ( ( TickType_t ) 1000 / configTICK_RATE_HZ )
-#define portTICK_PERIOD_MICROSECONDS        ( ( TickType_t ) 1000000 / configTICK_RATE_HZ )
-#define portBYTE_ALIGNMENT              4
-#define portREMOVE_STATIC_QUALIFIER
+#define portSTACK_GROWTH                ( -1 )  ///< The stack growth
+#define portTICK_PERIOD_MS              ( ( TickType_t ) 1000 / configTICK_RATE_HZ )        ///< The tick period in ms.
+#define portTICK_PERIOD_MICROSECONDS    ( ( TickType_t ) 1000000 / configTICK_RATE_HZ )     ///< The tick period in us.
+#define portBYTE_ALIGNMENT              4   ///< The byte alignment
+#define portREMOVE_STATIC_QUALIFIER         ///< Whether to remove the static qualifier
 /*-----------------------------------------------------------*/
+///@}
+///@}
 
 
 

@@ -66,53 +66,64 @@
 
 #include <stdint.h>
 
-#define configUSE_PREEMPTION            1
-#define configUSE_IDLE_HOOK             1
-#define configUSE_TICK_HOOK             0
-#define configTICK_RATE_HZ              ( ( TickType_t ) 1000 )
-#define configMINIMAL_STACK_SIZE        ( ( unsigned short ) 4 ) /* This can be made smaller if required. */
-#define configTOTAL_HEAP_SIZE           ( ( size_t ) ( 32 * 1024 ) )
-#define configMAX_TASK_NAME_LEN         ( 16 )
-#define configUSE_TRACE_FACILITY        1
-#define configUSE_STATS_FORMATTING_FUNCTIONS 1
-#define configGENERATE_RUN_TIME_STATS   1
-#define configUSE_16_BIT_TICKS          0
-#define configIDLE_SHOULD_YIELD         1
-#define configUSE_CO_ROUTINES           1
-#define configUSE_MUTEXES               1
-#define configUSE_TASK_NOTIFICATIONS    1
-#define configUSE_COUNTING_SEMAPHORES   1
-#define configUSE_ALTERNATIVE_API       0
-#define configUSE_RECURSIVE_MUTEXES     1
-#define configCHECK_FOR_STACK_OVERFLOW  0 /* Do not use this option on the PC port. */
-#define configUSE_APPLICATION_TASK_TAG  1
-#define configQUEUE_REGISTRY_SIZE       0
-#define configMAX_SYSCALL_INTERRUPT_PRIORITY    1
+/**
+ * @ingroup freeRTOS
+ * @defgroup freeRTOSconfig FreeRTOS Configurations
+ * @brief Some FreeRTOS configurations.
+ * @{
+ */
 
-#define configMAX_PRIORITIES        ( 10 )
-#define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
+#define configUSE_PREEMPTION            1   ///< Whether to use preemption or not
+#define configUSE_IDLE_HOOK             1   ///< Whether to use the idle hook.  
+#define configUSE_TICK_HOOK             0   ///< Whether to use the tick rate hook.
+#define configTICK_RATE_HZ              ( ( TickType_t ) 1000 ) ///< The tick rate
+#define configMINIMAL_STACK_SIZE        ( ( unsigned short ) 4 ) ///< The minimal stack size. This can be made smaller if required.
+#define configTOTAL_HEAP_SIZE           ( ( size_t ) ( 32 * 1024 ) ) ///< The total heap size.
+#define configMAX_TASK_NAME_LEN         ( 16 )  ///< The maximum length of a task name
+#define configUSE_TRACE_FACILITY        1       ///< Whether to use the trace facility
+#define configUSE_STATS_FORMATTING_FUNCTIONS 1  ///< Whether use stats formatting functions
+#define configGENERATE_RUN_TIME_STATS   1   ///< Enable/Disable runtime stats generation
+#define configUSE_16_BIT_TICKS          0   ///< Enable/Disable 16-bit ticks (32-bit default)
+#define configIDLE_SHOULD_YIELD         1   ///< Enable/Disable idle task yields
+#define configUSE_CO_ROUTINES           1   ///< Enable/Disable co-routines
+#define configUSE_MUTEXES               1   ///< Enable/Disable Mutexes
+#define configUSE_TASK_NOTIFICATIONS    1   ///< Enable/Disable task notifications
+#define configUSE_COUNTING_SEMAPHORES   1   ///< Enable/Disable counting semaphores
+#define configUSE_ALTERNATIVE_API       0   ///< Enable/Disable an alternative API
+#define configUSE_RECURSIVE_MUTEXES     1   ///< Enable/Disable recursive Mutexes   
+#define configCHECK_FOR_STACK_OVERFLOW  0   ///< Whether to check for stack overflow. Do not use this option on the PC port.
+
+#define configUSE_APPLICATION_TASK_TAG  1   ///< Enable/Disable application task tags
+#define configQUEUE_REGISTRY_SIZE       0   ///< Set the queue registry size
+#define configMAX_SYSCALL_INTERRUPT_PRIORITY 1  ///< Set the maximum syscall interrupt priority
+
+#define configMAX_PRIORITIES        ( 10 )      ///< Set the maximum number of priorities
+#define configMAX_CO_ROUTINE_PRIORITIES ( 2 )   ///< Set the maximum number of co-routines
 
 /* Set the following definitions to 1 to include the API function, or zero
  to exclude the API function. */
 
-#define INCLUDE_vTaskPrioritySet            1
-#define INCLUDE_uxTaskPriorityGet           1
-#define INCLUDE_vTaskDelete                 1
-#define INCLUDE_vTaskCleanUpResources       1
-#define INCLUDE_vTaskSuspend                1
-#define INCLUDE_vTaskDelayUntil             1
-#define INCLUDE_vTaskDelay                  1
-#define INCLUDE_uxTaskGetStackHighWaterMark 0 /* Do not use this option on the PC port. */
-#define INCLUDE_xTaskGetSchedulerState      1
+#define INCLUDE_vTaskPrioritySet            1   ///< Enable/Disable vTaskPrioritySet()
+#define INCLUDE_uxTaskPriorityGet           1   ///< Enable/Disable uxTaskPriorityGet()  
+#define INCLUDE_vTaskDelete                 1   ///< Enable/Disable vTaskDelete()
+#define INCLUDE_vTaskCleanUpResources       1   ///< Enable/Disable vTaskCleanUpResources()
+#define INCLUDE_vTaskSuspend                1   ///< Enable/Disable vTaskSuspend()
+#define INCLUDE_vTaskDelayUntil             1   ///< Enable/Disable vTaskDelayUntil()
+#define INCLUDE_vTaskDelay                  1   ///< Enable/Disable vTaskDelay()
+#define INCLUDE_uxTaskGetStackHighWaterMark 0   ///< Enable/Disable vTaskGetStackHighWaterMark(). Do not use this option on the PC port.
+#define INCLUDE_xTaskGetSchedulerState      1   ///< Enable/Disable xTaskGetSchedulerState()   
 
 extern void vMainQueueSendPassed(void);
 #define traceQUEUE_SEND( pxQueue ) vMainQueueSendPassed()
 
-#define configGENERATE_RUN_TIME_STATS       1
-
-#define configTIMER_SERVICE_TASK_NAME "Tmr Svc"
+#define configTIMER_SERVICE_TASK_NAME "Tmr Svc" ///< Set the name of the timer service task
+/// Set the priority of the timer task
 #define configTIMER_TASK_PRIORITY (configMAX_PRIORITIES - 1)
+/// Set the stack depth of the timer task
 #define configTIMER_TASK_STACK_DEPTH (configMINIMAL_STACK_SIZE*2)
+/// Set the queue length of the timer
 #define configTIMER_QUEUE_LENGTH 10
+
+///@}
 
 #endif /* FREERTOS_CONFIG_H */

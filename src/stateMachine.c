@@ -3,10 +3,10 @@
 #include "game.h"
 #include "opponent.h"
 
-/*!
- * \addtogroup state
+/**
+ * @addtogroup state
  * @{
- * \name State Machine Definitions
+ * @name State Machine Definitions
  * @{
  */
 #define STATE_QUEUE_LENGTH 1        ///< Length of the state queue
@@ -22,13 +22,13 @@
 
 const uint8_t nextStateSignal       = NEXT_TASK;    ///< Signal to change to the next state
 const uint8_t prevStateSignal       = PREV_TASK;    ///< Signal to change to the previous state
-static TaskHandle_t StateMachine    = NULL;         ///< \ref TaskHandle_t "Task" for the State Machine
-QueueHandle_t StateQueue            = NULL;         ///< \ref QueueHandle_t "Queue" Queue for the different states
+static TaskHandle_t StateMachine    = NULL;         ///< @ref TaskHandle_t "Task" for the State Machine
+QueueHandle_t StateQueue            = NULL;         ///< @ref QueueHandle_t "Queue" for the different states
 
-/*!
- * \brief Change the state, either forwards of backwards.
- * \param[inout] state (uint8_t*): Current state, to be changed.
- * \param[in] forwards (uint8_t): Whether to change to the next or previous state. 
+/**
+ * @brief Change the state, either forwards of backwards.
+ * @param[inout] state (uint8_t*): Current state, to be changed.
+ * @param[in] forwards (uint8_t): Whether to change to the next or previous state. 
  */
 static void changeState(volatile uint8_t *state, uint8_t forwards)
 {
@@ -51,8 +51,8 @@ static void changeState(volatile uint8_t *state, uint8_t forwards)
     }
 }
 
-/*!
- * \brief Basic state machine with sequential states.
+/**
+ * @brief Basic state machine with sequential states.
  *
  * -# Read from #StateQueue, whether to switch to the next or previous task.
  * -# Calculate the current state by calling changeState().

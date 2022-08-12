@@ -6,10 +6,10 @@
 #include "AsyncIO.h"
 #include "FreeRTOS.h"
 
-/*!
- * \addtogroup opponent
+/**
+ * @addtogroup opponent
  * @{
- * \name UDP Definitions
+ * @name UDP Definitions
  * @{
  */
 #define UDP_BUFFER_SIZE     1024 ///< Buffer size of the UDP connection
@@ -21,49 +21,49 @@
 // Global Variables *****************************************************************
 // **********************************************************************************
 // Task Handles *********************************************************************
-TaskHandle_t UDPControlTask             = NULL; ///< \ref TaskHandle_t "Task" to control the UDP socket
+TaskHandle_t UDPControlTask             = NULL; ///< @ref TaskHandle_t "Task" to control the UDP socket
 // Semaphore Handles ****************************************************************
-static SemaphoreHandle_t HandleUDP      = NULL; ///< \ref SemaphoreHandle_t "Mutex" for handling UDP
-SemaphoreHandle_t NextTetrominoSignal   = NULL; ///< \ref SemaphoreHandle_t "Signal" for the next Tetromino
+static SemaphoreHandle_t HandleUDP      = NULL; ///< @ref SemaphoreHandle_t "Mutex" for handling UDP
+SemaphoreHandle_t NextTetrominoSignal   = NULL; ///< @ref SemaphoreHandle_t "Signal" for the next Tetromino
 // Queue Handles ********************************************************************
-QueueHandle_t TetrominoQueue            = NULL; ///< \ref QueueHandle_t "Queue" for receiving tetromino types from opponent
+QueueHandle_t TetrominoQueue            = NULL; ///< @ref QueueHandle_t "Queue" for receiving tetromino types from opponent
 // aIO Handles **********************************************************************
-static aIO_handle_t UDPSocReceive       = NULL; ///< \ref aIO_handle_t "AsyncIO Handle" for receiving data via UDP
+static aIO_handle_t UDPSocReceive       = NULL; ///< @ref aIO_handle_t "AsyncIO Handle" for receiving data via UDP
 
 // **********************************************************************************
 // Forward Declarations *************************************************************
 // **********************************************************************************
-/*!
- * \brief Parse \p buffer into the corresponding \ref game_mode_t.
- * \param[in] buffer (const char*): String to parse. 
- * \param[out] mode ( \ref game_mode_t *): Object to parse game mode into.
- * \return (bool): whether \p buffer could be parsed.
+/**
+ * @brief Parse @p buffer into the corresponding @ref game_mode_t.
+ * @param[in] buffer (const char*): String to parse. 
+ * @param[out] mode ( @ref game_mode_t *): Object to parse game mode into.
+ * @return (bool): whether @p buffer could be parsed.
  */
 static bool parseMode(const char *buffer, game_mode_t *mode);
 
-/*!
- * \brief Parse \p buffer into the corresponding \ref tetromino_type_t.
- * \param[in] buffer (const char*): String to parse. 
- * \param[out] type ( \ref tetromino_type_t *): Object to parse Tetromino type into. 
- * \return (bool): whether \p buffer could be parsed.
+/**
+ * @brief Parse @p buffer into the corresponding @ref tetromino_type_t.
+ * @param[in] buffer (const char*): String to parse. 
+ * @param[out] type ( @ref tetromino_type_t *): Object to parse Tetromino type into. 
+ * @return (bool): whether @p buffer could be parsed.
  */
 static bool parseTetrominoType(const char* buffer, tetromino_type_t *type);
 
-/*!
- * \brief Function that reads a game selection from the user.
- * \param[in] buf (char*): String to put the selected game mode in.
- * \return (bool): whether a game mode was selected.
+/**
+ * @brief Function that reads a game selection from the user.
+ * @param[in] buf (char*): String to put the selected game mode in.
+ * @return (bool): whether a game mode was selected.
  */
 static bool selectGameMode(char *buf);
 
 // **********************************************************************************
 // Function Definitions *************************************************************
 // **********************************************************************************
-/*!
- * \brief Interrupt-Servie-Routine that handles incoming UDP messages.
- * \param[in] readSize (size_t): Size of the buffer. 
- * \param[in] buffer (char*): The UDP message.
- * \param[in] args (void*): Additional arguments.
+/**
+ * @brief Interrupt-Servie-Routine that handles incoming UDP messages.
+ * @param[in] readSize (size_t): Size of the buffer. 
+ * @param[in] buffer (char*): The UDP message.
+ * @param[in] args (void*): Additional arguments.
  */
 static void UDPHandler(size_t readSize, char *buffer, void *args)
 {
@@ -105,8 +105,8 @@ static void UDPHandler(size_t readSize, char *buffer, void *args)
     }
 }
 
-/*!
- * \brief Task that controls incoming/outgoing UDP messages.
+/**
+ * @brief Task that controls incoming/outgoing UDP messages.
  */
 static void vUDPControlTask()
 {

@@ -1,31 +1,32 @@
-/*!
- * \file tetrisConfig.h
+/**
+ * @file tetrisConfig.h
  * 
- * \authors Philipp Karg (philipp.karg@tum.de)
+ * @authors Philipp Karg (philipp.karg@tum.de)
  * 
- * \brief File containing some game configurations.
- * \date 04.02.2021
- * \copyright Philipp Karg 2022
+ * @brief File containing some game configurations.
+ * @date 04.02.2021
+ * @copyright Philipp Karg 2022
  */
 
-/*!
- * \mainpage FreeRTOS Tetris
- * Welcome to my little Tetris game using the open-source RTOS FreeRTOS. This project was developed in the scope of a laboratory at the Technical University of Munich.
- * In this laboratory I was tasked to create a Tetris game using <a href="https://freertos.org/" target="_blank">FreeRTOS</a>, building on the existing framework provided Alex Hoffman, who was the instructor for this course.
- * The FreeRTOS Emulator that he provided can be found <a href="https://github.com/alxhoff/FreeRTOS-Emulator" target="_blank">here</a>.
- * The project is divided into the following modules:
- * - A \ref config "Configuration Module" that allows for some game configurations.
- * - A \ref gui "GUI Module" that makes use of the FreeRTOS Emulators built-in \ref tum_draw "Drawing API".
- * - A \ref logic "Logic Module" that handles the game's logic.
- * - An \ref input "Input Module" that handles any mouse or keyboard input using the SDL & Emulator's \ref tum_event "Event API".
- * - An \ref opponent "Opponent Module" that allows playing against an "opponent" executable (found in the opponents folder) by sending/receiving UDP messages.
+/**
+ * @defgroup tetris Tetris Modules
+ * @brief All modules that were created in the scope of this project.
+ * 
+ * This module contains all submodules that were created in the scope of this project, 
+ * e.g. the @ref logic "Logic" or @ref gui "GUI" modules.
+ * 
+ * @authors Philipp Karg (philipp.karg@tum.de)
+ * @date 04.02.2021
+ * @copyright Philipp Karg 2022
  */
 
-/*!
- * \defgroup tetris Tetris Modules
- * \defgroup config Config Module
- * \ingroup tetris
- * \brief Module that allows some configurations of the game.
+/**
+ * @defgroup config Config Module
+ * @ingroup tetris
+ * @brief Module that allows some configurations of the game.
+ * @authors Philipp Karg (philipp.karg@tum.de)
+ * @date 04.02.2021
+ * @copyright Philipp Karg 2022
  * @{
  */
 
@@ -57,8 +58,8 @@
 #include "enum.h"
 #include "EmulatorConfig.h"
 
-/*!
- * \name User Names
+/**
+ * @name User Names
  * @{
  */
 #define USER_NAME_1 "tetrisdominator420"
@@ -70,8 +71,8 @@
 #define DEFAULT_USER_NAME USER_NAME_1 // If the player does not select a user name, the default one is given
 ///@}
 
-/*!
- * \name Game window configuration
+/**
+ * @name Game window configuration
  * @{
  */
 #define FIGURE_SIZE 5   ///< Maximum length/width of a Tetromino
@@ -82,16 +83,16 @@
 #define BACKGROUND_COLOR ((unsigned int) 0x656565)  ///< Background color (can be any HEX color)
 ///@}
 
-/*!
- * \name Sound effects.
+/**
+ * @name Sound effects.
  * 
- * Set ENABLE_SOUND_EFFECTS to 1 to enable soundeffects.
+ * Set ENABLE_SOUND_EFFECTS to 1 to enable sound effects.
  * Sound effects may not be synchronized at all time.
  */
 #define ENABLE_SOUND_EFFECTS 0  ///< Whether sound effects should be enabled
 
-/*!
- * \name Sound effect files
+/**
+ * @name Sound effect files
  * @{
  */
 #define FALLING_SOUND   "../resources/waveforms/user_waveforms/falling.wav"
@@ -100,8 +101,8 @@
 #define THUMP_SOUND     "../resources/waveforms/user_waveforms/thump.wav"
 ///@}
 
-/*!
- * \name Square image files
+/**
+ * @name Square image files
  * @{
  */
 #define BLUE_SQUARE         "../resources/images/blue_square.png"

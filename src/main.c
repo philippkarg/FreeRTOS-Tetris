@@ -3,11 +3,11 @@
 #include "opponent.h"
 #include "stateMachine.h"
 
-static TaskHandle_t BufferSwap = NULL; ///< \ref TaskHandle_t "Task Handle" for swapBuffers() task
+static TaskHandle_t BufferSwap = NULL; ///< @ref TaskHandle_t "Task Handle" for swapBuffers() task
 
-/*!
- * \ingroup game
- * \brief Task that updates the screen every 20ms & gives #ScreenLock & #DrawSignal.
+/**
+ * @ingroup game
+ * @brief Task that updates the screen every 20ms & gives #ScreenLock & #DrawSignal.
  */
 static void swapBuffers()
 {
