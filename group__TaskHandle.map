@@ -1,0 +1,4 @@
+<map id="Task Handles &amp; Enumerations" name="Task Handles &amp; Enumerations">
+<area shape="rect" id="node1" title="Group that contains definitions for task handles." alt="" coords="164,5,380,31"/>
+<area shape="rect" id="node2" href="$group__TaskCreation.html" title="Group that contains macros &amp; functions for the creation of FreeRTOS Tasks." alt="" coords="5,5,116,31"/>
+</map>

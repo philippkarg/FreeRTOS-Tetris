@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xTimerDelete</title>
+<title>FreeRTOS Tetris: Timer Deletion</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,33 +62,78 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">xTimerDelete<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Timers</a></div></div>  </div>
+<div class="title">Timer Deletion<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Software Timers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for timer deletion.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xTimerDelete:</div>
+Collaboration diagram for Timer Deletion:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xTimerDelete.png" border="0" usemap="#group____xTimerDelete" alt=""/></div>
 <map name="group____xTimerDelete" id="group____xTimerDelete">
-<area shape="rect" title=" " alt="" coords="120,5,231,31"/>
-<area shape="rect" href="group__Timers.html" title=" " alt="" coords="5,5,72,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for timer deletion." alt="" coords="181,5,300,31"/>
+<area shape="rect" href="group__Timers.html" title="Group that handles FreeRTOS Timers." alt="" coords="5,5,133,31"/>
 </map>
 </div>
-<p>BaseType_t xTimerDelete( TimerHandle_t xTimer, TickType_t xTicksToWait );</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga8c8e21f05ebe92e15449addc5d269d10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xTimerDelete.html#ga8c8e21f05ebe92e15449addc5d269d10">xTimerDelete</a>(xTimer,  xTicksToWait)&#160;&#160;&#160;xTimerGenericCommand( ( xTimer ), tmrCOMMAND_DELETE, 0U, NULL, ( xTicksToWait ) )</td></tr>
+<tr class="memdesc:ga8c8e21f05ebe92e15449addc5d269d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a timer that was previously created using the <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> API function.  <a href="group__xTimerDelete.html#ga8c8e21f05ebe92e15449addc5d269d10">More...</a><br /></td></tr>
+<tr class="separator:ga8c8e21f05ebe92e15449addc5d269d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for timer deletion. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga8c8e21f05ebe92e15449addc5d269d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c8e21f05ebe92e15449addc5d269d10">&#9670;&nbsp;</a></span>xTimerDelete</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xTimerDelete</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xTimer, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xTicksToWait&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;xTimerGenericCommand( ( xTimer ), tmrCOMMAND_DELETE, 0U, NULL, ( xTicksToWait ) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;timers.h&gt;</code></p>
+
+<p>Delete a timer that was previously created using the <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> API function. </p>
 <p>Timer functionality is provided by a timer service/daemon task. Many of the public FreeRTOS timer API functions send commands to the timer service task through a queue called the timer command queue. The timer command queue is private to the kernel itself and is not directly accessible to application code. The length of the timer command queue is set by the configTIMER_QUEUE_LENGTH configuration constant.</p>
-<p>xTimerDelete() deletes a timer that was previously created using the xTimerCreate() API function.</p>
-<p>The configUSE_TIMERS configuration constant must be set to 1 for xTimerDelete() to be available.</p>
+<p>The configUSE_TIMERS configuration constant must be set to 1 for <a class="el" href="group__xTimerDelete.html#ga8c8e21f05ebe92e15449addc5d269d10" title="Delete a timer that was previously created using the xTimerCreate() API function.">xTimerDelete()</a> to be available.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xTimer</td><td>The handle of the timer being deleted.</td></tr>
-    <tr><td class="paramname">xTicksToWait</td><td>Specifies the time, in ticks, that the calling task should be held in the Blocked state to wait for the delete command to be successfully sent to the timer command queue, should the queue already be full when xTimerDelete() was called. xTicksToWait is ignored if xTimerDelete() is called before the scheduler is started.</td></tr>
+    <tr><td class="paramname">xTicksToWait</td><td>Specifies the time, in ticks, that the calling task should be held in the Blocked state to wait for the delete command to be successfully sent to the timer command queue, should the queue already be full when <a class="el" href="group__xTimerDelete.html#ga8c8e21f05ebe92e15449addc5d269d10" title="Delete a timer that was previously created using the xTimerCreate() API function.">xTimerDelete()</a> was called. xTicksToWait is ignored if <a class="el" href="group__xTimerDelete.html#ga8c8e21f05ebe92e15449addc5d269d10" title="Delete a timer that was previously created using the xTimerCreate() API function.">xTimerDelete()</a> is called before the scheduler is started.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdFAIL will be returned if the delete command could not be sent to the timer command queue even after xTicksToWait ticks had passed. pdPASS will be returned if the command was successfully sent to the timer command queue. When the command is actually processed will depend on the priority of the timer service/daemon task relative to other tasks in the system. The timer service/daemon task priority is set by the configTIMER_TASK_PRIORITY configuration constant.</dd></dl>
 <p>Example usage:</p>
-<p>See the xTimerChangePeriod() API function example usage scenario. </p>
+<p>See the <a class="el" href="group__xTimerControl.html#gab12eac1c69a3437b8161ce81ff34b2f4" title="Change the period of a timer that was previously created using the xTimerCreate() API function.">xTimerChangePeriod()</a> API function example usage scenario. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

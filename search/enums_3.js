@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_5fmode_849',['player_mode',['../group__config.html#gaec940e45eb1c4841e79cfa1a8cf86733',1,'enum.h']]]
+  ['game_5fmode_1063',['game_mode',['../group__enum.html#ga5d069ca8708a30d3ae09a065989ec1f7',1,'enum.h']]]
 ];

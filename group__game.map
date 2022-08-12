@@ -1,4 +1,4 @@
 <map id="Main Game Module" name="Main Game Module">
-<area shape="rect" id="node1" href="$group__tetris.html" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" id="node1" href="$group__tetris.html" title="All modules that were created in the scope of this project." alt="" coords="5,5,121,31"/>
 <area shape="rect" id="node2" title="Module that contains the primary game functionality." alt="" coords="169,5,319,31"/>
 </map>

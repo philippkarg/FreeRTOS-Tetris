@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xTimerPendFunctionCall</title>
+<title>FreeRTOS Tetris: Function Deference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,21 +62,78 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xTimerPendFunctionCall<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Timers</a></div></div>  </div>
+<div class="title">Function Deference<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Software Timers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains function that allow the user to defer functions to the FreeRTOS daemon task.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xTimerPendFunctionCall:</div>
+Collaboration diagram for Function Deference:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xTimerPendFunctionCall.png" border="0" usemap="#group____xTimerPendFunctionCall" alt=""/></div>
 <map name="group____xTimerPendFunctionCall" id="group____xTimerPendFunctionCall">
-<area shape="rect" title=" " alt="" coords="120,5,300,31"/>
-<area shape="rect" href="group__Timers.html" title=" " alt="" coords="5,5,72,31"/>
+<area shape="rect" title="Group that contains function that allow the user to defer functions to the FreeRTOS daemon task." alt="" coords="181,5,329,31"/>
+<area shape="rect" href="group__Timers.html" title="Group that handles FreeRTOS Timers." alt="" coords="5,5,133,31"/>
 </map>
 </div>
-<p>BaseType_t xTimerPendFunctionCall( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, TickType_t xTicksToWait );</p>
-<p>Used to defer the execution of a function to the RTOS daemon task (the timer service task, hence this function is implemented in timers.c and is prefixed with 'Timer').</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gae0d9338933037e6feebe6437763fa299"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299">xTimerPendFunctionCallFromISR</a> (<a class="el" href="group__TimerHandle.html#gaf6e8e2be58df2be9f9bb808fcdc51622">PendedFunction_t</a> xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *pxHigherPriorityTaskWoken) PRIVILEGED_FUNCTION</td></tr>
+<tr class="memdesc:gae0d9338933037e6feebe6437763fa299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used from application interrupt service routines to defer the execution of a function to the RTOS daemon task (the timer service task, hence this function is implemented in timers.c and is prefixed with 'Timer').  <a href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299">More...</a><br /></td></tr>
+<tr class="separator:gae0d9338933037e6feebe6437763fa299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04e031135bd3276caaedd656d464dc23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xTimerPendFunctionCall.html#ga04e031135bd3276caaedd656d464dc23">xTimerPendFunctionCall</a> (<a class="el" href="group__TimerHandle.html#gaf6e8e2be58df2be9f9bb808fcdc51622">PendedFunction_t</a> xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTicksToWait) PRIVILEGED_FUNCTION</td></tr>
+<tr class="memdesc:ga04e031135bd3276caaedd656d464dc23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to defer the execution of a function to the RTOS daemon task (the timer service task, hence this function is implemented in timers.c and is prefixed with 'Timer').  <a href="group__xTimerPendFunctionCall.html#ga04e031135bd3276caaedd656d464dc23">More...</a><br /></td></tr>
+<tr class="separator:ga04e031135bd3276caaedd656d464dc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains function that allow the user to defer functions to the FreeRTOS daemon task. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga04e031135bd3276caaedd656d464dc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04e031135bd3276caaedd656d464dc23">&#9670;&nbsp;</a></span>xTimerPendFunctionCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xTimerPendFunctionCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#gaf6e8e2be58df2be9f9bb808fcdc51622">PendedFunction_t</a>&#160;</td>
+          <td class="paramname"><em>xFunctionToPend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pvParameter1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ulParameter2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>&#160;</td>
+          <td class="paramname"><em>xTicksToWait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;timers.h&gt;</code></p>
+
+<p>Used to defer the execution of a function to the RTOS daemon task (the timer service task, hence this function is implemented in timers.c and is prefixed with 'Timer'). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xFunctionToPend</td><td>The function to execute from the timer service/ daemon task. The function must conform to the PendedFunction_t prototype.</td></tr>
@@ -87,7 +144,104 @@ Collaboration diagram for xTimerPendFunctionCall:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdPASS is returned if the message was successfully sent to the timer daemon task, otherwise pdFALSE is returned. </dd></dl>
+
+</div>
+</div>
+<a id="gae0d9338933037e6feebe6437763fa299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0d9338933037e6feebe6437763fa299">&#9670;&nbsp;</a></span>xTimerPendFunctionCallFromISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xTimerPendFunctionCallFromISR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#gaf6e8e2be58df2be9f9bb808fcdc51622">PendedFunction_t</a>&#160;</td>
+          <td class="paramname"><em>xFunctionToPend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pvParameter1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ulParameter2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *&#160;</td>
+          <td class="paramname"><em>pxHigherPriorityTaskWoken</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;timers.h&gt;</code></p>
+
+<p>Used from application interrupt service routines to defer the execution of a function to the RTOS daemon task (the timer service task, hence this function is implemented in timers.c and is prefixed with 'Timer'). </p>
+<p>Ideally an interrupt service routine (ISR) is kept as short as possible, but sometimes an ISR either has a lot of processing to do, or needs to perform processing that is not deterministic. In these cases <a class="el" href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299" title="Used from application interrupt service routines to defer the execution of a function to the RTOS dae...">xTimerPendFunctionCallFromISR()</a> can be used to defer processing of a function to the RTOS daemon task.</p>
+<p>A mechanism is provided that allows the interrupt to return directly to the task that will subsequently execute the pended callback function. This allows the callback function to execute contiguously in time with the interrupt - just as if the callback had executed in the interrupt itself.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xFunctionToPend</td><td>The function to execute from the timer service/ daemon task. The function must conform to the PendedFunction_t prototype.</td></tr>
+    <tr><td class="paramname">pvParameter1</td><td>The value of the callback function's first parameter. The parameter has a void * type to allow it to be used to pass any type. For example, unsigned longs can be cast to a void *, or the void * can be used to point to a structure.</td></tr>
+    <tr><td class="paramname">ulParameter2</td><td>The value of the callback function's second parameter.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>As mentioned above, calling this function will result in a message being sent to the timer daemon task. If the priority of the timer daemon task (which is set using configTIMER_TASK_PRIORITY in <a class="el" href="FreeRTOSConfig_8h_source.html">FreeRTOSConfig.h</a>) is higher than the priority of the currently running task (the task the interrupt interrupted) then *pxHigherPriorityTaskWoken will be set to pdTRUE within <a class="el" href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299" title="Used from application interrupt service routines to defer the execution of a function to the RTOS dae...">xTimerPendFunctionCallFromISR()</a>, indicating that a context switch should be requested before the interrupt exits. For that reason *pxHigherPriorityTaskWoken must be initialised to pdFALSE. See the example code below.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pdPASS is returned if the message was successfully sent to the timer daemon task, otherwise pdFALSE is returned.</dd></dl>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="comment">// The callback function that will execute in the context of the daemon task.</span></div>
+<div class="line"><span class="comment">// Note callback functions must all use this same prototype.</span></div>
+<div class="line"><span class="keywordtype">void</span> vProcessInterface( <span class="keywordtype">void</span> *pvParameter1, uint32_t ulParameter2 )</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xInterfaceToService;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The interface that requires servicing is passed in the second</span></div>
+<div class="line">    <span class="comment">// parameter.  The first parameter is not used in this case.</span></div>
+<div class="line">    xInterfaceToService = ( <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> ) ulParameter2;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// ...Perform the processing here...</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// An ISR that receives data packets from multiple interfaces</span></div>
+<div class="line"><span class="keywordtype">void</span> vAnISR( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xInterfaceToService, xHigherPriorityTaskWoken;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Query the hardware to determine which interface needs processing.</span></div>
+<div class="line">    xInterfaceToService = prvCheckInterfaces();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The actual processing is to be deferred to a task.  Request the</span></div>
+<div class="line">    <span class="comment">// vProcessInterface() callback function is executed, passing in the</span></div>
+<div class="line">    <span class="comment">// number of the interface that needs processing.  The interface to</span></div>
+<div class="line">    <span class="comment">// service is passed in the second parameter.  The first parameter is</span></div>
+<div class="line">    <span class="comment">// not used in this case.</span></div>
+<div class="line">    xHigherPriorityTaskWoken = pdFALSE;</div>
+<div class="line">    <a class="code" href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299">xTimerPendFunctionCallFromISR</a>( vProcessInterface, NULL, ( uint32_t ) xInterfaceToService, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// If xHigherPriorityTaskWoken is now set to pdTRUE then a context</span></div>
+<div class="line">    <span class="comment">// switch should be requested.  The macro used is port specific and will</span></div>
+<div class="line">    <span class="comment">// be either portYIELD_FROM_ISR() or portEND_SWITCHING_ISR() - refer to</span></div>
+<div class="line">    <span class="comment">// the documentation page for the port being used.</span></div>
+<div class="line">    portYIELD_FROM_ISR( xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
+<div class="ttc" id="agroup__xTimerPendFunctionCall_html_gae0d9338933037e6feebe6437763fa299"><div class="ttname"><a href="group__xTimerPendFunctionCall.html#gae0d9338933037e6feebe6437763fa299">xTimerPendFunctionCallFromISR</a></div><div class="ttdeci">BaseType_t xTimerPendFunctionCallFromISR(PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, BaseType_t *pxHigherPriorityTaskWoken) PRIVILEGED_FUNCTION</div><div class="ttdoc">Used from application interrupt service routines to defer the execution of a function to the RTOS dae...</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

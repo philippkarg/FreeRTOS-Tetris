@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xQueueSendFromISR</title>
+<title>FreeRTOS Tetris: Queue Sending from ISR</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,160 +62,471 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xQueueSendFromISR<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queue Management</a></div></div>  </div>
+<div class="title">Queue Sending from ISR<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queues</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for sending queue data from an Interrupt Service Routine.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xQueueSendFromISR:</div>
+Collaboration diagram for Queue Sending from ISR:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xQueueSendFromISR.png" border="0" usemap="#group____xQueueSendFromISR" alt=""/></div>
 <map name="group____xQueueSendFromISR" id="group____xQueueSendFromISR">
-<area shape="rect" title=" " alt="" coords="208,5,367,31"/>
-<area shape="rect" href="group__QueueManagement.html" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for sending queue data from an Interrupt Service Routine." alt="" coords="124,5,304,31"/>
+<area shape="rect" href="group__QueueManagement.html" title="Group that handles FreeRTOS Queue Management." alt="" coords="5,5,76,31"/>
 </map>
 </div>
-<p>queue. h </p><pre>
-BaseType_t xQueueSendToFrontFromISR(
-                                        QueueHandle_t xQueue,
-                                        const void *pvItemToQueue,
-                                        BaseType_t *pxHigherPriorityTaskWoken
-                                     );
-</pre><p>This is a macro that calls xQueueGenericSendFromISR().</p>
-<p>Post an item to the front of a queue. It is safe to use this macro from within an interrupt service routine.</p>
-<p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaf03b83396462affe9e28302660e7b9c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR</a>(xQueue,  pvItemToQueue,  pxHigherPriorityTaskWoken)&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_FRONT )</td></tr>
+<tr class="separator:gaf03b83396462affe9e28302660e7b9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51e9f73417b11441a181cdc4f33a68e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR</a>(xQueue,  pvItemToQueue,  pxHigherPriorityTaskWoken)&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )</td></tr>
+<tr class="separator:ga51e9f73417b11441a181cdc4f33a68e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdcd6a86ef82034d002193e79cfd3ce8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR</a>(xQueue,  pvItemToQueue,  pxHigherPriorityTaskWoken)&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueOVERWRITE )</td></tr>
+<tr class="separator:gabdcd6a86ef82034d002193e79cfd3ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21d5919ed26c21d121df4a4debeb643c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR</a>(xQueue,  pvItemToQueue,  pxHigherPriorityTaskWoken)&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )</td></tr>
+<tr class="separator:ga21d5919ed26c21d121df4a4debeb643c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga263711eb0124112e828a18fd4b8ab29d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a> (<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue, const void *const pvItemToQueue, <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *const pxHigherPriorityTaskWoken, const <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xCopyPosition) PRIVILEGED_FUNCTION</td></tr>
+<tr class="separator:ga263711eb0124112e828a18fd4b8ab29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for sending queue data from an Interrupt Service Routine. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gabdcd6a86ef82034d002193e79cfd3ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabdcd6a86ef82034d002193e79cfd3ce8">&#9670;&nbsp;</a></span>xQueueOverwriteFromISR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueOverwriteFromISR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvItemToQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pxHigherPriorityTaskWoken&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueOVERWRITE )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR</a>(</div>
+<div class="line">                             <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                             <span class="keyword">const</span> <span class="keywordtype">void</span> * pvItemToQueue,</div>
+<div class="line">                             <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *pxHigherPriorityTaskWoken</div>
+<div class="line">                        );</div>
+</div><!-- fragment --><p>A version of <a class="el" href="group__xQueueSend.html#ga8e9ced123b5a0e37a36d3bbdb2e56b4e">xQueueOverwrite()</a> that can be used in an interrupt service routine (ISR).</p>
+<p>Only for use with queues that can hold a single item - so the queue is either empty or full.</p>
+<p>Post an item on a queue. If the queue is already full then overwrite the value held in the queue. The item is queued by copy, not by reference.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
     <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
-    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>xQueueSendToFrontFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If xQueueSendToFromFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td><a class="el" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR()</a> will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If <a class="el" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR()</a> sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
-<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><pre>
-void vBufferISR( void )
-{
-char cIn;
-BaseType_t xHigherPrioritTaskWoken;</pre><pre>   // We have not woken a task at the start of the ISR.
-   xHigherPriorityTaskWoken = pdFALSE;</pre><pre>   // Loop until the buffer is empty.
-   do
-   {
-       // Obtain a byte from the buffer.
-       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</pre><pre>       // Post the byte.
-       xQueueSendToFrontFromISR( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</pre><pre>   } while( portINPUT_BYTE( BUFFER_COUNT ) );</pre><pre>   // Now the buffer is empty we can switch context if necessary.
-   if( xHigherPriorityTaskWoken )
-   {
-       taskYIELD ();
-   }
-}
-</pre><p>queue. h </p><pre>
-BaseType_t xQueueSendToBackFromISR(
-                                        QueueHandle_t xQueue,
-                                        const void *pvItemToQueue,
-                                        BaseType_t *pxHigherPriorityTaskWoken
-                                     );
-</pre><p>This is a macro that calls xQueueGenericSendFromISR().</p>
-<p>Post an item to the back of a queue. It is safe to use this macro from within an interrupt service routine.</p>
-<p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
-    <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
-    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>xQueueSendToBackFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If xQueueSendToBackFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
-<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><pre>
-void vBufferISR( void )
-{
-char cIn;
-BaseType_t xHigherPriorityTaskWoken;</pre><pre>   // We have not woken a task at the start of the ISR.
-   xHigherPriorityTaskWoken = pdFALSE;</pre><pre>   // Loop until the buffer is empty.
-   do
-   {
-       // Obtain a byte from the buffer.
-       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</pre><pre>       // Post the byte.
-       xQueueSendToBackFromISR( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</pre><pre>   } while( portINPUT_BYTE( BUFFER_COUNT ) );</pre><pre>   // Now the buffer is empty we can switch context if necessary.
-   if( xHigherPriorityTaskWoken )
-   {
-       taskYIELD ();
-   }
-}
-</pre><p>queue. h </p><pre>
-BaseType_t xQueueSendFromISR(
-                                    QueueHandle_t xQueue,
-                                    const void *pvItemToQueue,
-                                    BaseType_t *pxHigherPriorityTaskWoken
-                               );
-</pre><p>This is a macro that calls xQueueGenericSendFromISR(). It is included for backward compatibility with versions of FreeRTOS.org that did not include the xQueueSendToBackFromISR() and xQueueSendToFrontFromISR() macros.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR()</a> is a macro that calls <a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a>, and therefore has the same return values as <a class="el" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR()</a>. However, pdPASS is the only value that can be returned because <a class="el" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR()</a> will write to the queue even when the queue is already full.</dd></dl>
+<p>Example usage: </p><div class="fragment"><div class="line"> <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue;</div>
+<div class="line"> </div>
+<div class="line"> <span class="keywordtype">void</span> vFunction( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line"> {</div>
+<div class="line">    <span class="comment">// Create a queue to hold one uint32_t value.  It is strongly</span></div>
+<div class="line">    <span class="comment">// recommended *not* to use xQueueOverwriteFromISR() on queues that can</span></div>
+<div class="line">    <span class="comment">// contain more than one value, and doing so will trigger an assertion</span></div>
+<div class="line">    <span class="comment">// if configASSERT() is defined.</span></div>
+<div class="line">    xQueue = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 1, <span class="keyword">sizeof</span>( uint32_t ) );</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> vAnInterruptHandler( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line"><span class="comment">// xHigherPriorityTaskWoken must be set to pdFALSE before it is used.</span></div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xHigherPriorityTaskWoken = pdFALSE;</div>
+<div class="line">uint32_t ulVarToSend, ulValReceived;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Write the value 10 to the queue using xQueueOverwriteFromISR().</span></div>
+<div class="line">    ulVarToSend = 10;</div>
+<div class="line">    <a class="code" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR</a>( xQueue, &amp;ulVarToSend, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// The queue is full, but calling xQueueOverwriteFromISR() again will still</span></div>
+<div class="line">    <span class="comment">// pass because the value held in the queue will be overwritten with the</span></div>
+<div class="line">    <span class="comment">// new value.</span></div>
+<div class="line">    ulVarToSend = 100;</div>
+<div class="line">    <a class="code" href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR</a>( xQueue, &amp;ulVarToSend, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Reading from the queue will now return 100.</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span>( xHigherPrioritytaskWoken == pdTRUE )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Writing to the queue caused a task to unblock and the unblocked task</span></div>
+<div class="line">        <span class="comment">// has a priority higher than or equal to the priority of the currently</span></div>
+<div class="line">        <span class="comment">// executing task (the task this interrupt interrupted).  Perform a context</span></div>
+<div class="line">        <span class="comment">// switch so this interrupt returns directly to the unblocked task.</span></div>
+<div class="line">        portYIELD_FROM_ISR(); <span class="comment">// or portEND_SWITCHING_ISR() depending on the port.</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga21d5919ed26c21d121df4a4debeb643c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21d5919ed26c21d121df4a4debeb643c">&#9670;&nbsp;</a></span>xQueueSendFromISR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueSendFromISR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvItemToQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pxHigherPriorityTaskWoken&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR</a>(</div>
+<div class="line">                                    <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                                    <span class="keyword">const</span> <span class="keywordtype">void</span> *pvItemToQueue,</div>
+<div class="line">                                    <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *pxHigherPriorityTaskWoken</div>
+<div class="line">                               );</div>
+</div><!-- fragment --><p> This is a macro that calls <a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a>. It is included for backward compatibility with versions of FreeRTOS.org that did not include the <a class="el" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR()</a> and <a class="el" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR()</a> macros.</p>
 <p>Post an item to the back of a queue. It is safe to use this function from within an interrupt service routine.</p>
 <p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
     <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
-    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>xQueueSendFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If xQueueSendFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td><a class="el" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR()</a> will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If <a class="el" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR()</a> sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
-<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><pre>
-void vBufferISR( void )
-{
-char cIn;
-BaseType_t xHigherPriorityTaskWoken;</pre><pre>   // We have not woken a task at the start of the ISR.
-   xHigherPriorityTaskWoken = pdFALSE;</pre><pre>   // Loop until the buffer is empty.
-   do
-   {
-       // Obtain a byte from the buffer.
-       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</pre><pre>       // Post the byte.
-       xQueueSendFromISR( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</pre><pre>   } while( portINPUT_BYTE( BUFFER_COUNT ) );</pre><pre>   // Now the buffer is empty we can switch context if necessary.
-   if( xHigherPriorityTaskWoken )
-   {
-       // Actual macro used here is port specific.
-       portYIELD_FROM_ISR ();
-   }
-}
-</pre><p>queue. h </p><pre>
-BaseType_t xQueueGenericSendFromISR(
-                                          QueueHandle_t        xQueue,
-                                          const    void    *pvItemToQueue,
-                                          BaseType_t   *pxHigherPriorityTaskWoken,
-                                          BaseType_t   xCopyPosition
-                                      );
-</pre><p>It is preferred that the macros xQueueSendFromISR(), xQueueSendToFrontFromISR() and xQueueSendToBackFromISR() be used in place of calling this function directly. xQueueGiveFromISR() is an equivalent for use by semaphores that don't actually copy any data.</p>
+<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> vBufferISR( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">char</span> cIn;</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xHigherPriorityTaskWoken;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// We have not woken a task at the start of the ISR.</span></div>
+<div class="line">   xHigherPriorityTaskWoken = pdFALSE;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Loop until the buffer is empty.</span></div>
+<div class="line">   <span class="keywordflow">do</span></div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Obtain a byte from the buffer.</span></div>
+<div class="line">       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// Post the byte.</span></div>
+<div class="line">       <a class="code" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR</a>( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">   } <span class="keywordflow">while</span>( portINPUT_BYTE( BUFFER_COUNT ) );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Now the buffer is empty we can switch context if necessary.</span></div>
+<div class="line">   <span class="keywordflow">if</span>( xHigherPriorityTaskWoken )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Actual macro used here is port specific.</span></div>
+<div class="line">       portYIELD_FROM_ISR ();</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga51e9f73417b11441a181cdc4f33a68e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51e9f73417b11441a181cdc4f33a68e9">&#9670;&nbsp;</a></span>xQueueSendToBackFromISR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueSendToBackFromISR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvItemToQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pxHigherPriorityTaskWoken&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR</a>(</div>
+<div class="line">                                        <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                                        <span class="keyword">const</span> <span class="keywordtype">void</span> *pvItemToQueue,</div>
+<div class="line">                                        <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *pxHigherPriorityTaskWoken</div>
+<div class="line">                                     );</div>
+</div><!-- fragment --><p> This is a macro that calls <a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a>.</p>
+<p>Post an item to the back of a queue. It is safe to use this macro from within an interrupt service routine.</p>
+<p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
+    <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td><a class="el" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR()</a> will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If <a class="el" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR()</a> sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
+<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> vBufferISR( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">char</span> cIn;</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xHigherPriorityTaskWoken;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// We have not woken a task at the start of the ISR.</span></div>
+<div class="line">   xHigherPriorityTaskWoken = pdFALSE;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Loop until the buffer is empty.</span></div>
+<div class="line">   <span class="keywordflow">do</span></div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Obtain a byte from the buffer.</span></div>
+<div class="line">       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// Post the byte.</span></div>
+<div class="line">       <a class="code" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR</a>( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">   } <span class="keywordflow">while</span>( portINPUT_BYTE( BUFFER_COUNT ) );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Now the buffer is empty we can switch context if necessary.</span></div>
+<div class="line">   <span class="keywordflow">if</span>( xHigherPriorityTaskWoken )</div>
+<div class="line">   {</div>
+<div class="line">       <a class="code" href="group__KernelControl.html#ga767e474430db1e60056e9678763f9202">taskYIELD</a> ();</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gaf03b83396462affe9e28302660e7b9c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf03b83396462affe9e28302660e7b9c6">&#9670;&nbsp;</a></span>xQueueSendToFrontFromISR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueSendToFrontFromISR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvItemToQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pxHigherPriorityTaskWoken&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( ( xQueue ), ( pvItemToQueue ), ( pxHigherPriorityTaskWoken ), queueSEND_TO_FRONT )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR</a>(</div>
+<div class="line">                                        <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                                        <span class="keyword">const</span> <span class="keywordtype">void</span> *pvItemToQueue,</div>
+<div class="line">                                        <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *pxHigherPriorityTaskWoken</div>
+<div class="line">                                     );</div>
+</div><!-- fragment --><p> This is a macro that calls <a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a>.</p>
+<p>Post an item to the front of a queue. It is safe to use this macro from within an interrupt service routine.</p>
+<p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
+    <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td><a class="el" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR()</a> will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If xQueueSendToFromFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
+<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> vBufferISR( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">char</span> cIn;</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xHigherPrioritTaskWoken;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// We have not woken a task at the start of the ISR.</span></div>
+<div class="line">   xHigherPriorityTaskWoken = pdFALSE;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Loop until the buffer is empty.</span></div>
+<div class="line">   <span class="keywordflow">do</span></div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Obtain a byte from the buffer.</span></div>
+<div class="line">       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// Post the byte.</span></div>
+<div class="line">       <a class="code" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR</a>( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWoken );</div>
+<div class="line"> </div>
+<div class="line">   } <span class="keywordflow">while</span>( portINPUT_BYTE( BUFFER_COUNT ) );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Now the buffer is empty we can switch context if necessary.</span></div>
+<div class="line">   <span class="keywordflow">if</span>( xHigherPriorityTaskWoken )</div>
+<div class="line">   {</div>
+<div class="line">       <a class="code" href="group__KernelControl.html#ga767e474430db1e60056e9678763f9202">taskYIELD</a> ();</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga263711eb0124112e828a18fd4b8ab29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga263711eb0124112e828a18fd4b8ab29d">&#9670;&nbsp;</a></span>xQueueGenericSendFromISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xQueueGenericSendFromISR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td>
+          <td class="paramname"><em>xQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *const&#160;</td>
+          <td class="paramname"><em>pvItemToQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> *const&#160;</td>
+          <td class="paramname"><em>pxHigherPriorityTaskWoken</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td>
+          <td class="paramname"><em>xCopyPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>(</div>
+<div class="line">                                          <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>        xQueue,</div>
+<div class="line">                                          <span class="keyword">const</span>    <span class="keywordtype">void</span>    *pvItemToQueue,</div>
+<div class="line">                                          <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>   *pxHigherPriorityTaskWoken,</div>
+<div class="line">                                          <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>   xCopyPosition</div>
+<div class="line">                                      );</div>
+</div><!-- fragment --><p> It is preferred that the macros <a class="el" href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR()</a>, <a class="el" href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR()</a> and <a class="el" href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR()</a> be used in place of calling this function directly. xQueueGiveFromISR() is an equivalent for use by semaphores that don't actually copy any data.</p>
 <p>Post an item on a queue. It is safe to use this function from within an interrupt service routine.</p>
 <p>Items are queued by copy not reference so it is preferable to only queue small items, especially when called from an ISR. In most cases it would be preferable to store a pointer to the item being queued.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue on which the item is to be posted.</td></tr>
     <tr><td class="paramname">pvItemToQueue</td><td>A pointer to the item that is to be placed on the queue. The size of the items the queue will hold was defined when the queue was created, so this many bytes will be copied from pvItemToQueue into the queue storage area.</td></tr>
-    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>xQueueGenericSendFromISR() will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If xQueueGenericSendFromISR() sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
+    <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td><a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a> will set *pxHigherPriorityTaskWoken to pdTRUE if sending to the queue caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If <a class="el" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR()</a> sets this value to pdTRUE then a context switch should be requested before the interrupt is exited.</td></tr>
     <tr><td class="paramname">xCopyPosition</td><td>Can take the value queueSEND_TO_BACK to place the item at the back of the queue, or queueSEND_TO_FRONT to place the item at the front of the queue (for high priority messages).</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdTRUE if the data was successfully sent to the queue, otherwise errQUEUE_FULL.</dd></dl>
-<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><pre>
-void vBufferISR( void )
-{
-char cIn;
-BaseType_t xHigherPriorityTaskWokenByPost;</pre><pre>   // We have not woken a task at the start of the ISR.
-   xHigherPriorityTaskWokenByPost = pdFALSE;</pre><pre>   // Loop until the buffer is empty.
-   do
-   {
-       // Obtain a byte from the buffer.
-       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</pre><pre>       // Post each byte.
-       xQueueGenericSendFromISR( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWokenByPost, queueSEND_TO_BACK );</pre><pre>   } while( portINPUT_BYTE( BUFFER_COUNT ) );</pre><pre>   // Now the buffer is empty we can switch context if necessary.  Note that the
-   // name of the yield function required is port specific.
-   if( xHigherPriorityTaskWokenByPost )
-   {
-       taskYIELD_YIELD_FROM_ISR();
-   }
-}
-</pre> </div><!-- contents -->
+<p>Example usage for buffered IO (where the ISR can obtain more than one value per call): </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> vBufferISR( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">char</span> cIn;</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xHigherPriorityTaskWokenByPost;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// We have not woken a task at the start of the ISR.</span></div>
+<div class="line">   xHigherPriorityTaskWokenByPost = pdFALSE;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Loop until the buffer is empty.</span></div>
+<div class="line">   <span class="keywordflow">do</span></div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Obtain a byte from the buffer.</span></div>
+<div class="line">       cIn = portINPUT_BYTE( RX_REGISTER_ADDRESS );</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// Post each byte.</span></div>
+<div class="line">       <a class="code" href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a>( xRxQueue, &amp;cIn, &amp;xHigherPriorityTaskWokenByPost, queueSEND_TO_BACK );</div>
+<div class="line"> </div>
+<div class="line">   } <span class="keywordflow">while</span>( portINPUT_BYTE( BUFFER_COUNT ) );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Now the buffer is empty we can switch context if necessary.  Note that the</span></div>
+<div class="line">   <span class="comment">// name of the yield function required is port specific.</span></div>
+<div class="line">   <span class="keywordflow">if</span>( xHigherPriorityTaskWokenByPost )</div>
+<div class="line">   {</div>
+<div class="line">       taskYIELD_YIELD_FROM_ISR();</div>
+<div class="line">   }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup__xQueueSendFromISR_html_ga51e9f73417b11441a181cdc4f33a68e9"><div class="ttname"><a href="group__xQueueSendFromISR.html#ga51e9f73417b11441a181cdc4f33a68e9">xQueueSendToBackFromISR</a></div><div class="ttdeci">#define xQueueSendToBackFromISR(xQueue, pvItemToQueue, pxHigherPriorityTaskWoken)</div><div class="ttdef"><b>Definition:</b> queue.h:895</div></div>
+<div class="ttc" id="agroup__xQueueSendFromISR_html_ga263711eb0124112e828a18fd4b8ab29d"><div class="ttname"><a href="group__xQueueSendFromISR.html#ga263711eb0124112e828a18fd4b8ab29d">xQueueGenericSendFromISR</a></div><div class="ttdeci">BaseType_t xQueueGenericSendFromISR(QueueHandle_t xQueue, const void *const pvItemToQueue, BaseType_t *const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition) PRIVILEGED_FUNCTION</div><div class="ttdef"><b>Definition:</b> queue.c:949</div></div>
+<div class="ttc" id="agroup__QueueHandle_html_gaaf19d499892a4ce1409326ece00f5264"><div class="ttname"><a href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a></div><div class="ttdeci">void * QueueHandle_t</div><div class="ttdef"><b>Definition:</b> queue.h:135</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
+<div class="ttc" id="agroup__xQueueSendFromISR_html_gabdcd6a86ef82034d002193e79cfd3ce8"><div class="ttname"><a href="group__xQueueSendFromISR.html#gabdcd6a86ef82034d002193e79cfd3ce8">xQueueOverwriteFromISR</a></div><div class="ttdeci">#define xQueueOverwriteFromISR(xQueue, pvItemToQueue, pxHigherPriorityTaskWoken)</div><div class="ttdef"><b>Definition:</b> queue.h:980</div></div>
+<div class="ttc" id="agroup__xQueueSendFromISR_html_gaf03b83396462affe9e28302660e7b9c6"><div class="ttname"><a href="group__xQueueSendFromISR.html#gaf03b83396462affe9e28302660e7b9c6">xQueueSendToFrontFromISR</a></div><div class="ttdeci">#define xQueueSendToFrontFromISR(xQueue, pvItemToQueue, pxHigherPriorityTaskWoken)</div><div class="ttdef"><b>Definition:</b> queue.h:828</div></div>
+<div class="ttc" id="agroup__xQueueSendFromISR_html_ga21d5919ed26c21d121df4a4debeb643c"><div class="ttname"><a href="group__xQueueSendFromISR.html#ga21d5919ed26c21d121df4a4debeb643c">xQueueSendFromISR</a></div><div class="ttdeci">#define xQueueSendFromISR(xQueue, pvItemToQueue, pxHigherPriorityTaskWoken)</div><div class="ttdef"><b>Definition:</b> queue.h:1050</div></div>
+<div class="ttc" id="agroup__xQueueCreate_html_gaeb858b824bd74a934ea7ebb81af2a6bb"><div class="ttname"><a href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a></div><div class="ttdeci">#define xQueueCreate(uxQueueLength, uxItemSize)</div><div class="ttdef"><b>Definition:</b> queue.h:237</div></div>
+<div class="ttc" id="agroup__KernelControl_html_ga767e474430db1e60056e9678763f9202"><div class="ttname"><a href="group__KernelControl.html#ga767e474430db1e60056e9678763f9202">taskYIELD</a></div><div class="ttdeci">#define taskYIELD()</div><div class="ttdoc">Macro for forcing a context switch.</div><div class="ttdef"><b>Definition:</b> task.h:236</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

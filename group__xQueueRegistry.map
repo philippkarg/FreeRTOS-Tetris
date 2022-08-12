@@ -1,0 +1,4 @@
+<map id="Queue Registry" name="Queue Registry">
+<area shape="rect" id="node1" title="Group that contains macros &amp; functions to register queues." alt="" coords="124,5,247,31"/>
+<area shape="rect" id="node2" href="$group__QueueManagement.html" title="Group that handles FreeRTOS Queue Management." alt="" coords="5,5,76,31"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xQueueCreate</title>
+<title>FreeRTOS Tetris: Queue Creation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,26 +62,76 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xQueueCreate<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queue Management</a></div></div>  </div>
+<div class="title">Queue Creation<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queues</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for creating queues.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xQueueCreate:</div>
+Collaboration diagram for Queue Creation:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xQueueCreate.png" border="0" usemap="#group____xQueueCreate" alt=""/></div>
 <map name="group____xQueueCreate" id="group____xQueueCreate">
-<area shape="rect" title=" " alt="" coords="208,5,323,31"/>
-<area shape="rect" href="group__QueueManagement.html" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for creating queues." alt="" coords="124,5,247,31"/>
+<area shape="rect" href="group__QueueManagement.html" title="Group that handles FreeRTOS Queue Management." alt="" coords="5,5,76,31"/>
 </map>
 </div>
-<p>queue. h </p><pre>
-QueueHandle_t xQueueCreate(
-                             UBaseType_t uxQueueLength,
-                             UBaseType_t uxItemSize
-                         );
-  </pre><p>Creates a new queue instance, and returns a handle by which the new queue can be referenced.</p>
-<p>Internally, within the FreeRTOS implementation, queues use two blocks of memory. The first block is used to hold the queue's data structures. The second block is used to hold items placed into the queue. If a queue is created using xQueueCreate() then both blocks of memory are automatically dynamically allocated inside the xQueueCreate() function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a queue is created using xQueueCreateStatic() then the application writer must provide the memory that will get used by the queue. xQueueCreateStatic() therefore allows a queue to be created without using any dynamic memory allocation.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaeb858b824bd74a934ea7ebb81af2a6bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>(uxQueueLength,  uxItemSize)&#160;&#160;&#160;<a class="el" href="group__xQueueCreate.html#ga74fb40ea6a869143597ca91ce90c99c2">xQueueGenericCreate</a>( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )</td></tr>
+<tr class="separator:gaeb858b824bd74a934ea7ebb81af2a6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga867bd68852e9eea7206d364a7e165e57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic</a>(uxQueueLength,  uxItemSize,  pucQueueStorage,  pxQueueBuffer)&#160;&#160;&#160;<a class="el" href="group__xQueueCreate.html#ga5b2efe04da1dd893134938188aebc8e1">xQueueGenericCreateStatic</a>( ( uxQueueLength ), ( uxItemSize ), ( pucQueueStorage ), ( pxQueueBuffer ), ( queueQUEUE_TYPE_BASE ) )</td></tr>
+<tr class="separator:ga867bd68852e9eea7206d364a7e165e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga74fb40ea6a869143597ca91ce90c99c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueCreate.html#ga74fb40ea6a869143597ca91ce90c99c2">xQueueGenericCreate</a> (const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxQueueLength, const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxItemSize, const uint8_t ucQueueType) PRIVILEGED_FUNCTION</td></tr>
+<tr class="separator:ga74fb40ea6a869143597ca91ce90c99c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b2efe04da1dd893134938188aebc8e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueCreate.html#ga5b2efe04da1dd893134938188aebc8e1">xQueueGenericCreateStatic</a> (const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxQueueLength, const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxItemSize, uint8_t *pucQueueStorage, <a class="el" href="structxSTATIC__QUEUE.html">StaticQueue_t</a> *pxStaticQueue, const uint8_t ucQueueType) PRIVILEGED_FUNCTION</td></tr>
+<tr class="separator:ga5b2efe04da1dd893134938188aebc8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for creating queues. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gaeb858b824bd74a934ea7ebb81af2a6bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb858b824bd74a934ea7ebb81af2a6bb">&#9670;&nbsp;</a></span>xQueueCreate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueCreate</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uxQueueLength, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uxItemSize&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueCreate.html#ga74fb40ea6a869143597ca91ce90c99c2">xQueueGenericCreate</a>( ( uxQueueLength ), ( uxItemSize ), ( queueQUEUE_TYPE_BASE ) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>(</div>
+<div class="line">                             <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxQueueLength,</div>
+<div class="line">                             <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxItemSize</div>
+<div class="line">                         );</div>
+</div><!-- fragment --><p>Creates a new queue instance, and returns a handle by which the new queue can be referenced.</p>
+<p>Internally, within the FreeRTOS implementation, queues use two blocks of memory. The first block is used to hold the queue's data structures. The second block is used to hold items placed into the queue. If a queue is created using <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate()</a> then both blocks of memory are automatically dynamically allocated inside the <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate()</a> function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a queue is created using <a class="el" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic()</a> then the application writer must provide the memory that will get used by the queue. <a class="el" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic()</a> therefore allows a queue to be created without using any dynamic memory allocation.</p>
 <p><a href="http://www.FreeRTOS.org/Embedded-RTOS-Queues.html">http://www.FreeRTOS.org/Embedded-RTOS-Queues.html</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -91,27 +141,221 @@ QueueHandle_t xQueueCreate(
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the queue is successfully create then a handle to the newly created queue is returned. If the queue cannot be created then 0 is returned.</dd></dl>
-<p>Example usage: </p><pre>
-struct AMessage
-{
-   char ucMessageID;
-   char ucData[ 20 ];
-};</pre><pre>void vATask( void *pvParameters )
-{
-QueueHandle_t xQueue1, xQueue2;</pre><pre>   // Create a queue capable of containing 10 uint32_t values.
-   xQueue1 = xQueueCreate( 10, sizeof( uint32_t ) );
-   if( xQueue1 == 0 )
-   {
-       // Queue was not created and must not be used.
-   }</pre><pre>   // Create a queue capable of containing 10 pointers to AMessage structures.
-   // These should be passed by pointer as they contain a lot of data.
-   xQueue2 = xQueueCreate( 10, sizeof( struct AMessage * ) );
-   if( xQueue2 == 0 )
-   {
-       // Queue was not created and must not be used.
-   }</pre><pre>   // ... Rest of task code.
-}
-</pre> </div><!-- contents -->
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>AMessage</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">char</span> ucMessageID;</div>
+<div class="line">   <span class="keywordtype">char</span> ucData[ 20 ];</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> vATask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue1, xQueue2;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 uint32_t values.</span></div>
+<div class="line">   xQueue1 = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 10, <span class="keyword">sizeof</span>( uint32_t ) );</div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue1 == 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Queue was not created and must not be used.</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 pointers to AMessage structures.</span></div>
+<div class="line">   <span class="comment">// These should be passed by pointer as they contain a lot of data.</span></div>
+<div class="line">   xQueue2 = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 10, <span class="keyword">sizeof</span>( <span class="keyword">struct</span> AMessage * ) );</div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue2 == 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Queue was not created and must not be used.</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga867bd68852e9eea7206d364a7e165e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga867bd68852e9eea7206d364a7e165e57">&#9670;&nbsp;</a></span>xQueueCreateStatic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueCreateStatic</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uxQueueLength, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">uxItemSize, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pucQueueStorage, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pxQueueBuffer&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueCreate.html#ga5b2efe04da1dd893134938188aebc8e1">xQueueGenericCreateStatic</a>( ( uxQueueLength ), ( uxItemSize ), ( pucQueueStorage ), ( pxQueueBuffer ), ( queueQUEUE_TYPE_BASE ) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> <a class="code" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic</a>(</div>
+<div class="line">                             <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxQueueLength,</div>
+<div class="line">                             <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxItemSize,</div>
+<div class="line">                             uint8_t *pucQueueStorageBuffer,</div>
+<div class="line">                             <a class="code" href="structxSTATIC__QUEUE.html">StaticQueue_t</a> *pxQueueBuffer</div>
+<div class="line">                         );</div>
+</div><!-- fragment --><p>Creates a new queue instance, and returns a handle by which the new queue can be referenced.</p>
+<p>Internally, within the FreeRTOS implementation, queues use two blocks of memory. The first block is used to hold the queue's data structures. The second block is used to hold items placed into the queue. If a queue is created using <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate()</a> then both blocks of memory are automatically dynamically allocated inside the <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate()</a> function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a queue is created using <a class="el" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic()</a> then the application writer must provide the memory that will get used by the queue. <a class="el" href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic()</a> therefore allows a queue to be created without using any dynamic memory allocation.</p>
+<p><a href="http://www.FreeRTOS.org/Embedded-RTOS-Queues.html">http://www.FreeRTOS.org/Embedded-RTOS-Queues.html</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uxQueueLength</td><td>The maximum number of items that the queue can contain.</td></tr>
+    <tr><td class="paramname">uxItemSize</td><td>The number of bytes each item in the queue will require. Items are queued by copy, not by reference, so this is the number of bytes that will be copied for each posted item. Each item on the queue must be the same size.</td></tr>
+    <tr><td class="paramname">pucQueueStorageBuffer</td><td>If uxItemSize is not zero then pucQueueStorageBuffer must point to a uint8_t array that is at least large enough to hold the maximum number of items that can be in the queue at any one time - which is ( uxQueueLength * uxItemsSize ) bytes. If uxItemSize is zero then pucQueueStorageBuffer can be NULL.</td></tr>
+    <tr><td class="paramname">pxQueueBuffer</td><td>Must point to a variable of type StaticQueue_t, which will be used to hold the queue's data structure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the queue is created then a handle to the created queue is returned. If pxQueueBuffer is NULL then NULL is returned.</dd></dl>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>AMessage</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">char</span> ucMessageID;</div>
+<div class="line">   <span class="keywordtype">char</span> ucData[ 20 ];</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define QUEUE_LENGTH 10</span></div>
+<div class="line"><span class="preprocessor">#define ITEM_SIZE sizeof( uint32_t )</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// xQueueBuffer will hold the queue structure.</span></div>
+<div class="line"><a class="code" href="structxSTATIC__QUEUE.html">StaticQueue_t</a> xQueueBuffer;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ucQueueStorage will hold the items posted to the queue.  Must be at least</span></div>
+<div class="line"><span class="comment">// [(queue length) * ( queue item size)] bytes long.</span></div>
+<div class="line">uint8_t ucQueueStorage[ QUEUE_LENGTH * ITEM_SIZE ];</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> vATask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue1;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 uint32_t values.</span></div>
+<div class="line">   xQueue1 = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( QUEUE_LENGTH, <span class="comment">// The number of items the queue can hold.</span></div>
+<div class="line">                           ITEM_SIZE     <span class="comment">// The size of each item in the queue</span></div>
+<div class="line">                           &amp;( ucQueueStorage[ 0 ] ), <span class="comment">// The buffer that will hold the items in the queue.</span></div>
+<div class="line">                           &amp;xQueueBuffer ); <span class="comment">// The buffer that will hold the queue structure.</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// The queue is guaranteed to be created successfully as no dynamic memory</span></div>
+<div class="line">   <span class="comment">// allocation is used.  Therefore xQueue1 is now a handle to a valid queue.</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga74fb40ea6a869143597ca91ce90c99c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74fb40ea6a869143597ca91ce90c99c2">&#9670;&nbsp;</a></span>xQueueGenericCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueueGenericCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxQueueLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxItemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>ucQueueType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<p>Generic version of the function used to create a queue using dynamic memory allocation. This is called by other functions and macros that create other RTOS objects that use the queue structure as their base. </p>
+
+</div>
+</div>
+<a id="ga5b2efe04da1dd893134938188aebc8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b2efe04da1dd893134938188aebc8e1">&#9670;&nbsp;</a></span>xQueueGenericCreateStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueueGenericCreateStatic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxQueueLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxItemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pucQueueStorage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxSTATIC__QUEUE.html">StaticQueue_t</a> *&#160;</td>
+          <td class="paramname"><em>pxStaticQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>ucQueueType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<p>Generic version of the function used to creaet a queue using dynamic memory allocation. This is called by other functions and macros that create other RTOS objects that use the queue structure as their base. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="astructxSTATIC__QUEUE_html"><div class="ttname"><a href="structxSTATIC__QUEUE.html">xSTATIC_QUEUE</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:965</div></div>
+<div class="ttc" id="agroup__QueueHandle_html_gaaf19d499892a4ce1409326ece00f5264"><div class="ttname"><a href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a></div><div class="ttdeci">void * QueueHandle_t</div><div class="ttdef"><b>Definition:</b> queue.h:135</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga646f89d4298e4f5afd522202b11cb2e6"><div class="ttname"><a href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a></div><div class="ttdeci">unsigned long UBaseType_t</div><div class="ttdoc">FreeRTOS definition for unsigned long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:92</div></div>
+<div class="ttc" id="agroup__xQueueCreate_html_gaeb858b824bd74a934ea7ebb81af2a6bb"><div class="ttname"><a href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a></div><div class="ttdeci">#define xQueueCreate(uxQueueLength, uxItemSize)</div><div class="ttdef"><b>Definition:</b> queue.h:237</div></div>
+<div class="ttc" id="agroup__xQueueCreate_html_ga867bd68852e9eea7206d364a7e165e57"><div class="ttname"><a href="group__xQueueCreate.html#ga867bd68852e9eea7206d364a7e165e57">xQueueCreateStatic</a></div><div class="ttdeci">#define xQueueCreateStatic(uxQueueLength, uxItemSize, pucQueueStorage, pxQueueBuffer)</div><div class="ttdef"><b>Definition:</b> queue.h:321</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

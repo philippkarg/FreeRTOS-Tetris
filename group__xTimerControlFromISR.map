@@ -1,0 +1,4 @@
+<map id="Timer Control form ISR" name="Timer Control form ISR">
+<area shape="rect" id="node1" href="$group__Timers.html" title="Group that handles FreeRTOS Timers." alt="" coords="5,5,133,31"/>
+<area shape="rect" id="node2" title="Group that contains macros &amp; functions to start, stop, reset and change the period of timers from an ..." alt="" coords="181,5,352,31"/>
+</map>

@@ -63,7 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ulTaskNotifyTake<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Task Notifications</a></div></div>  </div>
+<div class="title">ulTaskNotifyTake<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Direct To Task Notifications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -71,8 +71,8 @@ Collaboration diagram for ulTaskNotifyTake:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__ulTaskNotifyTake.png" border="0" usemap="#group____ulTaskNotifyTake" alt=""/></div>
 <map name="group____ulTaskNotifyTake" id="group____ulTaskNotifyTake">
-<area shape="rect" href="group__TaskNotifications.html" title=" " alt="" coords="5,5,143,31"/>
-<area shape="rect" title=" " alt="" coords="191,5,321,31"/>
+<area shape="rect" href="group__TaskNotifications.html" title="Group that contains macros &amp; functions for task notifications." alt="" coords="5,5,204,31"/>
+<area shape="rect" title=" " alt="" coords="252,5,383,31"/>
 </map>
 </div>
 <p>task. h </p><pre>uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait );</pre><p>configUSE_TASK_NOTIFICATIONS must be undefined or defined as 1 for this function to be available.</p>
@@ -80,7 +80,7 @@ Collaboration diagram for ulTaskNotifyTake:</div>
 <p>Events can be sent to a task using an intermediary object. Examples of such objects are queues, semaphores, mutexes and event groups. Task notifications are a method of sending an event directly to a task without the need for such an intermediary object.</p>
 <p>A notification sent to a task can optionally perform an action, such as update, overwrite or increment the task's notification value. In that way task notifications can be used to send data to a task, or be used as light weight and fast binary or counting semaphores.</p>
 <p>ulTaskNotifyTake() is intended for use when a task notification is used as a faster and lighter weight binary or counting semaphore alternative. Actual FreeRTOS semaphores are taken using the xSemaphoreTake() API function, the equivalent action that instead uses a task notification is ulTaskNotifyTake().</p>
-<p>When a task is using its notification value as a binary or counting semaphore other tasks should send notifications to it using the xTaskNotifyGive() macro, or xTaskNotify() function with the eAction parameter set to eIncrement.</p>
+<p>When a task is using its notification value as a binary or counting semaphore other tasks should send notifications to it using the xTaskNotifyGive() macro, or <a class="el" href="group__TaskNotifications.html#ga0d2d54fb8a64011dfbb54983e4ed06bd" title="Send an event directly to and potentially unblock an RTOS task, and optionally update one of the rece...">xTaskNotify()</a> function with the eAction parameter set to eIncrement.</p>
 <p>ulTaskNotifyTake() can either clear the task's notification value to zero on exit, in which case the notification value acts like a binary semaphore, or decrement the task's notification value on exit, in which case the notification value acts like a counting semaphore.</p>
 <p>A task can use ulTaskNotifyTake() to [optionally] block to wait for a the task's notification value to be non-zero. The task does not consume any CPU time while it is in the Blocked state.</p>
 <p>Where as xTaskNotifyWait() will return when a notification is pending, ulTaskNotifyTake() will return when the task's notification value is not zero.</p>

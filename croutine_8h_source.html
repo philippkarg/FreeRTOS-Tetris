@@ -158,18 +158,18 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> *CoRoutineHandle_t;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">/* Defines the prototype to which co-routine functions must conform. */</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">typedef</span> void (*crCOROUTINE_CODE)(CoRoutineHandle_t, UBaseType_t);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">typedef</span> void (*crCOROUTINE_CODE)(CoRoutineHandle_t, <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structcorCoRoutineControlBlock.html">   95</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcorCoRoutineControlBlock.html">corCoRoutineControlBlock</a> {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    crCOROUTINE_CODE    pxCoRoutineFunction;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="structxLIST__ITEM.html">ListItem_t</a>          xGenericListItem;   <span class="comment">/*&lt; List item used to place the CRCB in ready and blocked queues. */</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="structxLIST__ITEM.html">ListItem_t</a>          xEventListItem;     <span class="comment">/*&lt; List item used to place the CRCB in event lists. */</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    UBaseType_t         uxPriority;         <span class="comment">/*&lt; The priority of the co-routine in relation to other co-routines. */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    UBaseType_t         uxIndex;            <span class="comment">/*&lt; Used to distinguish between co-routines when multiple co-routines use the same co-routine function. */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>         uxPriority;         <span class="comment">/*&lt; The priority of the co-routine in relation to other co-routines. */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>         uxIndex;            <span class="comment">/*&lt; Used to distinguish between co-routines when multiple co-routines use the same co-routine function. */</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    uint16_t            uxState;            <span class="comment">/*&lt; Used internally by the co-routine implementation. */</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <a class="code" href="structcorCoRoutineControlBlock.html">CRCB_t</a>; <span class="comment">/* Co-routine control block.  Note must be identical in size down to uxPriority with TCB_t. */</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;BaseType_t xCoRoutineCreate(crCOROUTINE_CODE pxCoRoutineCode, UBaseType_t uxPriority, UBaseType_t uxIndex);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xCoRoutineCreate(crCOROUTINE_CODE pxCoRoutineCode, <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxPriority, <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxIndex);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordtype">void</span> vCoRoutineSchedule(<span class="keywordtype">void</span>);</div>
@@ -236,7 +236,7 @@ $(function() {
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="comment"> * Removes the current co-routine from its ready list and places it in the</span></div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="comment"> * appropriate delayed list.</span></div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keywordtype">void</span> vCoRoutineAddToDelayedList(TickType_t xTicksToDelay, <a class="code" href="structxLIST.html">List_t</a> *pxEventList);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keywordtype">void</span> vCoRoutineAddToDelayedList(<a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTicksToDelay, <a class="code" href="structxLIST.html">List_t</a> *pxEventList);</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="comment"> * This function is intended for internal use by the queue implementation only.</span></div>
@@ -245,7 +245,7 @@ $(function() {
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="comment"> * Removes the highest priority co-routine from the event list and places it in</span></div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="comment"> * the pending ready list.</span></div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;BaseType_t xCoRoutineRemoveFromEventList(<span class="keyword">const</span> <a class="code" href="structxLIST.html">List_t</a> *pxEventList);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xCoRoutineRemoveFromEventList(<span class="keyword">const</span> <a class="code" href="structxLIST.html">List_t</a> *pxEventList);</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;}</div>
@@ -254,6 +254,9 @@ $(function() {
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CO_ROUTINE_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructxLIST__ITEM_html"><div class="ttname"><a href="structxLIST__ITEM.html">xLIST_ITEM</a></div><div class="ttdef"><b>Definition:</b> list.h:181</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_gaa69c48c6e902ce54f70886e6573c92a9"><div class="ttname"><a href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a></div><div class="ttdeci">uint32_t TickType_t</div><div class="ttdoc">FreeRTOS definition for a single tick.</div><div class="ttdef"><b>Definition:</b> portmacro.h:98</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga646f89d4298e4f5afd522202b11cb2e6"><div class="ttname"><a href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a></div><div class="ttdeci">unsigned long UBaseType_t</div><div class="ttdoc">FreeRTOS definition for unsigned long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:92</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
 <div class="ttc" id="astructcorCoRoutineControlBlock_html"><div class="ttname"><a href="structcorCoRoutineControlBlock.html">corCoRoutineControlBlock</a></div><div class="ttdef"><b>Definition:</b> croutine.h:95</div></div>
 <div class="ttc" id="astructxLIST_html"><div class="ttname"><a href="structxLIST.html">xLIST</a></div><div class="ttdef"><b>Definition:</b> list.h:203</div></div>
 <!-- start footer part -->

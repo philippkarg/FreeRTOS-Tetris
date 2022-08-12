@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xQueueReceive</title>
+<title>FreeRTOS Tetris: Queue Receiving</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,75 +62,183 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xQueueReceive<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queue Management</a></div></div>  </div>
+<div class="title">Queue Receiving<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queues</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for receiving queue data.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xQueueReceive:</div>
+Collaboration diagram for Queue Receiving:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xQueueReceive.png" border="0" usemap="#group____xQueueReceive" alt=""/></div>
 <map name="group____xQueueReceive" id="group____xQueueReceive">
-<area shape="rect" title=" " alt="" coords="208,5,332,31"/>
-<area shape="rect" href="group__QueueManagement.html" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for receiving queue data." alt="" coords="124,5,256,31"/>
+<area shape="rect" href="group__QueueManagement.html" title="Group that handles FreeRTOS Queue Management." alt="" coords="5,5,76,31"/>
 </map>
 </div>
-<p>queue. h </p><pre>
-BaseType_t xQueuePeek(
-                            QueueHandle_t xQueue,
-                            void *pvBuffer,
-                            TickType_t xTicksToWait
-                        );</pre><p>This is a macro that calls the xQueueGenericReceive() function.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2df70733bb875477cd9614c5b3446257"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek</a>(xQueue,  pvBuffer,  xTicksToWait)&#160;&#160;&#160;<a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>( ( xQueue ), ( pvBuffer ), ( xTicksToWait ), pdTRUE )</td></tr>
+<tr class="separator:ga2df70733bb875477cd9614c5b3446257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1549eac0e7f05694a59a0b967c80be3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive</a>(xQueue,  pvBuffer,  xTicksToWait)&#160;&#160;&#160;<a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>( ( xQueue ), ( pvBuffer ), ( xTicksToWait ), pdFALSE )</td></tr>
+<tr class="separator:gaf1549eac0e7f05694a59a0b967c80be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga6a0c9135edf180d270ac0ffb17ec21b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a> (<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue, void *const pvBuffer, <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTicksToWait, const <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xJustPeek) PRIVILEGED_FUNCTION</td></tr>
+<tr class="separator:ga6a0c9135edf180d270ac0ffb17ec21b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for receiving queue data. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga2df70733bb875477cd9614c5b3446257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2df70733bb875477cd9614c5b3446257">&#9670;&nbsp;</a></span>xQueuePeek</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueuePeek</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvBuffer, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xTicksToWait&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>( ( xQueue ), ( pvBuffer ), ( xTicksToWait ), pdTRUE )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek</a>(</div>
+<div class="line">                            <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                            <span class="keywordtype">void</span> *pvBuffer,</div>
+<div class="line">                            <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTicksToWait</div>
+<div class="line">                        );</div>
+</div><!-- fragment --><p> This is a macro that calls the <a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive()</a> function.</p>
 <p>Receive an item from a queue without removing the item from the queue. The item is received by copy so a buffer of adequate size must be provided. The number of bytes copied into the buffer was defined when the queue was created.</p>
-<p>Successfully received items remain on the queue so will be returned again by the next call, or a call to xQueueReceive().</p>
-<p>This macro must not be used in an interrupt service routine. See xQueuePeekFromISR() for an alternative that can be called from an interrupt service routine.</p>
+<p>Successfully received items remain on the queue so will be returned again by the next call, or a call to <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a>.</p>
+<p>This macro must not be used in an interrupt service routine. See <a class="el" href="group__xQueueReceiveFromISR.html#gac402adf98be1fb8ca0345f30dc11a9dc">xQueuePeekFromISR()</a> for an alternative that can be called from an interrupt service routine.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue from which the item is to be received.</td></tr>
     <tr><td class="paramname">pvBuffer</td><td>Pointer to the buffer into which the received item will be copied.</td></tr>
-    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required. xQueuePeek() will return immediately if xTicksToWait is 0 and the queue is empty.</td></tr>
+    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required. <a class="el" href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek()</a> will return immediately if xTicksToWait is 0 and the queue is empty.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdTRUE if an item was successfully received from the queue, otherwise pdFALSE.</dd></dl>
-<p>Example usage: </p><pre>
-struct AMessage
-{
-   char ucMessageID;
-   char ucData[ 20 ];
-} xMessage;</pre><pre>QueueHandle_t xQueue;</pre><pre>// Task to create a queue and post a value.
-void vATask( void *pvParameters )
-{
-struct AMessage *pxMessage;</pre><pre>   // Create a queue capable of containing 10 pointers to AMessage structures.
-   // These should be passed by pointer as they contain a lot of data.
-   xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );
-   if( xQueue == 0 )
-   {
-       // Failed to create the queue.
-   }</pre><pre>   // ...</pre><pre>   // Send a pointer to a struct AMessage object.  Don't block if the
-   // queue is already full.
-   pxMessage = &amp; xMessage;
-   xQueueSend( xQueue, ( void * ) &amp;pxMessage, ( TickType_t ) 0 );</pre><pre>   // ... Rest of task code.
-}</pre><pre>// Task to peek the data from the queue.
-void vADifferentTask( void *pvParameters )
-{
-struct AMessage *pxRxedMessage;</pre><pre>   if( xQueue != 0 )
-   {
-       // Peek a message on the created queue.  Block for 10 ticks if a
-       // message is not immediately available.
-       if( xQueuePeek( xQueue, &amp;( pxRxedMessage ), ( TickType_t ) 10 ) )
-       {
-           // pcRxedMessage now points to the struct AMessage variable posted
-           // by vATask, but the item still remains on the queue.
-       }
-   }</pre><pre>   // ... Rest of task code.
-}
-</pre><p>queue. h </p><pre>
-BaseType_t xQueueReceive(
-                                QueueHandle_t xQueue,
-                                void *pvBuffer,
-                                TickType_t xTicksToWait
-                           );</pre><p>This is a macro that calls the xQueueGenericReceive() function.</p>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>AMessage</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">char</span> ucMessageID;</div>
+<div class="line">   <span class="keywordtype">char</span> ucData[ 20 ];</div>
+<div class="line">} xMessage;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to create a queue and post a value.</span></div>
+<div class="line"><span class="keywordtype">void</span> vATask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 pointers to AMessage structures.</span></div>
+<div class="line">   <span class="comment">// These should be passed by pointer as they contain a lot of data.</span></div>
+<div class="line">   xQueue = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 10, <span class="keyword">sizeof</span>( <span class="keyword">struct</span> AMessage * ) );</div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue == 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Failed to create the queue.</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Send a pointer to a struct AMessage object.  Don&#39;t block if the</span></div>
+<div class="line">   <span class="comment">// queue is already full.</span></div>
+<div class="line">   pxMessage = &amp; xMessage;</div>
+<div class="line">   <a class="code" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend</a>( xQueue, ( <span class="keywordtype">void</span> * ) &amp;pxMessage, ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 0 );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to peek the data from the queue.</span></div>
+<div class="line"><span class="keywordtype">void</span> vADifferentTask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxRxedMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue != 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Peek a message on the created queue.  Block for 10 ticks if a</span></div>
+<div class="line">       <span class="comment">// message is not immediately available.</span></div>
+<div class="line">       <span class="keywordflow">if</span>( <a class="code" href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek</a>( xQueue, &amp;( pxRxedMessage ), ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 10 ) )</div>
+<div class="line">       {</div>
+<div class="line">           <span class="comment">// pcRxedMessage now points to the struct AMessage variable posted</span></div>
+<div class="line">           <span class="comment">// by vATask, but the item still remains on the queue.</span></div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gaf1549eac0e7f05694a59a0b967c80be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1549eac0e7f05694a59a0b967c80be3">&#9670;&nbsp;</a></span>xQueueReceive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define xQueueReceive</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xQueue, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pvBuffer, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">xTicksToWait&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>( ( xQueue ), ( pvBuffer ), ( xTicksToWait ), pdFALSE )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive</a>(</div>
+<div class="line">                                <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                                <span class="keywordtype">void</span> *pvBuffer,</div>
+<div class="line">                                <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTicksToWait</div>
+<div class="line">                           );</div>
+</div><!-- fragment --><p> This is a macro that calls the <a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive()</a> function.</p>
 <p>Receive an item from a queue. The item is received by copy so a buffer of adequate size must be provided. The number of bytes copied into the buffer was defined when the queue was created.</p>
 <p>Successfully received items are removed from the queue.</p>
 <p>This function must not be used in an interrupt service routine. See xQueueReceiveFromISR for an alternative that can.</p>
@@ -138,95 +246,183 @@ BaseType_t xQueueReceive(
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue from which the item is to be received.</td></tr>
     <tr><td class="paramname">pvBuffer</td><td>Pointer to the buffer into which the received item will be copied.</td></tr>
-    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. xQueueReceive() will return immediately if xTicksToWait is zero and the queue is empty. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required.</td></tr>
+    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a> will return immediately if xTicksToWait is zero and the queue is empty. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdTRUE if an item was successfully received from the queue, otherwise pdFALSE.</dd></dl>
-<p>Example usage: </p><pre>
-struct AMessage
-{
-   char ucMessageID;
-   char ucData[ 20 ];
-} xMessage;</pre><pre>QueueHandle_t xQueue;</pre><pre>// Task to create a queue and post a value.
-void vATask( void *pvParameters )
-{
-struct AMessage *pxMessage;</pre><pre>   // Create a queue capable of containing 10 pointers to AMessage structures.
-   // These should be passed by pointer as they contain a lot of data.
-   xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );
-   if( xQueue == 0 )
-   {
-       // Failed to create the queue.
-   }</pre><pre>   // ...</pre><pre>   // Send a pointer to a struct AMessage object.  Don't block if the
-   // queue is already full.
-   pxMessage = &amp; xMessage;
-   xQueueSend( xQueue, ( void * ) &amp;pxMessage, ( TickType_t ) 0 );</pre><pre>   // ... Rest of task code.
-}</pre><pre>// Task to receive from the queue.
-void vADifferentTask( void *pvParameters )
-{
-struct AMessage *pxRxedMessage;</pre><pre>   if( xQueue != 0 )
-   {
-       // Receive a message on the created queue.  Block for 10 ticks if a
-       // message is not immediately available.
-       if( xQueueReceive( xQueue, &amp;( pxRxedMessage ), ( TickType_t ) 10 ) )
-       {
-           // pcRxedMessage now points to the struct AMessage variable posted
-           // by vATask.
-       }
-   }</pre><pre>   // ... Rest of task code.
-}
-</pre><p>queue. h </p><pre>
-BaseType_t xQueueGenericReceive(
-                                      QueueHandle_t    xQueue,
-                                      void *pvBuffer,
-                                      TickType_t   xTicksToWait
-                                      BaseType_t   xJustPeek
-                                   );</pre><p>It is preferred that the macro xQueueReceive() be used rather than calling this function directly.</p>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>AMessage</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">char</span> ucMessageID;</div>
+<div class="line">   <span class="keywordtype">char</span> ucData[ 20 ];</div>
+<div class="line">} xMessage;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to create a queue and post a value.</span></div>
+<div class="line"><span class="keywordtype">void</span> vATask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 pointers to AMessage structures.</span></div>
+<div class="line">   <span class="comment">// These should be passed by pointer as they contain a lot of data.</span></div>
+<div class="line">   xQueue = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 10, <span class="keyword">sizeof</span>( <span class="keyword">struct</span> AMessage * ) );</div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue == 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Failed to create the queue.</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Send a pointer to a struct AMessage object.  Don&#39;t block if the</span></div>
+<div class="line">   <span class="comment">// queue is already full.</span></div>
+<div class="line">   pxMessage = &amp; xMessage;</div>
+<div class="line">   <a class="code" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend</a>( xQueue, ( <span class="keywordtype">void</span> * ) &amp;pxMessage, ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 0 );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to receive from the queue.</span></div>
+<div class="line"><span class="keywordtype">void</span> vADifferentTask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxRxedMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue != 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Receive a message on the created queue.  Block for 10 ticks if a</span></div>
+<div class="line">       <span class="comment">// message is not immediately available.</span></div>
+<div class="line">       <span class="keywordflow">if</span>( <a class="code" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive</a>( xQueue, &amp;( pxRxedMessage ), ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 10 ) )</div>
+<div class="line">       {</div>
+<div class="line">           <span class="comment">// pcRxedMessage now points to the struct AMessage variable posted</span></div>
+<div class="line">           <span class="comment">// by vATask.</span></div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga6a0c9135edf180d270ac0ffb17ec21b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a0c9135edf180d270ac0ffb17ec21b4">&#9670;&nbsp;</a></span>xQueueGenericReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xQueueGenericReceive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td>
+          <td class="paramname"><em>xQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *const&#160;</td>
+          <td class="paramname"><em>pvBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>&#160;</td>
+          <td class="paramname"><em>xTicksToWait</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td>
+          <td class="paramname"><em>xJustPeek</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>(</div>
+<div class="line">                                      <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>    xQueue,</div>
+<div class="line">                                      <span class="keywordtype">void</span> *pvBuffer,</div>
+<div class="line">                                      <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>   xTicksToWait</div>
+<div class="line">                                      <a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>   xJustPeek</div>
+<div class="line">                                   );</div>
+</div><!-- fragment --><p> It is preferred that the macro <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a> be used rather than calling this function directly.</p>
 <p>Receive an item from a queue. The item is received by copy so a buffer of adequate size must be provided. The number of bytes copied into the buffer was defined when the queue was created.</p>
 <p>This function must not be used in an interrupt service routine. See xQueueReceiveFromISR for an alternative that can.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xQueue</td><td>The handle to the queue from which the item is to be received.</td></tr>
     <tr><td class="paramname">pvBuffer</td><td>Pointer to the buffer into which the received item will be copied.</td></tr>
-    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required. xQueueGenericReceive() will return immediately if the queue is empty and xTicksToWait is 0.</td></tr>
-    <tr><td class="paramname">xJustPeek</td><td>When set to true, the item received from the queue is not actually removed from the queue - meaning a subsequent call to xQueueReceive() will return the same item. When set to false, the item being received from the queue is also removed from the queue.</td></tr>
+    <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time the task should block waiting for an item to receive should the queue be empty at the time of the call. The time is defined in tick periods so the constant portTICK_PERIOD_MS should be used to convert to real time if this is required. <a class="el" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive()</a> will return immediately if the queue is empty and xTicksToWait is 0.</td></tr>
+    <tr><td class="paramname">xJustPeek</td><td>When set to true, the item received from the queue is not actually removed from the queue - meaning a subsequent call to <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a> will return the same item. When set to false, the item being received from the queue is also removed from the queue.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pdTRUE if an item was successfully received from the queue, otherwise pdFALSE.</dd></dl>
-<p>Example usage: </p><pre>
-struct AMessage
-{
-   char ucMessageID;
-   char ucData[ 20 ];
-} xMessage;</pre><pre>QueueHandle_t xQueue;</pre><pre>// Task to create a queue and post a value.
-void vATask( void *pvParameters )
-{
-struct AMessage *pxMessage;</pre><pre>   // Create a queue capable of containing 10 pointers to AMessage structures.
-   // These should be passed by pointer as they contain a lot of data.
-   xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );
-   if( xQueue == 0 )
-   {
-       // Failed to create the queue.
-   }</pre><pre>   // ...</pre><pre>   // Send a pointer to a struct AMessage object.  Don't block if the
-   // queue is already full.
-   pxMessage = &amp; xMessage;
-   xQueueSend( xQueue, ( void * ) &amp;pxMessage, ( TickType_t ) 0 );</pre><pre>   // ... Rest of task code.
-}</pre><pre>// Task to receive from the queue.
-void vADifferentTask( void *pvParameters )
-{
-struct AMessage *pxRxedMessage;</pre><pre>   if( xQueue != 0 )
-   {
-       // Receive a message on the created queue.  Block for 10 ticks if a
-       // message is not immediately available.
-       if( xQueueGenericReceive( xQueue, &amp;( pxRxedMessage ), ( TickType_t ) 10 ) )
-       {
-           // pcRxedMessage now points to the struct AMessage variable posted
-           // by vATask.
-       }
-   }</pre><pre>   // ... Rest of task code.
-}
-</pre> </div><!-- contents -->
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>AMessage</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordtype">char</span> ucMessageID;</div>
+<div class="line">   <span class="keywordtype">char</span> ucData[ 20 ];</div>
+<div class="line">} xMessage;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to create a queue and post a value.</span></div>
+<div class="line"><span class="keywordtype">void</span> vATask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Create a queue capable of containing 10 pointers to AMessage structures.</span></div>
+<div class="line">   <span class="comment">// These should be passed by pointer as they contain a lot of data.</span></div>
+<div class="line">   xQueue = <a class="code" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a>( 10, <span class="keyword">sizeof</span>( <span class="keyword">struct</span> AMessage * ) );</div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue == 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Failed to create the queue.</span></div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// Send a pointer to a struct AMessage object.  Don&#39;t block if the</span></div>
+<div class="line">   <span class="comment">// queue is already full.</span></div>
+<div class="line">   pxMessage = &amp; xMessage;</div>
+<div class="line">   <a class="code" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend</a>( xQueue, ( <span class="keywordtype">void</span> * ) &amp;pxMessage, ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 0 );</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Task to receive from the queue.</span></div>
+<div class="line"><span class="keywordtype">void</span> vADifferentTask( <span class="keywordtype">void</span> *pvParameters )</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">struct </span>AMessage *pxRxedMessage;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span>( xQueue != 0 )</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// Receive a message on the created queue.  Block for 10 ticks if a</span></div>
+<div class="line">       <span class="comment">// message is not immediately available.</span></div>
+<div class="line">       <span class="keywordflow">if</span>( <a class="code" href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a>( xQueue, &amp;( pxRxedMessage ), ( <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> ) 10 ) )</div>
+<div class="line">       {</div>
+<div class="line">           <span class="comment">// pcRxedMessage now points to the struct AMessage variable posted</span></div>
+<div class="line">           <span class="comment">// by vATask.</span></div>
+<div class="line">       }</div>
+<div class="line">   }</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... Rest of task code.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup__xQueueReceive_html_ga6a0c9135edf180d270ac0ffb17ec21b4"><div class="ttname"><a href="group__xQueueReceive.html#ga6a0c9135edf180d270ac0ffb17ec21b4">xQueueGenericReceive</a></div><div class="ttdeci">BaseType_t xQueueGenericReceive(QueueHandle_t xQueue, void *const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek) PRIVILEGED_FUNCTION</div><div class="ttdef"><b>Definition:</b> queue.c:1275</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_gaa69c48c6e902ce54f70886e6573c92a9"><div class="ttname"><a href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a></div><div class="ttdeci">uint32_t TickType_t</div><div class="ttdoc">FreeRTOS definition for a single tick.</div><div class="ttdef"><b>Definition:</b> portmacro.h:98</div></div>
+<div class="ttc" id="agroup__QueueHandle_html_gaaf19d499892a4ce1409326ece00f5264"><div class="ttname"><a href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a></div><div class="ttdeci">void * QueueHandle_t</div><div class="ttdef"><b>Definition:</b> queue.h:135</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
+<div class="ttc" id="agroup__xQueueReceive_html_gaf1549eac0e7f05694a59a0b967c80be3"><div class="ttname"><a href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive</a></div><div class="ttdeci">#define xQueueReceive(xQueue, pvBuffer, xTicksToWait)</div><div class="ttdef"><b>Definition:</b> queue.h:1314</div></div>
+<div class="ttc" id="agroup__xQueueCreate_html_gaeb858b824bd74a934ea7ebb81af2a6bb"><div class="ttname"><a href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate</a></div><div class="ttdeci">#define xQueueCreate(uxQueueLength, uxItemSize)</div><div class="ttdef"><b>Definition:</b> queue.h:237</div></div>
+<div class="ttc" id="agroup__xQueueSend_html_gaf7eb49d3249351176992950d9185abe9"><div class="ttname"><a href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend</a></div><div class="ttdeci">#define xQueueSend(xQueue, pvItemToQueue, xTicksToWait)</div><div class="ttdef"><b>Definition:</b> queue.h:440</div></div>
+<div class="ttc" id="agroup__xQueueReceive_html_ga2df70733bb875477cd9614c5b3446257"><div class="ttname"><a href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek</a></div><div class="ttdeci">#define xQueuePeek(xQueue, pvBuffer, xTicksToWait)</div><div class="ttdef"><b>Definition:</b> queue.h:1223</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

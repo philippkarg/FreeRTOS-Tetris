@@ -945,21 +945,21 @@ $(function() {
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment"> * structures below are used for inclusion in such a dummy structure.</span></div>
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00875"></a><span class="lineno"><a class="line" href="structxSTATIC__LIST__ITEM.html">  875</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structxSTATIC__LIST__ITEM.html">xSTATIC_LIST_ITEM</a> {</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    TickType_t xDummy1;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xDummy1;</div>
 <div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordtype">void</span> *pvDummy2[ 4 ];</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;};</div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxSTATIC__LIST__ITEM.html">xSTATIC_LIST_ITEM</a> <a class="code" href="structxSTATIC__LIST__ITEM.html">StaticListItem_t</a>;</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;<span class="comment">/* See the comments above the struct xSTATIC_LIST_ITEM definition. */</span></div>
 <div class="line"><a name="l00882"></a><span class="lineno"><a class="line" href="structxSTATIC__MINI__LIST__ITEM.html">  882</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structxSTATIC__MINI__LIST__ITEM.html">xSTATIC_MINI_LIST_ITEM</a> {</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    TickType_t xDummy1;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xDummy1;</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <span class="keywordtype">void</span> *pvDummy2[ 2 ];</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;};</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxSTATIC__MINI__LIST__ITEM.html">xSTATIC_MINI_LIST_ITEM</a> <a class="code" href="structxSTATIC__MINI__LIST__ITEM.html">StaticMiniListItem_t</a>;</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160; </div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;<span class="comment">/* See the comments above the struct xSTATIC_LIST_ITEM definition. */</span></div>
 <div class="line"><a name="l00889"></a><span class="lineno"><a class="line" href="structxSTATIC__LIST.html">  889</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxSTATIC__LIST.html">xSTATIC_LIST</a> {</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    UBaseType_t uxDummy1;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxDummy1;</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    <span class="keywordtype">void</span> *pvDummy2;</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <a class="code" href="structxSTATIC__MINI__LIST__ITEM.html">StaticMiniListItem_t</a> xDummy3;</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;} <a class="code" href="structxSTATIC__LIST.html">StaticList_t</a>;</div>
@@ -983,20 +983,20 @@ $(function() {
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;    xMPU_SETTINGS   xDummy2;</div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    <a class="code" href="structxSTATIC__LIST__ITEM.html">StaticListItem_t</a>    xDummy3[ 2 ];</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    UBaseType_t         uxDummy5;</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>         uxDummy5;</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    <span class="keywordtype">void</span>                *pxDummy6;</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    uint8_t             ucDummy7[ configMAX_TASK_NAME_LEN ];</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    uint8_t             ucDummy7[ <a class="code" href="group__freeRTOSconfig.html#gac388dc4041aab6997348828eb27fc1a8">configMAX_TASK_NAME_LEN</a> ];</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="preprocessor">#if ( portSTACK_GROWTH &gt; 0 )</span></div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    <span class="keywordtype">void</span>            *pxDummy8;</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;<span class="preprocessor">#if ( portCRITICAL_NESTING_IN_TCB == 1 )</span></div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    UBaseType_t     uxDummy9;</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>     uxDummy9;</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;<span class="preprocessor">#if ( configUSE_TRACE_FACILITY == 1 )</span></div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    UBaseType_t     uxDummy10[ 2 ];</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>     uxDummy10[ 2 ];</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="preprocessor">#if ( configUSE_MUTEXES == 1 )</span></div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    UBaseType_t     uxDummy12[ 2 ];</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>     uxDummy12[ 2 ];</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;<span class="preprocessor">#if ( configUSE_APPLICATION_TASK_TAG == 1 )</span></div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordtype">void</span>            *pxDummy14;</div>
@@ -1039,11 +1039,11 @@ $(function() {
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160; </div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    <span class="keyword">union </span>{</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        <span class="keywordtype">void</span> *pvDummy2;</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;        UBaseType_t uxDummy2;</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;        <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxDummy2;</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    } u;</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    <a class="code" href="structxSTATIC__LIST.html">StaticList_t</a> xDummy3[ 2 ];</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    UBaseType_t uxDummy4[ 3 ];</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxDummy4[ 3 ];</div>
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    uint8_t ucDummy5[ 2 ];</div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160; </div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="preprocessor">#if( ( configSUPPORT_STATIC_ALLOCATION == 1 ) &amp;&amp; ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )</span></div>
@@ -1055,7 +1055,7 @@ $(function() {
 <div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160; </div>
 <div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;<span class="preprocessor">#if ( configUSE_TRACE_FACILITY == 1 )</span></div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    UBaseType_t uxDummy8;</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxDummy8;</div>
 <div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;    uint8_t ucDummy9;</div>
 <div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160; </div>
@@ -1077,11 +1077,11 @@ $(function() {
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;<span class="comment"> * direct use of the structure members.</span></div>
 <div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l01007"></a><span class="lineno"><a class="line" href="structxSTATIC__EVENT__GROUP.html"> 1007</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxSTATIC__EVENT__GROUP.html">xSTATIC_EVENT_GROUP</a> {</div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    TickType_t xDummy1;</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xDummy1;</div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    <a class="code" href="structxSTATIC__LIST.html">StaticList_t</a> xDummy2;</div>
 <div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160; </div>
 <div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;<span class="preprocessor">#if( configUSE_TRACE_FACILITY == 1 )</span></div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    UBaseType_t uxDummy3;</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxDummy3;</div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160; </div>
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;<span class="preprocessor">#if( ( configSUPPORT_STATIC_ALLOCATION == 1 ) &amp;&amp; ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )</span></div>
@@ -1107,11 +1107,11 @@ $(function() {
 <div class="line"><a name="l01035"></a><span class="lineno"><a class="line" href="structxSTATIC__TIMER.html"> 1035</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxSTATIC__TIMER.html">xSTATIC_TIMER</a> {</div>
 <div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    <span class="keywordtype">void</span>                *pvDummy1;</div>
 <div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;    <a class="code" href="structxSTATIC__LIST__ITEM.html">StaticListItem_t</a>    xDummy2;</div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    TickType_t          xDummy3;</div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    UBaseType_t         uxDummy4;</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>          xDummy3;</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>         uxDummy4;</div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <span class="keywordtype">void</span>                *pvDummy5[ 2 ];</div>
 <div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;<span class="preprocessor">#if( configUSE_TRACE_FACILITY == 1 )</span></div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    UBaseType_t     uxDummy6;</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;    <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>     uxDummy6;</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="preprocessor">#if( ( configSUPPORT_STATIC_ALLOCATION == 1 ) &amp;&amp; ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) )</span></div>
@@ -1129,7 +1129,10 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructxSTATIC__LIST__ITEM_html"><div class="ttname"><a href="structxSTATIC__LIST__ITEM.html">xSTATIC_LIST_ITEM</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:875</div></div>
 <div class="ttc" id="astructxSTATIC__QUEUE_html"><div class="ttname"><a href="structxSTATIC__QUEUE.html">xSTATIC_QUEUE</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:965</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_gac388dc4041aab6997348828eb27fc1a8"><div class="ttname"><a href="group__freeRTOSconfig.html#gac388dc4041aab6997348828eb27fc1a8">configMAX_TASK_NAME_LEN</a></div><div class="ttdeci">#define configMAX_TASK_NAME_LEN</div><div class="ttdoc">The maximum length of a task name.</div><div class="ttdef"><b>Definition:</b> FreeRTOSConfig.h:82</div></div>
 <div class="ttc" id="astructxSTATIC__TIMER_html"><div class="ttname"><a href="structxSTATIC__TIMER.html">xSTATIC_TIMER</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:1035</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_gaa69c48c6e902ce54f70886e6573c92a9"><div class="ttname"><a href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a></div><div class="ttdeci">uint32_t TickType_t</div><div class="ttdoc">FreeRTOS definition for a single tick.</div><div class="ttdef"><b>Definition:</b> portmacro.h:98</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga646f89d4298e4f5afd522202b11cb2e6"><div class="ttname"><a href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a></div><div class="ttdeci">unsigned long UBaseType_t</div><div class="ttdoc">FreeRTOS definition for unsigned long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:92</div></div>
 <div class="ttc" id="astructxSTATIC__MINI__LIST__ITEM_html"><div class="ttname"><a href="structxSTATIC__MINI__LIST__ITEM.html">xSTATIC_MINI_LIST_ITEM</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:882</div></div>
 <div class="ttc" id="astructxSTATIC__TCB_html"><div class="ttname"><a href="structxSTATIC__TCB.html">xSTATIC_TCB</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:908</div></div>
 <div class="ttc" id="astructxSTATIC__EVENT__GROUP_html"><div class="ttname"><a href="structxSTATIC__EVENT__GROUP.html">xSTATIC_EVENT_GROUP</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:1007</div></div>

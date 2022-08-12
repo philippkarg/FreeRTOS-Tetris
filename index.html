@@ -66,14 +66,108 @@ $(function() {
 <div class="title">FreeRTOS Tetris </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Welcome to my little Tetris game using the open-source RTOS FreeRTOS. This project was developed in the scope of a laboratory at the Technical University of Munich. In this laboratory I was tasked to create a Tetris game using <a href="https://freertos.org/" target="_blank">FreeRTOS</a>, building on the existing framework provided Alex Hoffman, who was the instructor for this course. The FreeRTOS Emulator that he provided can be found <a href="https://github.com/alxhoff/FreeRTOS-Emulator" target="_blank">here</a>. The project is divided into the following modules:</p><ul>
-<li>A <a class="el" href="group__config.html">Configuration Module</a> that allows for some game configurations.</li>
-<li>A <a class="el" href="group__gui.html">GUI Module</a> that makes use of the FreeRTOS Emulators built-in <a class="el" href="group__tum__draw.html">Drawing API</a>.</li>
-<li>A <a class="el" href="group__logic.html">Logic Module</a> that handles the game's logic.</li>
-<li>An <a class="el" href="group__input.html">Input Module</a> that handles any mouse or keyboard input using the SDL &amp; Emulator's <a class="el" href="group__tum__event.html">Event API</a>.</li>
-<li>An <a class="el" href="group__opponent.html">Opponent Module</a> that allows playing against an "opponent" executable (found in the opponents folder) by sending/receiving UDP messages. </li>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#autotoc_md1">Introduction</a></li>
+<li class="level1"><a href="#autotoc_md2">Project Overview</a></li>
+<li class="level1"><a href="#autotoc_md3">Configuration:</a></li>
+<li class="level1"><a href="#autotoc_md4">Building the Project</a><ul><li class="level2"><a href="#autotoc_md5">Prerequisites</a></li>
+<li class="level2"><a href="#autotoc_md6">Compiling</a></li>
 </ul>
-</div></div><!-- PageDoc -->
+</li>
+<li class="level1"><a href="#autotoc_md7">Controls</a></li>
+<li class="level1"><a href="#autotoc_md8">Menus</a><ul><li class="level2"><a href="#autotoc_md9">Main Menu Screen</a></li>
+<li class="level2"><a href="#autotoc_md10">Game Screen</a></li>
+<li class="level2"><a href="#autotoc_md11">Pause Screen</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><div class="image">
+<img src="in_game.jpg" alt=""/>
+</div>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Introduction</h1>
+<p>Welcome to my little Tetris game using the open-source RTOS FreeRTOS. This project was developed in the scope of a laboratory at the Technical University of Munich. In this laboratory I was tasked to create a Tetris game using <a href="https://freertos.org/" target="_blank">FreeRTOS</a>, building on the existing framework provided Alex Hoffman, who was the instructor for this course. The FreeRTOS Emulator that he provided can be found <a href="https://github.com/alxhoff/FreeRTOS-Emulator" target="_blank">here</a>.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Project Overview</h1>
+<p>The project is divided into the following modules:</p><ul>
+<li>A <a class="el" href="group__config.html">Configuration Module</a> that allows for some game configurations.</li>
+<li>A <a class="el" href="group__game.html">Game Module</a> that handles the main game functionality, e.g. tasks &amp; menus.</li>
+<li>A <a class="el" href="group__gui.html">GUI Module</a> that makes use of the FreeRTOS Emulators built-in Drawing API.</li>
+<li>An <a class="el" href="group__input.html">Input Module</a> that handles any mouse or keyboard input using the SDL &amp; Emulator's Event API.</li>
+<li>A <a class="el" href="group__logic.html">Logic Module</a> that handles the game's logic.</li>
+<li>An <a class="el" href="group__opponent.html">Opponent Module</a> that allows playing against an "opponent" executable (found in the opponents folder) by sending/receiving UDP messages.</li>
+<li>A <a class="el" href="group__state.html">State Machine Module</a> that handles switching between the different tasks.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Configuration:</h1>
+<p>Some configurations to be done in the <a class="el" href="group__config.html">Configuration Module</a>:</p><ul>
+<li>There are 6 usernames that can be set</li>
+<li>If you want to enable sound effects, set <code>ENABLE_SOUND_EFFECTS</code> to 1 <br  />
+ <b>WARNING: Sound effects may be very annoying or not in sync at all time</b></li>
+<li>You can also change the background color, the block textures &amp; sound effect files from here</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Building the Project</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Prerequisites</h2>
+<p>To build the project, you need to have the following libraries installed:</p><ul>
+<li><code>cmake</code> (e.g. <code>sudo apt install cmake</code>)</li>
+<li><code>libsdl2-dev</code> (e.g. <code>sudo apt install libsdl2-dev</code>)</li>
+<li><code>libsdl2-gfx-dev</code> (e.g. <code>sudo apt install libsdl2-gfx-dev</code>)</li>
+<li><code>libsdl2-image-dev</code> (e.g. <code>sudo apt install libsdl2-image-dev</code>)</li>
+<li><code>libsdl2-ttf-dev</code> (e.g. <code>sudo apt install libsdl2-ttf-dev</code>)</li>
+<li><code>libsdl2-mixer-dev</code> (e.g. <code>sudo apt install libsdl2-mixer-dev</code>)</li>
+</ul>
+<p>The project can only be built for Linux in the current configuration. For other operating systems, adjust the CMake files.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Compiling</h2>
+<p>To compile the project, run the following commands: </p><div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">make</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Controls</h1>
+<ul>
+<li>Up: Rotating the Tetromino.</li>
+<li>Down: Falling faster (this button can be held down).</li>
+<li>Left/Right: Moving the Tetromino to the left/right.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Menus</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Main Menu Screen</h2>
+<ul>
+<li>Click on the rotation/player mode to select</li>
+<li>If a rotation &amp; player mode have been selected, press S to start</li>
+<li>Click on the "Select level" text to go to the level/high scores screen<ul>
+<li>Click on a level to select that level</li>
+</ul>
+</li>
+<li>If multi player mode is selected &amp; a connection has been established, <br  />
+ click on a mode to select that mode <br  />
+</li>
+</ul>
+<p><img src="main_menu.jpg" alt="" align="left" class="inline"/> </p><div style="clear: both"></div><h2><a class="anchor" id="autotoc_md10"></a>
+Game Screen</h2>
+<ul>
+<li>Press Esc to Pause <br  />
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Pause Screen</h2>
+<ul>
+<li>Press Esc to continue</li>
+<li>Press R to restart the game</li>
+<li>Press M to go back to Main Menu</li>
+<li>If the game is over:<ul>
+<li>Select your username by clicking</li>
+<li>Press R to restart</li>
+<li>Press M to go back to Main Menu</li>
+</ul>
+</li>
+</ul>
+<p><img src="pause_menu.jpg" alt="" align="left" class="inline"/> </p><div style="clear: both"></div> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

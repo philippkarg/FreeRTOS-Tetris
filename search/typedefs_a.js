@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tetromino_5ft_843',['tetromino_t',['../group__logic.html#ga136fe79e97366e28afcf4811728f4ddb',1,'logic.h']]],
-  ['tetromino_5ftype_5ft_844',['tetromino_type_t',['../group__config.html#ga4e449f42bec430c8a86a6d58bce55da7',1,'enum.h']]]
+  ['rbuf_5fhandle_5ft_1041',['rbuf_handle_t',['../TUM__Utils_8h.html#a0340f4935594ad3364d614e83aca525b',1,'TUM_Utils.h']]],
+  ['rotation_5ft_1042',['rotation_t',['../group__enum.html#gaf6d23f551fa9eb753616e0cc17453748',1,'enum.h']]]
 ];

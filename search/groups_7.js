@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opponent_20module_870',['Opponent Module',['../group__opponent.html',1,'']]]
+  ['logic_20module_1111',['Logic Module',['../group__logic.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xQueueReceiveFromISR</title>
+<title>FreeRTOS Tetris: Queue Receiving from ISR</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,19 +62,32 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xQueueReceiveFromISR<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queue Management</a></div></div>  </div>
+<div class="title">Queue Receiving from ISR<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__QueueManagement.html">Queues</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for receiving queue data from an Interrupt Service Routine.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xQueueReceiveFromISR:</div>
+Collaboration diagram for Queue Receiving from ISR:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xQueueReceiveFromISR.png" border="0" usemap="#group____xQueueReceiveFromISR" alt=""/></div>
 <map name="group____xQueueReceiveFromISR" id="group____xQueueReceiveFromISR">
-<area shape="rect" title=" " alt="" coords="208,5,387,31"/>
-<area shape="rect" href="group__QueueManagement.html" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for receiving queue data from an Interrupt Service Routine." alt="" coords="124,5,316,31"/>
+<area shape="rect" href="group__QueueManagement.html" title="Group that handles FreeRTOS Queue Management." alt="" coords="5,5,76,31"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac402adf98be1fb8ca0345f30dc11a9dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xQueueReceiveFromISR.html#gac402adf98be1fb8ca0345f30dc11a9dc">xQueuePeekFromISR</a> (<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue, void *const pvBuffer) PRIVILEGED_FUNCTION</td></tr>
+<tr class="separator:gac402adf98be1fb8ca0345f30dc11a9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for receiving queue data from an Interrupt Service Routine. </p>
 <p>queue. h </p><pre>
 BaseType_t xQueueReceiveFromISR(
                                       QueueHandle_t    xQueue,
@@ -96,18 +109,18 @@ void vAFunction( void *pvParameters )
 {
 char cValueToPost;
 const TickType_t xTicksToWait = ( TickType_t )0xff;</pre><pre>   // Create a queue capable of containing 10 characters.
-   xQueue = xQueueCreate( 10, sizeof( char ) );
+   xQueue = <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate( 10, sizeof( char ) )</a>;
    if( xQueue == 0 )
    {
        // Failed to create the queue.
    }</pre><pre>   // ...</pre><pre>   // Post some characters that will be used within an ISR.  If the queue
    // is full then this task will block for xTicksToWait ticks.
    cValueToPost = 'a';
-   xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait );
+   <a class="el" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait )</a>;
    cValueToPost = 'b';
-   xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait );</pre><pre>   // ... keep posting characters ... this task may block when the queue
+   <a class="el" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait )</a>;</pre><pre>   // ... keep posting characters ... this task may block when the queue
    // becomes full.</pre><pre>   cValueToPost = 'c';
-   xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait );
+   <a class="el" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend( xQueue, ( void * ) &amp;cValueToPost, xTicksToWait )</a>;
 }</pre><pre>// ISR that outputs all the characters received on the queue.
 void vISR_Routine( void )
 {
@@ -124,7 +137,56 @@ char cRxedChar;</pre><pre>   while( xQueueReceiveFromISR( xQueue, ( void * ) &am
        taskYIELD ();
    }
 }
-</pre> </div><!-- contents -->
+</pre> <h2 class="groupheader">Function Documentation</h2>
+<a id="gac402adf98be1fb8ca0345f30dc11a9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac402adf98be1fb8ca0345f30dc11a9dc">&#9670;&nbsp;</a></span>xQueuePeekFromISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xQueuePeekFromISR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td>
+          <td class="paramname"><em>xQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *const&#160;</td>
+          <td class="paramname"><em>pvBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;queue.h&gt;</code></p>
+<div class="fragment"><div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> <a class="code" href="group__xQueueReceiveFromISR.html#gac402adf98be1fb8ca0345f30dc11a9dc">xQueuePeekFromISR</a>(</div>
+<div class="line">                                   <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> xQueue,</div>
+<div class="line">                                   <span class="keywordtype">void</span> *pvBuffer,</div>
+<div class="line">                               );</div>
+</div><!-- fragment --><p> A version of <a class="el" href="group__xQueueReceive.html#ga2df70733bb875477cd9614c5b3446257">xQueuePeek()</a> that can be called from an interrupt service routine (ISR).</p>
+<p>Receive an item from a queue without removing the item from the queue. The item is received by copy so a buffer of adequate size must be provided. The number of bytes copied into the buffer was defined when the queue was created.</p>
+<p>Successfully received items remain on the queue so will be returned again by the next call, or a call to <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xQueue</td><td>The handle to the queue from which the item is to be received.</td></tr>
+    <tr><td class="paramname">pvBuffer</td><td>Pointer to the buffer into which the received item will be copied.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pdTRUE if an item was successfully received from the queue, otherwise pdFALSE. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup__QueueHandle_html_gaaf19d499892a4ce1409326ece00f5264"><div class="ttname"><a href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a></div><div class="ttdeci">void * QueueHandle_t</div><div class="ttdef"><b>Definition:</b> queue.h:135</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
+<div class="ttc" id="agroup__xQueueReceiveFromISR_html_gac402adf98be1fb8ca0345f30dc11a9dc"><div class="ttname"><a href="group__xQueueReceiveFromISR.html#gac402adf98be1fb8ca0345f30dc11a9dc">xQueuePeekFromISR</a></div><div class="ttdeci">BaseType_t xQueuePeekFromISR(QueueHandle_t xQueue, void *const pvBuffer) PRIVILEGED_FUNCTION</div><div class="ttdef"><b>Definition:</b> queue.c:1557</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

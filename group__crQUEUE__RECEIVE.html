@@ -63,18 +63,9 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">crQUEUE_RECEIVE<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Tasks.html">Tasks</a></div></div>  </div>
+<div class="title">crQUEUE_RECEIVE</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Collaboration diagram for crQUEUE_RECEIVE:</div>
-<div class="dyncontent">
-<div class="center"><img src="group__crQUEUE__RECEIVE.png" border="0" usemap="#group____crQUEUE____RECEIVE" alt=""/></div>
-<map name="group____crQUEUE____RECEIVE" id="group____crQUEUE____RECEIVE">
-<area shape="rect" href="group__Tasks.html" title=" " alt="" coords="5,5,64,31"/>
-<area shape="rect" title=" " alt="" coords="112,5,255,31"/>
-</map>
-</div>
 <p>croutine. h </p><pre>
  crQUEUE_RECEIVE(
                     CoRoutineHandle_t xHandle,
@@ -82,14 +73,14 @@ Collaboration diagram for crQUEUE_RECEIVE:</div>
                     void *pvBuffer,
                     TickType_t xTicksToWait,
                     BaseType_t *pxResult
-                )</pre><p>The macro's crQUEUE_SEND() and crQUEUE_RECEIVE() are the co-routine equivalent to the xQueueSend() and xQueueReceive() functions used by tasks.</p>
-<p>crQUEUE_SEND and crQUEUE_RECEIVE can only be used from a co-routine whereas xQueueSend() and xQueueReceive() can only be used from tasks.</p>
+                )</pre><p>The macro's crQUEUE_SEND() and crQUEUE_RECEIVE() are the co-routine equivalent to the <a class="el" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend()</a> and <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a> functions used by tasks.</p>
+<p>crQUEUE_SEND and crQUEUE_RECEIVE can only be used from a co-routine whereas <a class="el" href="group__xQueueSend.html#gaf7eb49d3249351176992950d9185abe9">xQueueSend()</a> and <a class="el" href="group__xQueueReceive.html#gaf1549eac0e7f05694a59a0b967c80be3">xQueueReceive()</a> can only be used from tasks.</p>
 <p>crQUEUE_RECEIVE can only be called from the co-routine function itself - not from within a function called by the co-routine function. This is because co-routines do not maintain their own stack.</p>
 <p>See the co-routine section of the WEB documentation for information on passing data between tasks and co-routines and between ISR's and co-routines.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xHandle</td><td>The handle of the calling co-routine. This is the xHandle parameter of the co-routine function.</td></tr>
-    <tr><td class="paramname">pxQueue</td><td>The handle of the queue from which the data will be received. The handle is obtained as the return value when the queue is created using the xQueueCreate() API function.</td></tr>
+    <tr><td class="paramname">pxQueue</td><td>The handle of the queue from which the data will be received. The handle is obtained as the return value when the queue is created using the <a class="el" href="group__xQueueCreate.html#gaeb858b824bd74a934ea7ebb81af2a6bb">xQueueCreate()</a> API function.</td></tr>
     <tr><td class="paramname">pvBuffer</td><td>The buffer into which the received item is to be copied. The number of bytes of each queued item is specified when the queue is created. This number of bytes is copied into pvBuffer.</td></tr>
     <tr><td class="paramname">xTickToDelay</td><td>The number of ticks that the co-routine should block to wait for data to become available from the queue, should data not be available immediately. The actual amount of time this equates to is defined by configTICK_RATE_HZ (set in <a class="el" href="FreeRTOSConfig_8h_source.html">FreeRTOSConfig.h</a>). The constant portTICK_PERIOD_MS can be used to convert ticks to milliseconds (see the crQUEUE_SEND example).</td></tr>
     <tr><td class="paramname">pxResult</td><td>The variable pointed to by pxResult will be set to pdPASS if data was successfully retrieved from the queue, otherwise it will be set to an error code as defined within ProjDefs.h.</td></tr>

@@ -71,68 +71,77 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="enum_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef ENUM_H</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define ENUM_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="group__config.html#ga5d069ca8708a30d3ae09a065989ec1f7">   24</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__config.html#ga5d069ca8708a30d3ae09a065989ec1f7">game_mode</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    NO_MODE = 0,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    FAIR = 1,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EASY = 2,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    HARD = 3,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    RANDOM = 4,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    DETERMINISTIC = 5</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;} <a class="code" href="group__config.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="group__config.html#ga2a6e541cd030366c98e526cb7790dff2">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__config.html#ga2a6e541cd030366c98e526cb7790dff2">rotation</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    NO_ROTATION = 0,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    LEFT = 1,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    RIGHT = 2</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="group__config.html#gaf6d23f551fa9eb753616e0cc17453748">rotation_t</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="group__config.html#ga37dbdc30935031c05304482e1be89d8f">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__config.html#ga37dbdc30935031c05304482e1be89d8f">color</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    NO_COLOR = 0,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    TETRIS_BLUE = 1, </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    TETRIS_GREEN = 2, </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    TETRIS_YELLOW = 3,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    TETRIS_RED = 4, </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    TETRIS_LIGHT_BLUE = 5, </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    TETRIS_PURPLE = 6</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <a class="code" href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="group__config.html#gae1485c7997f4fca1e6ddbe65c0be819d">   61</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__config.html#gae1485c7997f4fca1e6ddbe65c0be819d">tetromino_type</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    NO_TYPE = 0,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    S = 1,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Z = 2,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    J = 3,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    L = 4,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    T = 5,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    O = 6,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    I = 7</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <a class="code" href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="group__config.html#gaec940e45eb1c4841e79cfa1a8cf86733">   76</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__config.html#gaec940e45eb1c4841e79cfa1a8cf86733">player_mode</a></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    NO_PLAYER = 0,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    SINGLE_PLAYER = 1,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    MULTI_PLAYER = 2</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <a class="code" href="group__config.html#gae5b321660194c52be6c81a99b5b1266f">player_mode_t</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // ENUM_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef ENUM_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define ENUM_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__enum.html#ga5d069ca8708a30d3ae09a065989ec1f7">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__enum.html#ga5d069ca8708a30d3ae09a065989ec1f7">game_mode</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a3e51fb946570e643ba0a3ffd95c70537">   28</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a3e51fb946570e643ba0a3ffd95c70537">NO_MODE</a> = 0,        </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa88121d675cd90ae31741ceb1070f74f">   29</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa88121d675cd90ae31741ceb1070f74f">FAIR</a> = 1,           </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a26d394b5caf2853dbcef5884f0f068dd">   30</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a26d394b5caf2853dbcef5884f0f068dd">EASY</a> = 2,           </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a712b8eb9268f114b4afc567f24bc536f">   31</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a712b8eb9268f114b4afc567f24bc536f">HARD</a> = 3,           </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa2b65445a3a16f164c5e811064d75726">   32</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa2b65445a3a16f164c5e811064d75726">RANDOM</a> = 4,         </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7ada77bbb00b0142cac38ea27ef520a9ad">   33</a></span>&#160;    <a class="code" href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7ada77bbb00b0142cac38ea27ef520a9ad">DETERMINISTIC</a> = 5   </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <a class="code" href="group__enum.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="group__enum.html#ga2a6e541cd030366c98e526cb7790dff2">   39</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__enum.html#ga2a6e541cd030366c98e526cb7790dff2">rotation</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aa7b522eba767bd9e3d19631055606a6a">   41</a></span>&#160;    <a class="code" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aa7b522eba767bd9e3d19631055606a6a">NO_ROTATION</a> = 0,    </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2adb45120aafd37a973140edee24708065">   42</a></span>&#160;    <a class="code" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2adb45120aafd37a973140edee24708065">LEFT</a> = 1,           </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aec8379af7490bb9eaaf579cf17876f38">   43</a></span>&#160;    <a class="code" href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aec8379af7490bb9eaaf579cf17876f38">RIGHT</a> = 2           </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <a class="code" href="group__enum.html#gaf6d23f551fa9eb753616e0cc17453748">rotation_t</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__enum.html#ga37dbdc30935031c05304482e1be89d8f">   49</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__enum.html#ga37dbdc30935031c05304482e1be89d8f">color</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    NO_COLOR = 0,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    TETRIS_BLUE = 1, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    TETRIS_GREEN = 2, </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    TETRIS_YELLOW = 3,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    TETRIS_RED = 4, </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    TETRIS_LIGHT_BLUE = 5, </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    TETRIS_PURPLE = 6</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <a class="code" href="group__enum.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="group__enum.html#gae1485c7997f4fca1e6ddbe65c0be819d">   63</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__enum.html#gae1485c7997f4fca1e6ddbe65c0be819d">tetromino_type</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    NO_TYPE = 0,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    S = 1,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Z = 2,          </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    J = 3,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    L = 4,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    T = 5,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    O = 6,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    I = 7</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <a class="code" href="group__enum.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="group__enum.html#gaec940e45eb1c4841e79cfa1a8cf86733">   78</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__enum.html#gaec940e45eb1c4841e79cfa1a8cf86733">player_mode</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    NO_PLAYER = 0,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    SINGLE_PLAYER = 1,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    MULTI_PLAYER = 2</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <a class="code" href="group__enum.html#gae5b321660194c52be6c81a99b5b1266f">player_mode_t</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif // ENUM_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__config_html_ga416473f8c4b102c5b8ff20637c9016b2"><div class="ttname"><a href="group__config.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a></div><div class="ttdeci">enum color color_t</div><div class="ttdoc">Tetromino colors.</div></div>
-<div class="ttc" id="agroup__config_html_gaec940e45eb1c4841e79cfa1a8cf86733"><div class="ttname"><a href="group__config.html#gaec940e45eb1c4841e79cfa1a8cf86733">player_mode</a></div><div class="ttdeci">player_mode</div><div class="ttdoc">Player modes.</div><div class="ttdef"><b>Definition:</b> enum.h:76</div></div>
-<div class="ttc" id="agroup__config_html_gae5b321660194c52be6c81a99b5b1266f"><div class="ttname"><a href="group__config.html#gae5b321660194c52be6c81a99b5b1266f">player_mode_t</a></div><div class="ttdeci">enum player_mode player_mode_t</div><div class="ttdoc">Player modes.</div></div>
-<div class="ttc" id="agroup__config_html_ga37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="group__config.html#ga37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdoc">Tetromino colors.</div><div class="ttdef"><b>Definition:</b> enum.h:47</div></div>
-<div class="ttc" id="agroup__config_html_gae79611776a8a64d2e30154442d0fa2a1"><div class="ttname"><a href="group__config.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a></div><div class="ttdeci">enum game_mode game_mode_t</div><div class="ttdoc">Game modes supported by the &quot;opponent&quot;.</div></div>
-<div class="ttc" id="agroup__config_html_ga2a6e541cd030366c98e526cb7790dff2"><div class="ttname"><a href="group__config.html#ga2a6e541cd030366c98e526cb7790dff2">rotation</a></div><div class="ttdeci">rotation</div><div class="ttdoc">Rotations.</div><div class="ttdef"><b>Definition:</b> enum.h:37</div></div>
-<div class="ttc" id="agroup__config_html_ga5d069ca8708a30d3ae09a065989ec1f7"><div class="ttname"><a href="group__config.html#ga5d069ca8708a30d3ae09a065989ec1f7">game_mode</a></div><div class="ttdeci">game_mode</div><div class="ttdoc">Game modes supported by the &quot;opponent&quot;.</div><div class="ttdef"><b>Definition:</b> enum.h:24</div></div>
-<div class="ttc" id="agroup__config_html_ga4e449f42bec430c8a86a6d58bce55da7"><div class="ttname"><a href="group__config.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a></div><div class="ttdeci">enum tetromino_type tetromino_type_t</div><div class="ttdoc">Tetromino types.</div></div>
-<div class="ttc" id="agroup__config_html_gae1485c7997f4fca1e6ddbe65c0be819d"><div class="ttname"><a href="group__config.html#gae1485c7997f4fca1e6ddbe65c0be819d">tetromino_type</a></div><div class="ttdeci">tetromino_type</div><div class="ttdoc">Tetromino types.</div><div class="ttdef"><b>Definition:</b> enum.h:61</div></div>
-<div class="ttc" id="agroup__config_html_gaf6d23f551fa9eb753616e0cc17453748"><div class="ttname"><a href="group__config.html#gaf6d23f551fa9eb753616e0cc17453748">rotation_t</a></div><div class="ttdeci">enum rotation rotation_t</div><div class="ttdoc">Rotations.</div></div>
+<div class="ttc" id="agroup__enum_html_gga2a6e541cd030366c98e526cb7790dff2adb45120aafd37a973140edee24708065"><div class="ttname"><a href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdoc">Rotating Tetrominos to the left.</div><div class="ttdef"><b>Definition:</b> enum.h:42</div></div>
+<div class="ttc" id="agroup__enum_html_ga4e449f42bec430c8a86a6d58bce55da7"><div class="ttname"><a href="group__enum.html#ga4e449f42bec430c8a86a6d58bce55da7">tetromino_type_t</a></div><div class="ttdeci">enum tetromino_type tetromino_type_t</div><div class="ttdoc">Tetromino types.</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7aa2b65445a3a16f164c5e811064d75726"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa2b65445a3a16f164c5e811064d75726">RANDOM</a></div><div class="ttdeci">@ RANDOM</div><div class="ttdoc">Random mode, the opponent will produce random Tetromino types.</div><div class="ttdef"><b>Definition:</b> enum.h:32</div></div>
+<div class="ttc" id="agroup__enum_html_gae1485c7997f4fca1e6ddbe65c0be819d"><div class="ttname"><a href="group__enum.html#gae1485c7997f4fca1e6ddbe65c0be819d">tetromino_type</a></div><div class="ttdeci">tetromino_type</div><div class="ttdoc">Tetromino types.</div><div class="ttdef"><b>Definition:</b> enum.h:63</div></div>
+<div class="ttc" id="agroup__enum_html_ga2a6e541cd030366c98e526cb7790dff2"><div class="ttname"><a href="group__enum.html#ga2a6e541cd030366c98e526cb7790dff2">rotation</a></div><div class="ttdeci">rotation</div><div class="ttdoc">Rotations.</div><div class="ttdef"><b>Definition:</b> enum.h:39</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7a26d394b5caf2853dbcef5884f0f068dd"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a26d394b5caf2853dbcef5884f0f068dd">EASY</a></div><div class="ttdeci">@ EASY</div><div class="ttdoc">Easy mode, the opponent will produce fewer S &amp; Z Tetrominos.</div><div class="ttdef"><b>Definition:</b> enum.h:30</div></div>
+<div class="ttc" id="agroup__enum_html_ga5d069ca8708a30d3ae09a065989ec1f7"><div class="ttname"><a href="group__enum.html#ga5d069ca8708a30d3ae09a065989ec1f7">game_mode</a></div><div class="ttdeci">game_mode</div><div class="ttdoc">Game modes supported by the &quot;opponent&quot;.</div><div class="ttdef"><b>Definition:</b> enum.h:26</div></div>
+<div class="ttc" id="agroup__enum_html_gga2a6e541cd030366c98e526cb7790dff2aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdoc">Rotating Tetrominos to the right.</div><div class="ttdef"><b>Definition:</b> enum.h:43</div></div>
+<div class="ttc" id="agroup__enum_html_ga416473f8c4b102c5b8ff20637c9016b2"><div class="ttname"><a href="group__enum.html#ga416473f8c4b102c5b8ff20637c9016b2">color_t</a></div><div class="ttdeci">enum color color_t</div><div class="ttdoc">Tetromino colors.</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7ada77bbb00b0142cac38ea27ef520a9ad"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7ada77bbb00b0142cac38ea27ef520a9ad">DETERMINISTIC</a></div><div class="ttdeci">@ DETERMINISTIC</div><div class="ttdoc">Deterministic mode, the opponent will produce each Tetromino type at least once every 7 types.</div><div class="ttdef"><b>Definition:</b> enum.h:33</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7a3e51fb946570e643ba0a3ffd95c70537"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a3e51fb946570e643ba0a3ffd95c70537">NO_MODE</a></div><div class="ttdeci">@ NO_MODE</div><div class="ttdoc">No mode selected.</div><div class="ttdef"><b>Definition:</b> enum.h:28</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7a712b8eb9268f114b4afc567f24bc536f"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7a712b8eb9268f114b4afc567f24bc536f">HARD</a></div><div class="ttdeci">@ HARD</div><div class="ttdoc">Hard mode, the opponent will produce more S &amp; Z Tetrominos.</div><div class="ttdef"><b>Definition:</b> enum.h:31</div></div>
+<div class="ttc" id="agroup__enum_html_gaf6d23f551fa9eb753616e0cc17453748"><div class="ttname"><a href="group__enum.html#gaf6d23f551fa9eb753616e0cc17453748">rotation_t</a></div><div class="ttdeci">enum rotation rotation_t</div><div class="ttdoc">Rotations.</div></div>
+<div class="ttc" id="agroup__enum_html_gga2a6e541cd030366c98e526cb7790dff2aa7b522eba767bd9e3d19631055606a6a"><div class="ttname"><a href="group__enum.html#gga2a6e541cd030366c98e526cb7790dff2aa7b522eba767bd9e3d19631055606a6a">NO_ROTATION</a></div><div class="ttdeci">@ NO_ROTATION</div><div class="ttdoc">No rotation.</div><div class="ttdef"><b>Definition:</b> enum.h:41</div></div>
+<div class="ttc" id="agroup__enum_html_ga37dbdc30935031c05304482e1be89d8f"><div class="ttname"><a href="group__enum.html#ga37dbdc30935031c05304482e1be89d8f">color</a></div><div class="ttdeci">color</div><div class="ttdoc">Tetromino colors.</div><div class="ttdef"><b>Definition:</b> enum.h:49</div></div>
+<div class="ttc" id="agroup__enum_html_gaec940e45eb1c4841e79cfa1a8cf86733"><div class="ttname"><a href="group__enum.html#gaec940e45eb1c4841e79cfa1a8cf86733">player_mode</a></div><div class="ttdeci">player_mode</div><div class="ttdoc">Player modes.</div><div class="ttdef"><b>Definition:</b> enum.h:78</div></div>
+<div class="ttc" id="agroup__enum_html_gga5d069ca8708a30d3ae09a065989ec1f7aa88121d675cd90ae31741ceb1070f74f"><div class="ttname"><a href="group__enum.html#gga5d069ca8708a30d3ae09a065989ec1f7aa88121d675cd90ae31741ceb1070f74f">FAIR</a></div><div class="ttdeci">@ FAIR</div><div class="ttdoc">Fair mode, the opponent will produce a fair selection of Tetrominos.</div><div class="ttdef"><b>Definition:</b> enum.h:29</div></div>
+<div class="ttc" id="agroup__enum_html_gae79611776a8a64d2e30154442d0fa2a1"><div class="ttname"><a href="group__enum.html#gae79611776a8a64d2e30154442d0fa2a1">game_mode_t</a></div><div class="ttdeci">enum game_mode game_mode_t</div><div class="ttdoc">Game modes supported by the &quot;opponent&quot;.</div></div>
+<div class="ttc" id="agroup__enum_html_gae5b321660194c52be6c81a99b5b1266f"><div class="ttname"><a href="group__enum.html#gae5b321660194c52be6c81a99b5b1266f">player_mode_t</a></div><div class="ttdeci">enum player_mode player_mode_t</div><div class="ttdoc">Player modes.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

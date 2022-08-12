@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="structxLIST__ITEM.html">  181</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structxLIST__ITEM.html">xLIST_ITEM</a> {</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE           <span class="comment">/*&lt; Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    configLIST_VOLATILE TickType_t xItemValue;          <span class="comment">/*&lt; The value being listed.  In most cases this is used to sort the list in descending order. */</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    configLIST_VOLATILE <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xItemValue;          <span class="comment">/*&lt; The value being listed.  In most cases this is used to sort the list in descending order. */</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">struct </span><a class="code" href="structxLIST__ITEM.html">xLIST_ITEM</a> *configLIST_VOLATILE pxNext;      <span class="comment">/*&lt; Pointer to the next ListItem_t in the list. */</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">struct </span><a class="code" href="structxLIST__ITEM.html">xLIST_ITEM</a> *configLIST_VOLATILE pxPrevious;  <span class="comment">/*&lt; Pointer to the previous ListItem_t in the list. */</span></div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> *pvOwner;                                      <span class="comment">/*&lt; Pointer to the object (normally a TCB) that contains the list item.  There is therefore a two way link between the object containing the list item and the list item itself. */</span></div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="structxMINI__LIST__ITEM.html">  192</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structxMINI__LIST__ITEM.html">xMINI_LIST_ITEM</a> {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    listFIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE           <span class="comment">/*&lt; Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    configLIST_VOLATILE TickType_t xItemValue;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    configLIST_VOLATILE <a class="code" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xItemValue;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">struct </span><a class="code" href="structxLIST__ITEM.html">xLIST_ITEM</a> *configLIST_VOLATILE pxNext;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">struct </span><a class="code" href="structxLIST__ITEM.html">xLIST_ITEM</a> *configLIST_VOLATILE pxPrevious;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;};</div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="structxLIST.html">  203</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structxLIST.html">xLIST</a> {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    listFIRST_LIST_INTEGRITY_CHECK_VALUE                <span class="comment">/*&lt; Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    configLIST_VOLATILE UBaseType_t uxNumberOfItems;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    configLIST_VOLATILE <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxNumberOfItems;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="structxLIST__ITEM.html">ListItem_t</a> *configLIST_VOLATILE pxIndex;            <span class="comment">/*&lt; Used to walk through the list.  Points to the last item returned by a call to listGET_OWNER_OF_NEXT_ENTRY (). */</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="structxMINI__LIST__ITEM.html">MiniListItem_t</a> xListEnd;                            <span class="comment">/*&lt; List item that contains the maximum possible item value meaning it is always at the end of the list and is therefore used as a marker. */</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    listSECOND_LIST_INTEGRITY_CHECK_VALUE               <span class="comment">/*&lt; Set to a known value if configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */</span></div>
@@ -512,7 +512,7 @@ $(function() {
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment"> * \page uxListRemove uxListRemove</span></div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment"> * \ingroup LinkedList</span></div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;UBaseType_t uxListRemove(<a class="code" href="structxLIST__ITEM.html">ListItem_t</a> *<span class="keyword">const</span> pxItemToRemove) PRIVILEGED_FUNCTION;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxListRemove(<a class="code" href="structxLIST__ITEM.html">ListItem_t</a> *<span class="keyword">const</span> pxItemToRemove) PRIVILEGED_FUNCTION;</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
@@ -522,7 +522,9 @@ $(function() {
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructxLIST__ITEM_html"><div class="ttname"><a href="structxLIST__ITEM.html">xLIST_ITEM</a></div><div class="ttdef"><b>Definition:</b> list.h:181</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_gaa69c48c6e902ce54f70886e6573c92a9"><div class="ttname"><a href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a></div><div class="ttdeci">uint32_t TickType_t</div><div class="ttdoc">FreeRTOS definition for a single tick.</div><div class="ttdef"><b>Definition:</b> portmacro.h:98</div></div>
 <div class="ttc" id="astructxMINI__LIST__ITEM_html"><div class="ttname"><a href="structxMINI__LIST__ITEM.html">xMINI_LIST_ITEM</a></div><div class="ttdef"><b>Definition:</b> list.h:192</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga646f89d4298e4f5afd522202b11cb2e6"><div class="ttname"><a href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a></div><div class="ttdeci">unsigned long UBaseType_t</div><div class="ttdoc">FreeRTOS definition for unsigned long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:92</div></div>
 <div class="ttc" id="astructxLIST_html"><div class="ttname"><a href="structxLIST.html">xLIST</a></div><div class="ttdef"><b>Definition:</b> list.h:203</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

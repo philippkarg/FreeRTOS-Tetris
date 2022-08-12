@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gametask_624',['gameTask',['../group__game.html#ga64073a53ee7519eb4633b15ea05886a7',1,'game.c']]]
+  ['fprints_756',['fprints',['../group__tum__print.html#ga7fbd8ab113e5ff59be957365d08acbad',1,'fprints(FILE *__restrict __stream, const char *__format,...):&#160;TUM_Print.c'],['../group__tum__print.html#ga7fbd8ab113e5ff59be957365d08acbad',1,'fprints(FILE *__restrict __stream, const char *__format,...):&#160;TUM_Print.c']]]
 ];

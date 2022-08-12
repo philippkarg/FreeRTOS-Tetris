@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FreeRTOS Tetris: xTimerCreate</title>
+<title>FreeRTOS Tetris: Timer Creation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,23 +62,86 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">xTimerCreate<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Timers</a></div></div>  </div>
+<div class="title">Timer Creation<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__Timers.html">Software Timers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Group that contains macros &amp; functions for timer creation.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for xTimerCreate:</div>
+Collaboration diagram for Timer Creation:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xTimerCreate.png" border="0" usemap="#group____xTimerCreate" alt=""/></div>
 <map name="group____xTimerCreate" id="group____xTimerCreate">
-<area shape="rect" title=" " alt="" coords="120,5,231,31"/>
-<area shape="rect" href="group__Timers.html" title=" " alt="" coords="5,5,72,31"/>
+<area shape="rect" title="Group that contains macros &amp; functions for timer creation." alt="" coords="181,5,300,31"/>
+<area shape="rect" href="group__Timers.html" title="Group that handles FreeRTOS Timers." alt="" coords="5,5,133,31"/>
 </map>
 </div>
-<p>TimerHandle_t xTimerCreate( const char * const pcTimerName, TickType_t xTimerPeriodInTicks, UBaseType_t uxAutoReload, void * pvTimerID, TimerCallbackFunction_t pxCallbackFunction );</p>
-<p>Creates a new software timer instance, and returns a handle by which the created software timer can be referenced.</p>
-<p>Internally, within the FreeRTOS implementation, software timers use a block of memory, in which the timer data structure is stored. If a software timer is created using xTimerCreate() then the required memory is automatically dynamically allocated inside the xTimerCreate() function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a software timer is created using xTimerCreateStatic() then the application writer must provide the memory that will get used by the software timer. xTimerCreateStatic() therefore allows a software timer to be created without using any dynamic memory allocation.</p>
-<p>Timers are created in the dormant state. The xTimerStart(), xTimerReset(), xTimerStartFromISR(), xTimerResetFromISR(), xTimerChangePeriod() and xTimerChangePeriodFromISR() API functions can all be used to transition a timer into the active state.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gacd5834fe4b94778f6204866277042627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627">xTimerCreate</a> (const char *const pcTimerName, const <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTimerPeriodInTicks, const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxAutoReload, void *const pvTimerID, <a class="el" href="group__TimerHandle.html#ga5cf6d1f61ccd4871022ed8ad454c6027">TimerCallbackFunction_t</a> pxCallbackFunction) PRIVILEGED_FUNCTION</td></tr>
+<tr class="memdesc:gacd5834fe4b94778f6204866277042627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new software timer instance, and returns a handle by which the created software timer can be referenced.  <a href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627">More...</a><br /></td></tr>
+<tr class="separator:gacd5834fe4b94778f6204866277042627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12002be9234be5958340690faa328e85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85">xTimerCreateStatic</a> (const char *const pcTimerName, const <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a> xTimerPeriodInTicks, const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxAutoReload, void *const pvTimerID, <a class="el" href="group__TimerHandle.html#ga5cf6d1f61ccd4871022ed8ad454c6027">TimerCallbackFunction_t</a> pxCallbackFunction, <a class="el" href="structxSTATIC__TIMER.html">StaticTimer_t</a> *pxTimerBuffer) PRIVILEGED_FUNCTION</td></tr>
+<tr class="memdesc:ga12002be9234be5958340690faa328e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new software timer instance, and returns a handle by which the created software timer can be referenced.  <a href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85">More...</a><br /></td></tr>
+<tr class="separator:ga12002be9234be5958340690faa328e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Group that contains macros &amp; functions for timer creation. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gacd5834fe4b94778f6204866277042627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd5834fe4b94778f6204866277042627">&#9670;&nbsp;</a></span>xTimerCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> xTimerCreate </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>pcTimerName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>&#160;</td>
+          <td class="paramname"><em>xTimerPeriodInTicks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxAutoReload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *const&#160;</td>
+          <td class="paramname"><em>pvTimerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#ga5cf6d1f61ccd4871022ed8ad454c6027">TimerCallbackFunction_t</a>&#160;</td>
+          <td class="paramname"><em>pxCallbackFunction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;timers.h&gt;</code></p>
+
+<p>Creates a new software timer instance, and returns a handle by which the created software timer can be referenced. </p>
+<p>Internally, within the FreeRTOS implementation, software timers use a block of memory, in which the timer data structure is stored. If a software timer is created using <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> then the required memory is automatically dynamically allocated inside the <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a software timer is created using <a class="el" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreateStatic()</a> then the application writer must provide the memory that will get used by the software timer. <a class="el" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreateStatic()</a> therefore allows a software timer to be created without using any dynamic memory allocation.</p>
+<p>Timers are created in the dormant state. The <a class="el" href="group__xTimerControl.html#ga3a9b838f48991e852ce05c986b0eeb8c" title="Start a timer that was previously created using the xTimerCreate() API function. If the timer had alr...">xTimerStart()</a>, <a class="el" href="group__xTimerControl.html#ga8081b4541b752908dc55df2693e53287" title="xTimerReset() re-starts a timer that was previously created using the xTimerCreate() API function....">xTimerReset()</a>, xTimerStartFromISR(), xTimerResetFromISR(), <a class="el" href="group__xTimerControl.html#gab12eac1c69a3437b8161ce81ff34b2f4" title="Change the period of a timer that was previously created using the xTimerCreate() API function.">xTimerChangePeriod()</a> and xTimerChangePeriodFromISR() API functions can all be used to transition a timer into the active state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pcTimerName</td><td>A text name that is assigned to the timer. This is done purely to assist debugging. The kernel itself only ever references a timer by its handle, and never by its name.</td></tr>
@@ -90,85 +153,206 @@ Collaboration diagram for xTimerCreate:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the timer is successfully created then a handle to the newly created timer is returned. If the timer cannot be created (because either there is insufficient FreeRTOS heap remaining to allocate the timer structures, or the timer period was set to 0) then NULL is returned.</dd></dl>
-<p>Example usage: </p><pre class="fragment">* #define NUM_TIMERS 5
-*
-* // An array to hold handles to the created timers.
-* TimerHandle_t xTimers[ NUM_TIMERS ];
-*
-* // An array to hold a count of the number of times each timer expires.
-* int32_t lExpireCounters[ NUM_TIMERS ] = { 0 };
-*
-* // Define a callback function that will be used by multiple timer instances.
-* // The callback function does nothing but count the number of times the
-* // associated timer expires, and stop the timer once the timer has expired
-* // 10 times.
-* void vTimerCallback( TimerHandle_t pxTimer )
-* {
-* int32_t lArrayIndex;
-* const int32_t xMaxExpiryCountBeforeStopping = 10;
-*
-*     // Optionally do something if the pxTimer parameter is NULL.
-*     configASSERT( pxTimer );
-*
-*     // Which timer expired?
-*     lArrayIndex = ( int32_t ) pvTimerGetTimerID( pxTimer );
-*
-*     // Increment the number of times that pxTimer has expired.
-*     lExpireCounters[ lArrayIndex ] += 1;
-*
-*     // If the timer has expired 10 times then stop it from running.
-*     if( lExpireCounters[ lArrayIndex ] == xMaxExpiryCountBeforeStopping )
-*     {
-*         // Do not use a block time if calling a timer API function from a
-*         // timer callback function, as doing so could cause a deadlock!
-*         xTimerStop( pxTimer, 0 );
-*     }
-* }
-*
-* void main( void )
-* {
-* int32_t x;
-*
-*     // Create then start some timers.  Starting the timers before the scheduler
-*     // has been started means the timers will start running immediately that
-*     // the scheduler starts.
-*     for( x = 0; x &lt; NUM_TIMERS; x++ )
-*     {
-*         xTimers[ x ] = xTimerCreate(    "Timer",       // Just a text name, not used by the kernel.
-*                                         ( 100 * x ),   // The timer period in ticks.
-*                                         pdTRUE,        // The timers will auto-reload themselves when they expire.
-*                                         ( void * ) x,  // Assign each timer a unique id equal to its array index.
-*                                         vTimerCallback // Each timer calls the same callback when it expires.
-*                                     );
-*
-*         if( xTimers[ x ] == NULL )
-*         {
-*             // The timer was not created.
-*         }
-*         else
-*         {
-*             // Start the timer.  No block time is specified, and even if one was
-*             // it would be ignored because the scheduler has not yet been
-*             // started.
-*             if( xTimerStart( xTimers[ x ], 0 ) != pdPASS )
-*             {
-*                 // The timer could not be set into the Active state.
-*             }
-*         }
-*     }
-*
-*     // ...
-*     // Create tasks here.
-*     // ...
-*
-*     // Starting the scheduler will start the timers running as they have already
-*     // been set into the active state.
-*     vTaskStartScheduler();
-*
-*     // Should not reach here.
-*     for( ;; );
-* }
-* </pre> </div><!-- contents -->
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="preprocessor">#define NUM_TIMERS 5</span></div>
+<div class="line"><span class="comment">// An array to hold handles to the created timers.</span></div>
+<div class="line"><a class="code" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> xTimers[ NUM_TIMERS ];</div>
+<div class="line"><span class="comment">// An array to hold a count of the number of times each timer expires.</span></div>
+<div class="line">int32_t lExpireCounters[ NUM_TIMERS ] = { 0 };</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Define a callback function that will be used by multiple timer instances.</span></div>
+<div class="line"><span class="comment">// The callback function does nothing but count the number of times the</span></div>
+<div class="line"><span class="comment">// associated timer expires, and stop the timer once the timer has expired</span></div>
+<div class="line"><span class="comment">// 10 times.</span></div>
+<div class="line"><span class="keywordtype">void</span> vTimerCallback( <a class="code" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> pxTimer )</div>
+<div class="line">{</div>
+<div class="line">int32_t lArrayIndex;</div>
+<div class="line"><span class="keyword">const</span> int32_t xMaxExpiryCountBeforeStopping = 10;</div>
+<div class="line">    <span class="comment">// Optionally do something if the pxTimer parameter is NULL.</span></div>
+<div class="line">    configASSERT( pxTimer );</div>
+<div class="line">    <span class="comment">// Which timer expired?</span></div>
+<div class="line">    lArrayIndex = ( int32_t ) <a class="code" href="group__xTimerUtility.html#gae20907a90360107d72283eb9099685ad">pvTimerGetTimerID</a>( pxTimer );</div>
+<div class="line">    <span class="comment">// Increment the number of times that pxTimer has expired.</span></div>
+<div class="line">    lExpireCounters[ lArrayIndex ] += 1;</div>
+<div class="line">    <span class="comment">// If the timer has expired 10 times then stop it from running.</span></div>
+<div class="line">    <span class="keywordflow">if</span>( lExpireCounters[ lArrayIndex ] == xMaxExpiryCountBeforeStopping )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Do not use a block time if calling a timer API function from a</span></div>
+<div class="line">        <span class="comment">// timer callback function, as doing so could cause a deadlock!</span></div>
+<div class="line">        <a class="code" href="group__xTimerControl.html#ga8327c7fc10aee414cb163b445c5269a4">xTimerStop</a>( pxTimer, 0 );</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordtype">void</span> main( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line">    int32_t x;</div>
+<div class="line">    <span class="comment">// Create then start some timers.  Starting the timers before the scheduler</span></div>
+<div class="line">    <span class="comment">// has been started means the timers will start running immediately that</span></div>
+<div class="line">    <span class="comment">// the scheduler starts.</span></div>
+<div class="line">    <span class="keywordflow">for</span>( x = 0; x &lt; NUM_TIMERS; x++ )</div>
+<div class="line">    {</div>
+<div class="line">        xTimers[ x ] = <a class="code" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627">xTimerCreate</a>(    <span class="stringliteral">&quot;Timer&quot;</span>,       <span class="comment">// Just a text name, not used by the kernel.</span></div>
+<div class="line">                                        ( 100 * x ),   <span class="comment">// The timer period in ticks.</span></div>
+<div class="line">                                        pdTRUE,        <span class="comment">// The timers will auto-reload themselves when they expire.</span></div>
+<div class="line">                                        ( <span class="keywordtype">void</span> * ) x,  <span class="comment">// Assign each timer a unique id equal to its array index.</span></div>
+<div class="line">                                        vTimerCallback <span class="comment">// Each timer calls the same callback when it expires.</span></div>
+<div class="line">                                    );</div>
+<div class="line">        <span class="keywordflow">if</span>( xTimers[ x ] == NULL )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// The timer was not created.</span></div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Start the timer.  No block time is specified, and even if one was</span></div>
+<div class="line">            <span class="comment">// it would be ignored because the scheduler has not yet been</span></div>
+<div class="line">            <span class="comment">// started.</span></div>
+<div class="line">            <span class="keywordflow">if</span>( <a class="code" href="group__xTimerControl.html#ga3a9b838f48991e852ce05c986b0eeb8c">xTimerStart</a>( xTimers[ x ], 0 ) != pdPASS )</div>
+<div class="line">            {</div>
+<div class="line">                <span class="comment">// The timer could not be set into the Active state.</span></div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">    <span class="comment">// Create tasks here.</span></div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">    <span class="comment">// Starting the scheduler will start the timers running as they have already</span></div>
+<div class="line">    <span class="comment">// been set into the active state.</span></div>
+<div class="line">    <a class="code" href="group__KernelControl.html#gaaf9dca1065c60abdeb309d56ab7293cb">vTaskStartScheduler</a>();</div>
+<div class="line">    <span class="comment">// Should not reach here.</span></div>
+<div class="line">    <span class="keywordflow">for</span>( ;; );</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga12002be9234be5958340690faa328e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12002be9234be5958340690faa328e85">&#9670;&nbsp;</a></span>xTimerCreateStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> xTimerCreateStatic </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>pcTimerName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#gaa69c48c6e902ce54f70886e6573c92a9">TickType_t</a>&#160;</td>
+          <td class="paramname"><em>xTimerPeriodInTicks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a>&#160;</td>
+          <td class="paramname"><em>uxAutoReload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *const&#160;</td>
+          <td class="paramname"><em>pvTimerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#ga5cf6d1f61ccd4871022ed8ad454c6027">TimerCallbackFunction_t</a>&#160;</td>
+          <td class="paramname"><em>pxCallbackFunction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxSTATIC__TIMER.html">StaticTimer_t</a> *&#160;</td>
+          <td class="paramname"><em>pxTimerBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;timers.h&gt;</code></p>
+
+<p>Creates a new software timer instance, and returns a handle by which the created software timer can be referenced. </p>
+<p>Internally, within the FreeRTOS implementation, software timers use a block of memory, in which the timer data structure is stored. If a software timer is created using <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> then the required memory is automatically dynamically allocated inside the <a class="el" href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreate()</a> function. (see <a href="http://www.freertos.org/a00111.html">http://www.freertos.org/a00111.html</a>). If a software timer is created using <a class="el" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreateStatic()</a> then the application writer must provide the memory that will get used by the software timer. <a class="el" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85" title="Creates a new software timer instance, and returns a handle by which the created software timer can b...">xTimerCreateStatic()</a> therefore allows a software timer to be created without using any dynamic memory allocation.</p>
+<p>Timers are created in the dormant state. The <a class="el" href="group__xTimerControl.html#ga3a9b838f48991e852ce05c986b0eeb8c" title="Start a timer that was previously created using the xTimerCreate() API function. If the timer had alr...">xTimerStart()</a>, <a class="el" href="group__xTimerControl.html#ga8081b4541b752908dc55df2693e53287" title="xTimerReset() re-starts a timer that was previously created using the xTimerCreate() API function....">xTimerReset()</a>, xTimerStartFromISR(), xTimerResetFromISR(), <a class="el" href="group__xTimerControl.html#gab12eac1c69a3437b8161ce81ff34b2f4" title="Change the period of a timer that was previously created using the xTimerCreate() API function.">xTimerChangePeriod()</a> and xTimerChangePeriodFromISR() API functions can all be used to transition a timer into the active state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcTimerName</td><td>A text name that is assigned to the timer. This is done purely to assist debugging. The kernel itself only ever references a timer by its handle, and never by its name.</td></tr>
+    <tr><td class="paramname">xTimerPeriodInTicks</td><td>The timer period. The time is defined in tick periods so the constant portTICK_PERIOD_MS can be used to convert a time that has been specified in milliseconds. For example, if the timer must expire after 100 ticks, then xTimerPeriodInTicks should be set to 100. Alternatively, if the timer must expire after 500ms, then xPeriod can be set to ( 500 / portTICK_PERIOD_MS ) provided configTICK_RATE_HZ is less than or equal to 1000.</td></tr>
+    <tr><td class="paramname">uxAutoReload</td><td>If uxAutoReload is set to pdTRUE then the timer will expire repeatedly with a frequency set by the xTimerPeriodInTicks parameter. If uxAutoReload is set to pdFALSE then the timer will be a one-shot timer and enter the dormant state after it expires.</td></tr>
+    <tr><td class="paramname">pvTimerID</td><td>An identifier that is assigned to the timer being created. Typically this would be used in the timer callback function to identify which timer expired when the same callback function is assigned to more than one timer.</td></tr>
+    <tr><td class="paramname">pxCallbackFunction</td><td>The function to call when the timer expires. Callback functions must have the prototype defined by TimerCallbackFunction_t, which is "void vCallbackFunction( TimerHandle_t xTimer );".</td></tr>
+    <tr><td class="paramname">pxTimerBuffer</td><td>Must point to a variable of type StaticTimer_t, which will be then be used to hold the software timer's data structures, removing the need for the memory to be allocated dynamically.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the timer is created then a handle to the created timer is returned. If pxTimerBuffer was NULL then NULL is returned.</dd></dl>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="comment">// The buffer used to hold the software timer&#39;s data structure.</span></div>
+<div class="line"><span class="keyword">static</span> <a class="code" href="structxSTATIC__TIMER.html">StaticTimer_t</a> xTimerBuffer;</div>
+<div class="line"><span class="comment">// A variable that will be incremented by the software timer&#39;s callback</span></div>
+<div class="line"><span class="comment">// function.</span></div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> uxVariableToIncrement = 0;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// A software timer callback function that increments a variable passed to</span></div>
+<div class="line"><span class="comment">// it when the software timer was created.  After the 5th increment the</span></div>
+<div class="line"><span class="comment">// callback function stops the software timer.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> prvTimerCallback( <a class="code" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> xExpiredTimer )</div>
+<div class="line">{</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> *puxVariableToIncrement;</div>
+<div class="line"><a class="code" href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a> xReturned;</div>
+<div class="line">    <span class="comment">// Obtain the address of the variable to increment from the timer ID.</span></div>
+<div class="line">    puxVariableToIncrement = ( <a class="code" href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a> * ) <a class="code" href="group__xTimerUtility.html#gae20907a90360107d72283eb9099685ad">pvTimerGetTimerID</a>( xExpiredTimer );</div>
+<div class="line">    <span class="comment">// Increment the variable to show the timer callback has executed.</span></div>
+<div class="line">    ( *puxVariableToIncrement )++;</div>
+<div class="line">    <span class="comment">// If this callback has executed the required number of times, stop the</span></div>
+<div class="line">    <span class="comment">// timer.</span></div>
+<div class="line">    <span class="keywordflow">if</span>( *puxVariableToIncrement == 5 )</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// This is called from a timer callback so must not block.</span></div>
+<div class="line">        <a class="code" href="group__xTimerControl.html#ga8327c7fc10aee414cb163b445c5269a4">xTimerStop</a>( xExpiredTimer, staticDONT_BLOCK );</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> main( <span class="keywordtype">void</span> )</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Create the software time.  xTimerCreateStatic() has an extra parameter</span></div>
+<div class="line">    <span class="comment">// than the normal xTimerCreate() API function.  The parameter is a pointer</span></div>
+<div class="line">    <span class="comment">// to the StaticTimer_t structure that will hold the software timer</span></div>
+<div class="line">    <span class="comment">// structure.  If the parameter is passed as NULL then the structure will be</span></div>
+<div class="line">    <span class="comment">// allocated dynamically, just as if xTimerCreate() had been called.</span></div>
+<div class="line">    xTimer = <a class="code" href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85">xTimerCreateStatic</a>( <span class="stringliteral">&quot;T1&quot;</span>,             <span class="comment">// Text name for the task.  Helps debugging only.  Not used by FreeRTOS.</span></div>
+<div class="line">                                 xTimerPeriod,     <span class="comment">// The period of the timer in ticks.</span></div>
+<div class="line">                                 pdTRUE,           <span class="comment">// This is an auto-reload timer.</span></div>
+<div class="line">                                 ( <span class="keywordtype">void</span> * ) &amp;uxVariableToIncrement,    <span class="comment">// A variable incremented by the software timer&#39;s callback function</span></div>
+<div class="line">                                 prvTimerCallback, <span class="comment">// The function to execute when the timer expires.</span></div>
+<div class="line">                                 &amp;xTimerBuffer );  <span class="comment">// The buffer that will hold the software timer structure.</span></div>
+<div class="line">    <span class="comment">// The scheduler has not started yet so a block time is not used.</span></div>
+<div class="line">    xReturned = <a class="code" href="group__xTimerControl.html#ga3a9b838f48991e852ce05c986b0eeb8c">xTimerStart</a>( xTimer, 0 );</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">    <span class="comment">// Create tasks here.</span></div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">    <span class="comment">// Starting the scheduler will start the timers running as they have already</span></div>
+<div class="line">    <span class="comment">// been set into the active state.</span></div>
+<div class="line">    <a class="code" href="group__KernelControl.html#gaaf9dca1065c60abdeb309d56ab7293cb">vTaskStartScheduler</a>();</div>
+<div class="line">    <span class="comment">// Should not reach here.</span></div>
+<div class="line">    <span class="keywordflow">for</span>( ;; );</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="astructxSTATIC__TIMER_html"><div class="ttname"><a href="structxSTATIC__TIMER.html">xSTATIC_TIMER</a></div><div class="ttdef"><b>Definition:</b> FreeRTOS.h:1035</div></div>
+<div class="ttc" id="agroup__xTimerCreate_html_ga12002be9234be5958340690faa328e85"><div class="ttname"><a href="group__xTimerCreate.html#ga12002be9234be5958340690faa328e85">xTimerCreateStatic</a></div><div class="ttdeci">TimerHandle_t xTimerCreateStatic(const char *const pcTimerName, const TickType_t xTimerPeriodInTicks, const UBaseType_t uxAutoReload, void *const pvTimerID, TimerCallbackFunction_t pxCallbackFunction, StaticTimer_t *pxTimerBuffer) PRIVILEGED_FUNCTION</div><div class="ttdoc">Creates a new software timer instance, and returns a handle by which the created software timer can b...</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga646f89d4298e4f5afd522202b11cb2e6"><div class="ttname"><a href="group__freeRTOSconfig.html#ga646f89d4298e4f5afd522202b11cb2e6">UBaseType_t</a></div><div class="ttdeci">unsigned long UBaseType_t</div><div class="ttdoc">FreeRTOS definition for unsigned long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:92</div></div>
+<div class="ttc" id="agroup__xTimerControl_html_ga3a9b838f48991e852ce05c986b0eeb8c"><div class="ttname"><a href="group__xTimerControl.html#ga3a9b838f48991e852ce05c986b0eeb8c">xTimerStart</a></div><div class="ttdeci">#define xTimerStart(xTimer, xTicksToWait)</div><div class="ttdoc">Start a timer that was previously created using the xTimerCreate() API function. If the timer had alr...</div><div class="ttdef"><b>Definition:</b> timers.h:508</div></div>
+<div class="ttc" id="agroup__TimerHandle_html_gaae4bf1dce696ab615d5fd073606fd3cb"><div class="ttname"><a href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a></div><div class="ttdeci">void * TimerHandle_t</div><div class="ttdoc">Type by which software timers are referenced. For example, a call to xTimerCreate() returns an TimerH...</div><div class="ttdef"><b>Definition:</b> timers.h:154</div></div>
+<div class="ttc" id="agroup__freeRTOSconfig_html_ga46fb21e00ae0729d7515c0fbf2269796"><div class="ttname"><a href="group__freeRTOSconfig.html#ga46fb21e00ae0729d7515c0fbf2269796">BaseType_t</a></div><div class="ttdeci">long BaseType_t</div><div class="ttdoc">FreeRTOS definition for long ints.</div><div class="ttdef"><b>Definition:</b> portmacro.h:91</div></div>
+<div class="ttc" id="agroup__KernelControl_html_gaaf9dca1065c60abdeb309d56ab7293cb"><div class="ttname"><a href="group__KernelControl.html#gaaf9dca1065c60abdeb309d56ab7293cb">vTaskStartScheduler</a></div><div class="ttdeci">void vTaskStartScheduler(void) PRIVILEGED_FUNCTION</div><div class="ttdoc">Starts the real time kernel tick processing. After calling the kernel has control over which tasks ar...</div><div class="ttdef"><b>Definition:</b> tasks.c:1709</div></div>
+<div class="ttc" id="agroup__xTimerCreate_html_gacd5834fe4b94778f6204866277042627"><div class="ttname"><a href="group__xTimerCreate.html#gacd5834fe4b94778f6204866277042627">xTimerCreate</a></div><div class="ttdeci">TimerHandle_t xTimerCreate(const char *const pcTimerName, const TickType_t xTimerPeriodInTicks, const UBaseType_t uxAutoReload, void *const pvTimerID, TimerCallbackFunction_t pxCallbackFunction) PRIVILEGED_FUNCTION</div><div class="ttdoc">Creates a new software timer instance, and returns a handle by which the created software timer can b...</div></div>
+<div class="ttc" id="agroup__xTimerUtility_html_gae20907a90360107d72283eb9099685ad"><div class="ttname"><a href="group__xTimerUtility.html#gae20907a90360107d72283eb9099685ad">pvTimerGetTimerID</a></div><div class="ttdeci">void * pvTimerGetTimerID(const TimerHandle_t xTimer) PRIVILEGED_FUNCTION</div><div class="ttdoc">Returns the ID assigned to the timer.</div></div>
+<div class="ttc" id="agroup__xTimerControl_html_ga8327c7fc10aee414cb163b445c5269a4"><div class="ttname"><a href="group__xTimerControl.html#ga8327c7fc10aee414cb163b445c5269a4">xTimerStop</a></div><div class="ttdeci">#define xTimerStop(xTimer, xTicksToWait)</div><div class="ttdoc">Stop a timer that was previously started using either of the xTimerStart(), xTimerReset(),...</div><div class="ttdef"><b>Definition:</b> timers.h:548</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

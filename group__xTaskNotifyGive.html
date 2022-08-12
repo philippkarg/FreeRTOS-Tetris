@@ -63,7 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">xTaskNotifyGive<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Task Notifications</a></div></div>  </div>
+<div class="title">xTaskNotifyGive<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Direct To Task Notifications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -71,8 +71,8 @@ Collaboration diagram for xTaskNotifyGive:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xTaskNotifyGive.png" border="0" usemap="#group____xTaskNotifyGive" alt=""/></div>
 <map name="group____xTaskNotifyGive" id="group____xTaskNotifyGive">
-<area shape="rect" title=" " alt="" coords="191,5,319,31"/>
-<area shape="rect" href="group__TaskNotifications.html" title=" " alt="" coords="5,5,143,31"/>
+<area shape="rect" title=" " alt="" coords="252,5,380,31"/>
+<area shape="rect" href="group__TaskNotifications.html" title="Group that contains macros &amp; functions for task notifications." alt="" coords="5,5,204,31"/>
 </map>
 </div>
 <p>task. h </p><pre>BaseType_t xTaskNotifyGive( TaskHandle_t xTaskToNotify );</pre><p>configUSE_TASK_NOTIFICATIONS must be undefined or defined as 1 for this macro to be available.</p>
@@ -84,11 +84,11 @@ Collaboration diagram for xTaskNotifyGive:</div>
 <p>See <a href="http://www.FreeRTOS.org/RTOS-task-notifications.html">http://www.FreeRTOS.org/RTOS-task-notifications.html</a> for more details.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">xTaskToNotify</td><td>The handle of the task being notified. The handle to a task can be returned from the xTaskCreate() API function used to create the task, and the handle of the currently running task can be obtained by calling xTaskGetCurrentTaskHandle().</td></tr>
+    <tr><td class="paramname">xTaskToNotify</td><td>The handle of the task being notified. The handle to a task can be returned from the <a class="el" href="group__TaskCreation.html#gae2262d7bff03dfbb4d1a286afbbf1c2c" title="Create a new task and add it to the list of tasks that are ready to run.">xTaskCreate()</a> API function used to create the task, and the handle of the currently running task can be obtained by calling xTaskGetCurrentTaskHandle().</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>xTaskNotifyGive() is a macro that calls xTaskNotify() with the eAction parameter set to eIncrement - so pdPASS is always returned. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>xTaskNotifyGive() is a macro that calls <a class="el" href="group__TaskNotifications.html#ga0d2d54fb8a64011dfbb54983e4ed06bd" title="Send an event directly to and potentially unblock an RTOS task, and optionally update one of the rece...">xTaskNotify()</a> with the eAction parameter set to eIncrement - so pdPASS is always returned. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

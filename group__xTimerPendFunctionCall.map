@@ -1,4 +1,4 @@
-<map id="xTimerPendFunctionCall" name="xTimerPendFunctionCall">
-<area shape="rect" id="node1" title=" " alt="" coords="120,5,300,31"/>
-<area shape="rect" id="node2" href="$group__Timers.html" title=" " alt="" coords="5,5,72,31"/>
+<map id="Function Deference" name="Function Deference">
+<area shape="rect" id="node1" title="Group that contains function that allow the user to defer functions to the FreeRTOS daemon task." alt="" coords="181,5,329,31"/>
+<area shape="rect" id="node2" href="$group__Timers.html" title="Group that handles FreeRTOS Timers." alt="" coords="5,5,133,31"/>
 </map>

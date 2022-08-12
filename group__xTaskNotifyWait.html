@@ -63,7 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">xTaskNotifyWait<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Task Notifications</a></div></div>  </div>
+<div class="title">xTaskNotifyWait<div class="ingroups"><a class="el" href="group__freeRTOS.html">FreeRTOS Kernel</a> &raquo; <a class="el" href="group__TaskNotifications.html">Direct To Task Notifications</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -71,8 +71,8 @@ Collaboration diagram for xTaskNotifyWait:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__xTaskNotifyWait.png" border="0" usemap="#group____xTaskNotifyWait" alt=""/></div>
 <map name="group____xTaskNotifyWait" id="group____xTaskNotifyWait">
-<area shape="rect" href="group__TaskNotifications.html" title=" " alt="" coords="5,5,143,31"/>
-<area shape="rect" title=" " alt="" coords="191,5,317,31"/>
+<area shape="rect" href="group__TaskNotifications.html" title="Group that contains macros &amp; functions for task notifications." alt="" coords="5,5,204,31"/>
+<area shape="rect" title=" " alt="" coords="252,5,379,31"/>
 </map>
 </div>
 <p>task. h </p><pre>BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait );</pre><p>configUSE_TASK_NOTIFICATIONS must be undefined or defined as 1 for this function to be available.</p>
@@ -85,7 +85,7 @@ Collaboration diagram for xTaskNotifyWait:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ulBitsToClearOnEntry</td><td>Bits that are set in ulBitsToClearOnEntry value will be cleared in the calling task's notification value before the task checks to see if any notifications are pending, and optionally blocks if no notifications are pending. Setting ulBitsToClearOnEntry to ULONG_MAX (if limits.h is included) or 0xffffffffUL (if limits.h is not included) will have the effect of resetting the task's notification value to 0. Setting ulBitsToClearOnEntry to 0 will leave the task's notification value unchanged.</td></tr>
-    <tr><td class="paramname">ulBitsToClearOnExit</td><td>If a notification is pending or received before the calling task exits the xTaskNotifyWait() function then the task's notification value (see the xTaskNotify() API function) is passed out using the pulNotificationValue parameter. Then any bits that are set in ulBitsToClearOnExit will be cleared in the task's notification value (note *pulNotificationValue is set before any bits are cleared). Setting ulBitsToClearOnExit to ULONG_MAX (if limits.h is included) or 0xffffffffUL (if limits.h is not included) will have the effect of resetting the task's notification value to 0 before the function exits. Setting ulBitsToClearOnExit to 0 will leave the task's notification value unchanged when the function exits (in which case the value passed out in pulNotificationValue will match the task's notification value).</td></tr>
+    <tr><td class="paramname">ulBitsToClearOnExit</td><td>If a notification is pending or received before the calling task exits the xTaskNotifyWait() function then the task's notification value (see the <a class="el" href="group__TaskNotifications.html#ga0d2d54fb8a64011dfbb54983e4ed06bd" title="Send an event directly to and potentially unblock an RTOS task, and optionally update one of the rece...">xTaskNotify()</a> API function) is passed out using the pulNotificationValue parameter. Then any bits that are set in ulBitsToClearOnExit will be cleared in the task's notification value (note *pulNotificationValue is set before any bits are cleared). Setting ulBitsToClearOnExit to ULONG_MAX (if limits.h is included) or 0xffffffffUL (if limits.h is not included) will have the effect of resetting the task's notification value to 0 before the function exits. Setting ulBitsToClearOnExit to 0 will leave the task's notification value unchanged when the function exits (in which case the value passed out in pulNotificationValue will match the task's notification value).</td></tr>
     <tr><td class="paramname">pulNotificationValue</td><td>Used to pass the task's notification value out of the function. Note the value passed out will not be effected by the clearing of any bits caused by ulBitsToClearOnExit being non-zero.</td></tr>
     <tr><td class="paramname">xTicksToWait</td><td>The maximum amount of time that the task should wait in the Blocked state for a notification to be received, should a notification not already be pending when xTaskNotifyWait() was called. The task will not consume any processing time while it is in the Blocked state. This is specified in kernel ticks, the macro pdMS_TO_TICSK( value_in_ms ) can be used to convert a time specified in milliseconds to a time specified in ticks.</td></tr>
   </table>
@@ -111,7 +111,7 @@ using the ulTaskNotificationTake() API function rather than the
 xTaskNotifyWait() API function.</pre><pre>See <a href="http://www.FreeRTOS.org/RTOS-task-notifications.html">http://www.FreeRTOS.org/RTOS-task-notifications.html</a> for more details.</pre><pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xTaskToNotify</td><td>The handle of the task being notified.  The handle to a
-task can be returned from the xTaskCreate() API function used to create the
+task can be returned from the <a class="el" href="group__TaskCreation.html#gae2262d7bff03dfbb4d1a286afbbf1c2c" title="Create a new task and add it to the list of tasks that are ready to run.">xTaskCreate()</a> API function used to create the
 task, and the handle of the currently running task can be obtained by calling
 xTaskGetCurrentTaskHandle().</td></tr>
     <tr><td class="paramname">pxHigherPriorityTaskWoken</td><td>vTaskNotifyGiveFromISR() will set

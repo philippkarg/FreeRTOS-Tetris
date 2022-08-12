@@ -71,23 +71,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="opponent_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef OPPONENT_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define OPPONENT_H</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tetrisConfig_8h.html">tetrisConfig.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> QueueHandle_t <a class="code" href="group__opponent.html#ga2954b5ccae63e952fecce2ed70fb3640">TetrominoQueue</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> SemaphoreHandle_t <a class="code" href="group__opponent.html#gac001fe75bb1c7f4da598b80a9c26da27">NextTetrominoSignal</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">extern</span> TaskHandle_t <a class="code" href="group__opponent.html#ga48e6f373263639165964fa20530e5938">UDPControlTask</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef OPPONENT_H</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define OPPONENT_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tetrisConfig_8h.html">tetrisConfig.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__opponent.html#gadd4eabc700c894611bd1fa7ecdaffeb2">iOpponentInit</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // OPPONENT_H</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <a class="code" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a> <a class="code" href="group__opponent.html#ga2954b5ccae63e952fecce2ed70fb3640">TetrominoQueue</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> SemaphoreHandle_t <a class="code" href="group__opponent.html#gac001fe75bb1c7f4da598b80a9c26da27">NextTetrominoSignal</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <a class="code" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a> <a class="code" href="group__opponent.html#ga48e6f373263639165964fa20530e5938">UDPControlTask</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__opponent.html#ga9436a03dd59c743388bd96d0b8955070">iOpponentInit</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // OPPONENT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="agroup__opponent_html_gadd4eabc700c894611bd1fa7ecdaffeb2"><div class="ttname"><a href="group__opponent.html#gadd4eabc700c894611bd1fa7ecdaffeb2">iOpponentInit</a></div><div class="ttdeci">int iOpponentInit()</div><div class="ttdoc">Initialize the opponent functionality.</div><div class="ttdef"><b>Definition:</b> opponent.c:251</div></div>
+<div class="ttc" id="agroup__TaskHandle_html_gae95f44d4cfeb4a599c6cc258d241cb6b"><div class="ttname"><a href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a></div><div class="ttdeci">void * TaskHandle_t</div><div class="ttdoc">Type by which tasks are referenced.</div><div class="ttdef"><b>Definition:</b> task.h:132</div></div>
+<div class="ttc" id="agroup__QueueHandle_html_gaaf19d499892a4ce1409326ece00f5264"><div class="ttname"><a href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a></div><div class="ttdeci">void * QueueHandle_t</div><div class="ttdef"><b>Definition:</b> queue.h:135</div></div>
 <div class="ttc" id="agroup__opponent_html_ga48e6f373263639165964fa20530e5938"><div class="ttname"><a href="group__opponent.html#ga48e6f373263639165964fa20530e5938">UDPControlTask</a></div><div class="ttdeci">TaskHandle_t UDPControlTask</div><div class="ttdoc">Task to control the UDP socket</div><div class="ttdef"><b>Definition:</b> opponent.c:24</div></div>
 <div class="ttc" id="agroup__opponent_html_ga2954b5ccae63e952fecce2ed70fb3640"><div class="ttname"><a href="group__opponent.html#ga2954b5ccae63e952fecce2ed70fb3640">TetrominoQueue</a></div><div class="ttdeci">QueueHandle_t TetrominoQueue</div><div class="ttdoc">Queue for receiving tetromino types from opponent</div><div class="ttdef"><b>Definition:</b> opponent.c:29</div></div>
 <div class="ttc" id="atetrisConfig_8h_html"><div class="ttname"><a href="tetrisConfig_8h.html">tetrisConfig.h</a></div><div class="ttdoc">File containing some game configurations.</div></div>
+<div class="ttc" id="agroup__opponent_html_ga9436a03dd59c743388bd96d0b8955070"><div class="ttname"><a href="group__opponent.html#ga9436a03dd59c743388bd96d0b8955070">iOpponentInit</a></div><div class="ttdeci">int iOpponentInit()</div><div class="ttdoc">Initialize the opponent functionality.</div><div class="ttdef"><b>Definition:</b> opponent.c:251</div></div>
 <div class="ttc" id="agroup__opponent_html_gac001fe75bb1c7f4da598b80a9c26da27"><div class="ttname"><a href="group__opponent.html#gac001fe75bb1c7f4da598b80a9c26da27">NextTetrominoSignal</a></div><div class="ttdeci">SemaphoreHandle_t NextTetrominoSignal</div><div class="ttdoc">Signal for the next Tetromino</div><div class="ttdef"><b>Definition:</b> opponent.c:27</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

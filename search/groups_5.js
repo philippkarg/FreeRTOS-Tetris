@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logic_20module_868',['Logic Module',['../group__logic.html',1,'']]]
+  ['gui_20module_1109',['GUI Module',['../group__gui.html',1,'']]]
 ];

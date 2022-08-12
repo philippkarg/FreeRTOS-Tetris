@@ -77,7 +77,7 @@ Collaboration diagram for Main Game Module:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__game.png" border="0" usemap="#group____game" alt=""/></div>
 <map name="group____game" id="group____game">
-<area shape="rect" href="group__tetris.html" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" href="group__tetris.html" title="All modules that were created in the scope of this project." alt="" coords="5,5,121,31"/>
 <area shape="rect" title="Module that contains the primary game functionality." alt="" coords="169,5,319,31"/>
 </map>
 </div>
@@ -96,16 +96,16 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6e5ae3a6951c0d643f476418cdf1f2d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga6e5ae3a6951c0d643f476418cdf1f2d9">buttonInput</a> (bool *buttonPressed)</td></tr>
 <tr class="memdesc:ga6e5ae3a6951c0d643f476418cdf1f2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for button input, give semaphores and write the pressed buttons in a queue.  <a href="group__game.html#ga6e5ae3a6951c0d643f476418cdf1f2d9">More...</a><br /></td></tr>
 <tr class="separator:ga6e5ae3a6951c0d643f476418cdf1f2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7355913e824a897879f09fbd635c9812"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga7355913e824a897879f09fbd635c9812">changeTimerPeriod</a> (TimerHandle_t timer, uint8_t level, int delay)</td></tr>
+<tr class="memitem:ga7355913e824a897879f09fbd635c9812"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga7355913e824a897879f09fbd635c9812">changeTimerPeriod</a> (<a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> timer, uint8_t level, int delay)</td></tr>
 <tr class="memdesc:ga7355913e824a897879f09fbd635c9812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change a timer's period depending on the current level &amp; start the timer.  <a href="group__game.html#ga7355913e824a897879f09fbd635c9812">More...</a><br /></td></tr>
 <tr class="separator:ga7355913e824a897879f09fbd635c9812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac44abf45aa0fa337962ae13bc9bbef43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gac44abf45aa0fa337962ae13bc9bbef43">mainMenuTask</a> ()</td></tr>
 <tr class="memdesc:gac44abf45aa0fa337962ae13bc9bbef43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that handles the Main Menu.  <a href="group__game.html#gac44abf45aa0fa337962ae13bc9bbef43">More...</a><br /></td></tr>
 <tr class="separator:gac44abf45aa0fa337962ae13bc9bbef43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae3465a102a5799b71f1d17151b48a3e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gae3465a102a5799b71f1d17151b48a3e7">posUpdateTimerCallback</a> (TimerHandle_t <a class="el" href="group__game.html#ga6f00ade6863d7c9c9707f5abec4860d5">PosUpdateTimer</a>)</td></tr>
+<tr class="memitem:gae3465a102a5799b71f1d17151b48a3e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gae3465a102a5799b71f1d17151b48a3e7">posUpdateTimerCallback</a> (<a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> <a class="el" href="group__game.html#ga6f00ade6863d7c9c9707f5abec4860d5">PosUpdateTimer</a>)</td></tr>
 <tr class="memdesc:gae3465a102a5799b71f1d17151b48a3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the Timer that updates the position.  <a href="group__game.html#gae3465a102a5799b71f1d17151b48a3e7">More...</a><br /></td></tr>
 <tr class="separator:gae3465a102a5799b71f1d17151b48a3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5fc2cc66a3fafdd978e1f75eae4e9cac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga5fc2cc66a3fafdd978e1f75eae4e9cac">delayAtBottomTimerCallback</a> (TimerHandle_t <a class="el" href="group__game.html#gaf0f39057a5449286d20e005c848ddd97">DelayAtGroundTimer</a>)</td></tr>
+<tr class="memitem:ga5fc2cc66a3fafdd978e1f75eae4e9cac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga5fc2cc66a3fafdd978e1f75eae4e9cac">delayAtBottomTimerCallback</a> (<a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a> <a class="el" href="group__game.html#gaf0f39057a5449286d20e005c848ddd97">DelayAtGroundTimer</a>)</td></tr>
 <tr class="memdesc:ga5fc2cc66a3fafdd978e1f75eae4e9cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function for the Timer that starts a delay if a Tetromino hits the bottom.  <a href="group__game.html#ga5fc2cc66a3fafdd978e1f75eae4e9cac">More...</a><br /></td></tr>
 <tr class="separator:ga5fc2cc66a3fafdd978e1f75eae4e9cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga64073a53ee7519eb4633b15ea05886a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga64073a53ee7519eb4633b15ea05886a7">gameTask</a> ()</td></tr>
@@ -126,31 +126,31 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Task Handles</h2></td></tr>
 <tr class="memitem:ga215063f255bc753a0acb41aba47894da"><td class="memItemLeft" align="right" valign="top"><a id="ga215063f255bc753a0acb41aba47894da"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga215063f255bc753a0acb41aba47894da">MainMenuTask</a> = NULL</td></tr>
-<tr class="memdesc:ga215063f255bc753a0acb41aba47894da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Main Menu Task <br /></td></tr>
+<a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga215063f255bc753a0acb41aba47894da">MainMenuTask</a> = NULL</td></tr>
+<tr class="memdesc:ga215063f255bc753a0acb41aba47894da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">Task</a> for the Main Menu Task <br /></td></tr>
 <tr class="separator:ga215063f255bc753a0acb41aba47894da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafae39db714a1a294ee98ea33804b3760"><td class="memItemLeft" align="right" valign="top"><a id="gafae39db714a1a294ee98ea33804b3760"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gafae39db714a1a294ee98ea33804b3760">GameTask</a> = NULL</td></tr>
-<tr class="memdesc:gafae39db714a1a294ee98ea33804b3760"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Game Task <br /></td></tr>
+<a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gafae39db714a1a294ee98ea33804b3760">GameTask</a> = NULL</td></tr>
+<tr class="memdesc:gafae39db714a1a294ee98ea33804b3760"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">Task</a> for the Game Task <br /></td></tr>
 <tr class="separator:gafae39db714a1a294ee98ea33804b3760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memItemLeft" align="right" valign="top"><a id="ga490b4b9435b72080f06bf0ca4ef3b2f0"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga490b4b9435b72080f06bf0ca4ef3b2f0">PauseTask</a> = NULL</td></tr>
-<tr class="memdesc:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Pause Task <br /></td></tr>
+<a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga490b4b9435b72080f06bf0ca4ef3b2f0">PauseTask</a> = NULL</td></tr>
+<tr class="memdesc:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">Task</a> for the Pause Task <br /></td></tr>
 <tr class="separator:ga490b4b9435b72080f06bf0ca4ef3b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="memItemLeft" align="right" valign="top"><a id="ga1e503a50ab629bbd723a22b6cd8148a1"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga1e503a50ab629bbd723a22b6cd8148a1">ScoreTask</a> = NULL</td></tr>
-<tr class="memdesc:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle__t.html">Task</a> for the Score Task <br /></td></tr>
+<a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">TaskHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga1e503a50ab629bbd723a22b6cd8148a1">ScoreTask</a> = NULL</td></tr>
+<tr class="memdesc:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TaskHandle.html#gae95f44d4cfeb4a599c6cc258d241cb6b">Task</a> for the Score Task <br /></td></tr>
 <tr class="separator:ga1e503a50ab629bbd723a22b6cd8148a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Timer Handles</h2></td></tr>
 <tr class="memitem:ga6f00ade6863d7c9c9707f5abec4860d5"><td class="memItemLeft" align="right" valign="top"><a id="ga6f00ade6863d7c9c9707f5abec4860d5"></a>
-TimerHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga6f00ade6863d7c9c9707f5abec4860d5">PosUpdateTimer</a> = NULL</td></tr>
-<tr class="memdesc:ga6f00ade6863d7c9c9707f5abec4860d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TimerHandle__t.html">Timer</a> for updating a Tetromino's position <br /></td></tr>
+<a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga6f00ade6863d7c9c9707f5abec4860d5">PosUpdateTimer</a> = NULL</td></tr>
+<tr class="memdesc:ga6f00ade6863d7c9c9707f5abec4860d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">Timer</a> for updating a Tetromino's position <br /></td></tr>
 <tr class="separator:ga6f00ade6863d7c9c9707f5abec4860d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf0f39057a5449286d20e005c848ddd97"><td class="memItemLeft" align="right" valign="top"><a id="gaf0f39057a5449286d20e005c848ddd97"></a>
-TimerHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaf0f39057a5449286d20e005c848ddd97">DelayAtGroundTimer</a> = NULL</td></tr>
-<tr class="memdesc:gaf0f39057a5449286d20e005c848ddd97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TimerHandle__t.html">Timer</a> for the delay, when a Tetromino hits the bottom <br /></td></tr>
+<a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaf0f39057a5449286d20e005c848ddd97">DelayAtGroundTimer</a> = NULL</td></tr>
+<tr class="memdesc:gaf0f39057a5449286d20e005c848ddd97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">Timer</a> for the delay, when a Tetromino hits the bottom <br /></td></tr>
 <tr class="separator:gaf0f39057a5449286d20e005c848ddd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -199,45 +199,48 @@ SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Queue Handles</h2></td></tr>
 <tr class="memitem:gab7a0957deb21242647d33f7d8dba156d"><td class="memItemLeft" align="right" valign="top"><a id="gab7a0957deb21242647d33f7d8dba156d"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gab7a0957deb21242647d33f7d8dba156d">LeftRightQueue</a> = NULL</td></tr>
-<tr class="memdesc:gab7a0957deb21242647d33f7d8dba156d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for left &amp; right input <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gab7a0957deb21242647d33f7d8dba156d">LeftRightQueue</a> = NULL</td></tr>
+<tr class="memdesc:gab7a0957deb21242647d33f7d8dba156d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for left &amp; right input <br /></td></tr>
 <tr class="separator:gab7a0957deb21242647d33f7d8dba156d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="memItemLeft" align="right" valign="top"><a id="ga99ee110cf7bf0643a0f13222c19c5b78"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga99ee110cf7bf0643a0f13222c19c5b78">ConnectionQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the connection status <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga99ee110cf7bf0643a0f13222c19c5b78">ConnectionQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the connection status <br /></td></tr>
 <tr class="separator:ga99ee110cf7bf0643a0f13222c19c5b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="memItemLeft" align="right" valign="top"><a id="gaeb1026a4a6d5fb815b54cc60489e366d"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaeb1026a4a6d5fb815b54cc60489e366d">GameModeQueue</a> = NULL</td></tr>
-<tr class="memdesc:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the game mode <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaeb1026a4a6d5fb815b54cc60489e366d">GameModeQueue</a> = NULL</td></tr>
+<tr class="memdesc:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the game mode <br /></td></tr>
 <tr class="separator:gaeb1026a4a6d5fb815b54cc60489e366d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga741ddb5d9d35c6adc3b66022cf678368"><td class="memItemLeft" align="right" valign="top"><a id="ga741ddb5d9d35c6adc3b66022cf678368"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga741ddb5d9d35c6adc3b66022cf678368">PlayerModeQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga741ddb5d9d35c6adc3b66022cf678368"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the player mode <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga741ddb5d9d35c6adc3b66022cf678368">PlayerModeQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga741ddb5d9d35c6adc3b66022cf678368"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the player mode <br /></td></tr>
 <tr class="separator:ga741ddb5d9d35c6adc3b66022cf678368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0698a4549c5709c022f1138e0fe8d482"><td class="memItemLeft" align="right" valign="top"><a id="ga0698a4549c5709c022f1138e0fe8d482"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga0698a4549c5709c022f1138e0fe8d482">RotationModeQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga0698a4549c5709c022f1138e0fe8d482"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the rotation mode <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga0698a4549c5709c022f1138e0fe8d482">RotationModeQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga0698a4549c5709c022f1138e0fe8d482"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the rotation mode <br /></td></tr>
 <tr class="separator:ga0698a4549c5709c022f1138e0fe8d482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga054353658ca3ec9ecb185b8964c735c0"><td class="memItemLeft" align="right" valign="top"><a id="ga054353658ca3ec9ecb185b8964c735c0"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga054353658ca3ec9ecb185b8964c735c0">ScoreQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga054353658ca3ec9ecb185b8964c735c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the current score <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga054353658ca3ec9ecb185b8964c735c0">ScoreQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga054353658ca3ec9ecb185b8964c735c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the current score <br /></td></tr>
 <tr class="separator:ga054353658ca3ec9ecb185b8964c735c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea49840ec771aae0bd549870ed69eed4"><td class="memItemLeft" align="right" valign="top"><a id="gaea49840ec771aae0bd549870ed69eed4"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaea49840ec771aae0bd549870ed69eed4">HighScoresQueue</a> = NULL</td></tr>
-<tr class="memdesc:gaea49840ec771aae0bd549870ed69eed4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the highscores <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#gaea49840ec771aae0bd549870ed69eed4">HighScoresQueue</a> = NULL</td></tr>
+<tr class="memdesc:gaea49840ec771aae0bd549870ed69eed4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the highscores <br /></td></tr>
 <tr class="separator:gaea49840ec771aae0bd549870ed69eed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6b92f38e6df69b4c8830bb2c180d6bba"><td class="memItemLeft" align="right" valign="top"><a id="ga6b92f38e6df69b4c8830bb2c180d6bba"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga6b92f38e6df69b4c8830bb2c180d6bba">LevelQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga6b92f38e6df69b4c8830bb2c180d6bba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the current level <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga6b92f38e6df69b4c8830bb2c180d6bba">LevelQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga6b92f38e6df69b4c8830bb2c180d6bba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the current level <br /></td></tr>
 <tr class="separator:ga6b92f38e6df69b4c8830bb2c180d6bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5e038be0e93f68d19e039f95532c253f"><td class="memItemLeft" align="right" valign="top"><a id="ga5e038be0e93f68d19e039f95532c253f"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga5e038be0e93f68d19e039f95532c253f">GameOverQueue</a> = NULL</td></tr>
-<tr class="memdesc:ga5e038be0e93f68d19e039f95532c253f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle__t.html">Queue</a> for the game-over status <br /></td></tr>
+<a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__game.html#ga5e038be0e93f68d19e039f95532c253f">GameOverQueue</a> = NULL</td></tr>
+<tr class="memdesc:ga5e038be0e93f68d19e039f95532c253f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__QueueHandle.html#gaaf19d499892a4ce1409326ece00f5264">Queue</a> for the game-over status <br /></td></tr>
 <tr class="separator:ga5e038be0e93f68d19e039f95532c253f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Module that contains the primary game functionality. </p>
-<p>This module contains the game's main functionality. It contains the different tasks, for the main game, main menu &amp; pause screen. It interacts with the <a class="el" href="group__logic.html">Logic Module</a>, the <a class="el" href="group__gui.html">GUI Module</a> , the <a class="el" href="group__state.html">State Machine Module</a> and the <a class="el" href="group__opponent.html">Opponent Module</a>. </p>
+<p>This module contains the game's main functionality. It contains the different tasks, for the main game, main menu &amp; pause screen. It interacts with the <a class="el" href="group__logic.html">Logic Module</a>, the <a class="el" href="group__gui.html">GUI Module</a> , the <a class="el" href="group__state.html">State Machine Module</a> and the <a class="el" href="group__opponent.html">Opponent Module</a>.</p>
+<dl class="section author"><dt>Authors</dt><dd>Philipp Karg (<a href="#" onclick="location.href='mai'+'lto:'+'phi'+'li'+'pp.'+'ka'+'rg@'+'tu'+'m.d'+'e'; return false;">phili<span style="display: none;">.nosp@m.</span>pp.k<span style="display: none;">.nosp@m.</span>arg@t<span style="display: none;">.nosp@m.</span>um.d<span style="display: none;">.nosp@m.</span>e</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>04.02.2021 </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Philipp Karg 2022 </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga25abb65c929f9257cd2c8d4067799fff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga25abb65c929f9257cd2c8d4067799fff">&#9670;&nbsp;</a></span>PRINT_TASK_ERROR</h2>
@@ -316,7 +319,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">static void changeTimerPeriod </td>
           <td>(</td>
-          <td class="paramtype">TimerHandle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td>
           <td class="paramname"><em>timer</em>, </td>
         </tr>
         <tr>
@@ -349,7 +352,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Change a timer's period depending on the current level &amp; start the timer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">timer</td><td>( <a class="el" href="group__TimerHandle__t.html">TimerHandle_t</a>): Timer to change period for. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">timer</td><td>( <a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>): Timer to change period for. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>(uint8_t): Current level. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>(int): The delay for changing the period. </td></tr>
   </table>
@@ -370,7 +373,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">static void delayAtBottomTimerCallback </td>
           <td>(</td>
-          <td class="paramtype">TimerHandle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td>
           <td class="paramname"><em>DelayAtGroundTimer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -387,7 +390,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Callback function for the Timer that starts a delay if a Tetromino hits the bottom. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">DelayAtGroundTimer</td><td>( <a class="el" href="group__TimerHandle__t.html">TimerHandle_t</a>): Timer to callback. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DelayAtGroundTimer</td><td>( <a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>): Timer to callback. </td></tr>
   </table>
   </dd>
 </dl>
@@ -546,7 +549,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">static void posUpdateTimerCallback </td>
           <td>(</td>
-          <td class="paramtype">TimerHandle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>&#160;</td>
           <td class="paramname"><em>PosUpdateTimer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -563,7 +566,7 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Callback function for the Timer that updates the position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">PosUpdateTimer</td><td>( <a class="el" href="group__TimerHandle__t.html">TimerHandle_t</a>): Timer to callback. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PosUpdateTimer</td><td>( <a class="el" href="group__TimerHandle.html#gaae4bf1dce696ab615d5fd073606fd3cb">TimerHandle_t</a>): Timer to callback. </td></tr>
   </table>
   </dd>
 </dl>
